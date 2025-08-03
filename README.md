@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://github.com/Bitcoin-II/BitcoinII/releases">
-    <img src="https://img.shields.io/github/downloads/Bitcoin-II/BitcoinII/total?style=for-the-badge" alt="Downloads">
+  <a href="https://github.com/Bitcoin-II/BitcoinII-Core/releases">
+    <img src="https://img.shields.io/github/downloads/Bitcoin-II/BitcoinII-Core/total?style=for-the-badge" alt="Downloads">
   </a>
   <a href="https://Bitcoin-II.org">
     <img src="https://img.shields.io/badge/Website-Online-brightgreen?logo=google-chrome&style=for-the-badge" alt="Website">
