@@ -2,11 +2,11 @@
   <a href="https://github.com/Bitcoin-II/BitcoinII/releases">
     <img src="https://img.shields.io/github/downloads/Bitcoin-II/BitcoinII/total?style=for-the-badge" alt="Downloads">
   </a>
+  <a href="https://Bitcoin-II.org">
+    <img src="https://img.shields.io/badge/Website-Online-brightgreen?logo=google-chrome&style=for-the-badge" alt="Website">
+  </a>
   <a href="https://t.me/+mc19GB_d5yo3Yjg5">
     <img src="https://img.shields.io/badge/Telegram-Join%20Chat-blue?logo=telegram&style=for-the-badge" alt="Telegram">
-  </a>
-  <a href="https://discord.gg/aqc9c8GB">
-    <img src="https://img.shields.io/discord/123456789012345678?label=Discord&logo=discord&style=for-the-badge" alt="Discord">
   </a>
   <a href="https://reddit.com/r/BitcoinII">
     <img src="https://img.shields.io/reddit/subreddit-subscribers/BitcoinII?label=Reddit&style=for-the-badge" alt="Reddit">
@@ -15,9 +15,7 @@
     <img src="https://img.shields.io/badge/X-Follow-black?logo=twitter&style=for-the-badge" alt="X">
   </a>
 </p>
-  <a href="https://discord.gg/1390803064033906820">
-    <img src="https://img.shields.io/discord/123456789012345678?label=Discord&logo=discord&style=for-the-badge" alt="Discord">
-  </a>
+
 
 
 
