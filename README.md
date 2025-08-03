@@ -21,7 +21,7 @@
 
 **IMPORTANT NOTICE**
 
-Users of Legacy Windows Operating Systems (Windows 7 & Older) will need to use the BitcoinII Legacy Binary (version 27).
+Users of Legacy Windows 64 Bit Operating Systems (Windows 7 versions) will need to use the BitcoinII Legacy Binary (version 27) available at: https://github.com/BitcoinII-Dev/BitcoinII .
 Due to new mempool policies inherited from upstream Bitcoin Core, users of the Legacy Binaries will need to ensure
 that R.B.F. (Replace By Fee) is activated for all outgoing transactions to ensure their transactions are included in
 blocks once the majority of the network completes the upgrade to BitcoinII v29. 
