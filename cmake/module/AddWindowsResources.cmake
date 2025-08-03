@@ -1,0 +1,16 @@
+# Copyright (c) 2009-2025 Satoshi Nakamoto
+# Copyright (c) 2009-2025 The Bitcoin Core developers
+# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+include_guard(GLOBAL)
+
+macro(add_windows_resources target rc_file)
+  if(WIN32)
+    target_sources(${target} PRIVATE ${rc_file})
+    set_property(SOURCE ${rc_file}
+      APPEND PROPERTY COMPILE_DEFINITIONS WINDRES_PREPROC
+    )
+  endif()
+endmacro()
