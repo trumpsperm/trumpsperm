@@ -5,7 +5,7 @@ Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
 Source: https://github.com/bitcoin-II/bitcoinII-core/
 
 Files: *
-Copyright: 2009-2025, BitcoinII Core Developers
+Copyright: 2009-2025, Bitcoin Core Developers
 Copyright: 2004-2025, BitcoinII Core Developers
 License: Expat
 Comment: The BitcoinII Core Developers encompasses all contributors to the
