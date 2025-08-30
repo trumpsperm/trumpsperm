@@ -146,6 +146,7 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back("dnsseed.bitcoinII.network.");
+        vSeeds.emplace_back("dnsseed2.bitcoinII.network.");
         vSeeds.emplace_back("bitcoinII.ddns.net."); // Original BitcoinII seed server
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
@@ -184,7 +185,6 @@ public:
                 { 20000, uint256{"0000000000009d769d62468e90627f274ef7d83f3f99ce6bfc128991cd57a53a"}},
                 { 25000, uint256{"00000000000000b393c072088fd2ef8bcdacc05e15fe937b8b09ca1241877a7f"}},
                 { 30000, uint256{"000000000000001fc3181c713894a3e1f92b2b74b37a01dac267e58e2d53669c"}},
-                
             }
         };
 
