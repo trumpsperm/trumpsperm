@@ -88,10 +88,10 @@ public:
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
         consensus.nSubsidyHalvingInterval = 210000;
-        consensus.script_flag_exceptions.emplace( // BIP16 exception
-            uint256{"0000000028f062b221c1a8a5cf0244b1627315f7aa5b775b931cfec46dc17ceb"}, SCRIPT_VERIFY_NONE);
-        consensus.script_flag_exceptions.emplace( // Taproot exception
-            uint256{"0000000028f062b221c1a8a5cf0244b1627315f7aa5b775b931cfec46dc17ceb"}, SCRIPT_VERIFY_P2SH | SCRIPT_VERIFY_WITNESS);
+        //consensus.script_flag_exceptions.emplace( // BIP16 exception
+        //    uint256{"0000000028f062b221c1a8a5cf0244b1627315f7aa5b775b931cfec46dc17ceb"}, SCRIPT_VERIFY_NONE);
+        //consensus.script_flag_exceptions.emplace( // Taproot exception
+        //    uint256{"0000000028f062b221c1a8a5cf0244b1627315f7aa5b775b931cfec46dc17ceb"}, SCRIPT_VERIFY_P2SH | SCRIPT_VERIFY_WITNESS);
         consensus.BIP34Height = 250;
         consensus.BIP34Hash = uint256{"000000008e0241217a0c31509cc92ef8367d6add5668e07fd36269e287b5e7ef"};
         consensus.BIP65Height = 260; // 000000009b9a28c9368119f47479cfb0024d957d7416efcc0cc550acce627234
