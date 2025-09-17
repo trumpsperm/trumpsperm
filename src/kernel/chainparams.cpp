@@ -147,6 +147,7 @@ public:
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back("dnsseed.bitcoinII.network.");
         vSeeds.emplace_back("dnsseed2.bitcoinII.network.");
+        vSeeds.emplace_back("dnsseed3.bitcoinII.network.");
         vSeeds.emplace_back("bitcoinII.ddns.net."); // Original BitcoinII seed server
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
