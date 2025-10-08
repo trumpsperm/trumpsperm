@@ -316,12 +316,12 @@ public:
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
         consensus.nSubsidyHalvingInterval = 210000;
-        consensus.BIP34Height = 1;
-        consensus.BIP34Hash = uint256{};
-        consensus.BIP65Height = 1;
-        consensus.BIP66Height = 1;
-        consensus.CSVHeight = 1;
-        consensus.SegwitHeight = 1;
+        consensus.BIP34Height = 100;
+        consensus.BIP34Hash = uint256{"000000003e61348a1008db03396a77f8b138e50ec52181a79bbe36bc14341a54"};
+        consensus.BIP65Height = 100;
+        consensus.BIP66Height = 100;
+        consensus.CSVHeight = 100;
+        consensus.SegwitHeight = 100;
         consensus.MinBIP9WarningHeight = 0;
         consensus.powLimit = uint256{"00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff"};
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
@@ -342,8 +342,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
-        consensus.nMinimumChainWork = uint256{"0000000000000000000000000000000000000000000001d6dce8651b6094e4c1"};
-        consensus.defaultAssumeValid = uint256{"0000000000003ed4f08dbdf6f7d6b271a6bcffce25675cb40aa9fa43179a89f3"}; // 72600
+        consensus.nMinimumChainWork = uint256{"0000000000000000000000000000000000000000000000000000000600060006"};
+        consensus.defaultAssumeValid = uint256{"000000005541e67eb6f1851976a2269faf7aeb5195df05e4cd0f9a7649852e7d"};
 
         pchMessageStart[0] = 0x1b;
         pchMessageStart[1] = 0x15;
@@ -370,7 +370,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("seed.testnet4.bitcoinII.ddns.net."); 
+        vSeeds.emplace_back("testnet4-dnsseed.bitcoinii.network."); 
         
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
@@ -388,7 +388,8 @@ public:
 
         checkpointData = {
             {
-                {},
+                {0, uint256{"000000005541e67eb6f1851976a2269faf7aeb5195df05e4cd0f9a7649852e7d"}},
+                {100, uint256{"000000003e61348a1008db03396a77f8b138e50ec52181a79bbe36bc14341a54"}},
             }
         };
 
@@ -397,10 +398,10 @@ public:
         };
 
         chainTxData = ChainTxData{
-            // Data from RPC: getchaintxstats 4096 0000000000003ed4f08dbdf6f7d6b271a6bcffce25675cb40aa9fa43179a89f3
-            .nTime    = 1741070246,
-            .tx_count = 7653966,
-            .dTxRate  = 1.239174414591965,
+            // Data from RPC: getchaintxstats
+            .nTime    = 1753841191,
+            .tx_count = 1,
+            .dTxRate  = 1,
         };
     }
 };
