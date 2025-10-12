@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-present The BitcoinII Core developers
+# Copyright (c) 2018-present The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -94,7 +94,7 @@ if [ -z "$DANGER_RUN_CI_ON_HOST" ]; then
   fi
 
   if [ "$DANGER_CI_ON_HOST_CCACHE_FOLDER" ]; then
-   # Temporary exclusion for https://github.com/bitcoinII/bitcoinII/issues/31108
+   # Temporary exclusion for https://github.com/bitcoin/bitcoin/issues/31108
    # to allow CI configs and envs generated in the past to work for a bit longer.
    # Can be removed in March 2025.
    if [ "${CCACHE_DIR}" != "/tmp/ccache_dir" ]; then
