@@ -1327,27 +1327,27 @@ Proces migracji utworzy kopię zapasową portfela przed migracją. Plik kopii za
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB dostępnej przestrzeni dyskowej </numerusform>
-            <numerusform>%n GB dostępnej przestrzeni dyskowej </numerusform>
-            <numerusform>%n GB dostępnej przestrzeni dyskowej </numerusform>
+            <numerusform>%n MB dostępnej przestrzeni dyskowej </numerusform>
+            <numerusform>%n MB dostępnej przestrzeni dyskowej </numerusform>
+            <numerusform>%n MB dostępnej przestrzeni dyskowej </numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(z %n GB potrzebnych)</numerusform>
-            <numerusform>(z %n GB potrzebnych)</numerusform>
-            <numerusform>(z %n GB potrzebnych)</numerusform>
+            <numerusform>(z %n MB potrzebnych)</numerusform>
+            <numerusform>(z %n MB potrzebnych)</numerusform>
+            <numerusform>(z %n MB potrzebnych)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB potrzebny na pełny łańcuch)</numerusform>
-            <numerusform>(%n GB potrzebne na pełny łańcuch)</numerusform>
-            <numerusform>(%n GB potrzebnych na pełny łańcuch)</numerusform>
+            <numerusform>(%n MB potrzebny na pełny łańcuch)</numerusform>
+            <numerusform>(%n MB potrzebne na pełny łańcuch)</numerusform>
+            <numerusform>(%n MB potrzebnych na pełny łańcuch)</numerusform>
         </translation>
     </message>
     <message>
@@ -1355,12 +1355,12 @@ Proces migracji utworzy kopię zapasową portfela przed migracją. Plik kopii za
         <translation type="unfinished">Wybierz folder danych</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Co najmniej %1 GB danych, zostanie zapisane w tym katalogu, dane te będą przyrastały w czasie.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Co najmniej %1 MB danych, zostanie zapisane w tym katalogu, dane te będą przyrastały w czasie.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Około %1 GB danych zostanie zapisane w tym katalogu.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Około %1 MB danych zostanie zapisane w tym katalogu.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1408,16 +1408,16 @@ Proces migracji utworzy kopię zapasową portfela przed migracją. Plik kopii za
         <translation type="unfinished">Wyłączenie tej opcji spowoduje konieczność pobrania całego łańcucha bloków. Szybciej jest najpierw pobrać cały łańcuch a następnie go przyciąć (prune). Wyłącza niektóre zaawansowane funkcje.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Wstępna synchronizacja jest bardzo wymagająca i może ujawnić wcześniej niezauważone problemy sprzętowe. Za każdym uruchomieniem %1 pobieranie będzie kontynuowane od miejsca w którym zostało zatrzymane.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Gdy naciśniesz OK, %1 zacznie się pobieranie i przetwarzanie całego %4 łańcucha bloków (%2GB) zaczynając od najwcześniejszych transakcji w %3 gdy %4 został uruchomiony.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Gdy naciśniesz OK, %1 zacznie się pobieranie i przetwarzanie całego %4 łańcucha bloków (%2MB) zaczynając od najwcześniejszych transakcji w %3 gdy %4 został uruchomiony.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4058,8 +4058,8 @@ Przejdź do Plik &gt; Otwórz Portfel aby wgrać portfel.</translation>
         <translation type="unfinished">Nie można zaktualizować portfela dzielonego innego niż HD z wersji 1%i do wersji 1%i bez aktualizacji w celu obsługi wstępnie podzielonej puli kluczy. Użyj wersji 1%i lub nie określono wersji.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Rozmiar dysku dla %s może nie wystarczyć na pliki bloków. Około %u GB danych zostanie zapisane w tym katalogu.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Rozmiar dysku dla %s może nie wystarczyć na pliki bloków. Około %u MB danych zostanie zapisane w tym katalogu.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

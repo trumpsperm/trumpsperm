@@ -1336,24 +1336,24 @@ Il processo di migrazione creerà un backup del portafoglio prima della migrazio
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB di spazio disponibile</numerusform>
-            <numerusform>%n GB di spazio disponibile</numerusform>
+            <numerusform>%n MB di spazio disponibile</numerusform>
+            <numerusform>%n MB di spazio disponibile</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(di %n GB richiesto)</numerusform>
-            <numerusform>(di %n GB richiesti)</numerusform>
+            <numerusform>(di %n MB richiesto)</numerusform>
+            <numerusform>(di %n MB richiesti)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB richiesti per la catena completa)</numerusform>
-            <numerusform>(%n GB richiesti per la catena completa)</numerusform>
+            <numerusform>(%n MB richiesti per la catena completa)</numerusform>
+            <numerusform>(%n MB richiesti per la catena completa)</numerusform>
         </translation>
     </message>
     <message>
@@ -1361,12 +1361,12 @@ Il processo di migrazione creerà un backup del portafoglio prima della migrazio
         <translation type="unfinished">Specifica la cartella dati</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Almeno %1 GB di dati verrà salvato in questa cartella e continuerà ad aumentare col tempo.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Almeno %1 MB di dati verrà salvato in questa cartella e continuerà ad aumentare col tempo.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Verranno salvati circa %1 GB di dati in questa cartella.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Verranno salvati circa %1 MB di dati in questa cartella.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1417,8 +1417,8 @@ Il processo di migrazione creerà un backup del portafoglio prima della migrazio
         <translation type="unfinished">La sincronizzazione iniziale è molto dispendiosa e potrebbe mettere in luce problemi harware del tuo computer che passavano prima inosservati. Ogni volta che lanci %1 continuerà a scaricare da dove si era interrotto.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Facendo clic su OK, %1 inizierà a scaricare ed elaborare l'intera catena di blocchi di %4 (%2 GB) partendo dalle prime transazioni del %3quando %4 è stato inizialmente lanciato.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Facendo clic su OK, %1 inizierà a scaricare ed elaborare l'intera catena di blocchi di %4 (%2 MB) partendo dalle prime transazioni del %3quando %4 è stato inizialmente lanciato.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4057,8 +4057,8 @@ Vai su File &gt; Apri Portafoglio per caricare un portafoglio.
         <translation type="unfinished">impossibile aggiornare un portafoglio non diviso e non HD dalla versione %i alla versione %i senza fare l'aggiornamento per supportare il pre-split keypool. Prego usare la versione %i senza specificare la versione</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Lo spazio su disco per %s potrebbe non essere sufficiente per i file di blocco. In questa directory verranno memorizzati circa %u GB di dati.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Lo spazio su disco per %s potrebbe non essere sufficiente per i file di blocco. In questa directory verranno memorizzati circa %u MB di dati.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

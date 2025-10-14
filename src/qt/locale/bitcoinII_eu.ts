@@ -1036,21 +1036,21 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1077,8 +1077,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Ongietorri %1-ra</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>Use the default data directory</source>

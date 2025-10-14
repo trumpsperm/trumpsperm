@@ -1293,7 +1293,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Биткоин</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1301,28 +1301,28 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(од потребних %n GB)</numerusform>
-            <numerusform>(од потребних %n GB)</numerusform>
-            <numerusform>(од  потребних  %n GB)</numerusform>
+            <numerusform>(од потребних %n MB)</numerusform>
+            <numerusform>(од потребних %n MB)</numerusform>
+            <numerusform>(од  потребних  %n MB)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB потребно за цео ланац)</numerusform>
-            <numerusform>(%n GB потребно за цео ланац)</numerusform>
-            <numerusform>(%n GB потребно за цео ланац)</numerusform>
+            <numerusform>(%n MB потребно за цео ланац)</numerusform>
+            <numerusform>(%n MB потребно за цео ланац)</numerusform>
+            <numerusform>(%n MB потребно за цео ланац)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Најмање %1 GB подататака биће складиштен у овај директорјиум који ће временом порасти.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Најмање %1 MB подататака биће складиштен у овај директорјиум који ће временом порасти.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Најмање %1 GB подататака биће складиштен у овај директорјиум.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Најмање %1 MB подататака биће складиштен у овај директорјиум.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1370,7 +1370,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Враћање ове опције захтева поновно преузимање целокупног блокчејна - ланца блокова. Брже је преузети цели ланац и касније га скратити. Онемогућава неке напредне опције.</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished">Гигабајт</translation>
     </message>
     <message>

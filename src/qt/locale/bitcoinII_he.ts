@@ -403,7 +403,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 מ״ב</translation>
     </message>
     <message>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished">%1 ג״ב</translation>
     </message>
     <message>
@@ -1218,32 +1218,32 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ביטקוין</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform>(מתוך %n ג׳יגה-בייט נדרשים)</numerusform>
             <numerusform>(מתוך %n ג׳יגה-בייט נדרשים)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform>(ג׳יגה-בייט %n נדרש לשרשרת המלאה)</numerusform>
             <numerusform>(%n ג׳יגה-בייט נדרשים לשרשרת המלאה)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
         <translation type="unfinished">לפחות %1 ג״ב של נתונים יאוחסנו בתיקייה זו, והם יגדלו עם הזמן.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
         <translation type="unfinished">מידע בנפח של כ-%1 ג׳יגה-בייט יאוחסן בתיקייה זו.</translation>
     </message>
     <message numerus="yes">
@@ -1291,7 +1291,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">חזרה לאחור מהגדרות אלו מחייב הורדה מחדש של כל שרשרת הבלוקים. מהיר יותר להוריד את השרשרת המלאה ולקטום אותה מאוחר יותר. הדבר מנטרל כמה תכונות מתקדמות.</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished">ג״ב</translation>
     </message>
     <message>
@@ -1459,7 +1459,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">יש לגזום את &amp;מאגר הבלוקים אל</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">ג״ב</translation>
     </message>
     <message>

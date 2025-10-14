@@ -1294,21 +1294,21 @@ Taşıma işlemi, taşıma işleminden önce cüzdanın bir yedeğini oluşturac
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB alan kullanılabilir</numerusform>
+            <numerusform>%n MB alan kullanılabilir</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(gereken %n GB alandan)</numerusform>
+            <numerusform>(gereken %n MB alandan)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB tam zincir için gerekli)</numerusform>
+            <numerusform>(%n MB tam zincir için gerekli)</numerusform>
         </translation>
     </message>
     <message>
@@ -1316,12 +1316,12 @@ Taşıma işlemi, taşıma işleminden önce cüzdanın bir yedeğini oluşturac
         <translation type="unfinished">Veri dizinini seç</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Bu dizinde en az %1 GB veri depolanacak ve zamanla büyüyecek.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Bu dizinde en az %1 MB veri depolanacak ve zamanla büyüyecek.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Yaklaşık %1 GB veri bu klasörde depolanacak.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Yaklaşık %1 MB veri bu klasörde depolanacak.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1363,8 +1363,8 @@ Taşıma işlemi, taşıma işleminden önce cüzdanın bir yedeğini oluşturac
         <translation type="unfinished">Bu ayarın geri döndürülmesi, tüm blok zincirinin yeniden indirilmesini gerektirir. Önce tüm zinciri indirmek ve daha sonra veri budamak daha hızlıdır. Bazı gelişmiş özellikleri devre dışı bırakır.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Tamam'ı tıklattığınızda, %1, %4 ilk başlatıldığında %3'teki en eski işlemlerden başlayarak tam %4 blok zincirini (%2 GB) indirmeye ve işlemeye başlayacak.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Tamam'ı tıklattığınızda, %1, %4 ilk başlatıldığında %3'teki en eski işlemlerden başlayarak tam %4 blok zincirini (%2 MB) indirmeye ve işlemeye başlayacak.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

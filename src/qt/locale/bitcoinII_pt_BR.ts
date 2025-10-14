@@ -1290,24 +1290,24 @@ O processo de migração criará um backup da carteira antes da migração. Este
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB de espaço disponível</numerusform>
-            <numerusform>%n GB de espaço disponível</numerusform>
+            <numerusform>%n MB de espaço disponível</numerusform>
+            <numerusform>%n MB de espaço disponível</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(de %n GB necessário)</numerusform>
-            <numerusform>(de %n GB necessários)</numerusform>
+            <numerusform>(de %n MB necessário)</numerusform>
+            <numerusform>(de %n MB necessários)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB necessário para a cadeia completa)</numerusform>
-            <numerusform>(%n GB necessários para a cadeia completa)</numerusform>
+            <numerusform>(%n MB necessário para a cadeia completa)</numerusform>
+            <numerusform>(%n MB necessários para a cadeia completa)</numerusform>
         </translation>
     </message>
     <message>
@@ -1315,12 +1315,12 @@ O processo de migração criará um backup da carteira antes da migração. Este
         <translation type="unfinished">Escolha o diretório dos dados</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">No mínimo %1 GB de dados serão armazenados neste diretório, e isso irá crescer com o tempo.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">No mínimo %1 MB de dados serão armazenados neste diretório, e isso irá crescer com o tempo.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Aproximadamente %1 GB de dados serão armazenados neste diretório.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Aproximadamente %1 MB de dados serão armazenados neste diretório.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1367,16 +1367,16 @@ O processo de migração criará um backup da carteira antes da migração. Este
         <translation type="unfinished">Reverter essa configuração requer o re-download de todo o blockchain. É mais rápido fazer o download de todo o blockchain primeiro e depois fazer prune. Essa opção desabilita algumas funcionalidades avançadas.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Esta sincronização inicial é muito exigente e pode expor problemas de hardware com o computador que passaram despercebidos anteriormente. Cada vez que você executar o %1, irá continuar baixando de onde parou.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Quando clicar em OK, %1 iniciará o download e irá processar a cadeia de blocos completa %4 (%2 GB) iniciando com as mais recentes transações em %3 enquanto %4 é processado. </translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Quando clicar em OK, %1 iniciará o download e irá processar a cadeia de blocos completa %4 (%2 MB) iniciando com as mais recentes transações em %3 enquanto %4 é processado. </translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -3811,8 +3811,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">1%s solicita para escutar na porta 2%u. Esta porta é considerada "ruim" e, portanto, é improvável que qualquer ponto se conecte-se a ela. Consulte doc/p2p-bad-ports.md para obter detalhes e uma lista completa.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">O espaço em disco para 1%s pode não acomodar os arquivos de bloco. Aproximadamente 2%u GB de dados serão armazenados neste diretório.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">O espaço em disco para 1%s pode não acomodar os arquivos de bloco. Aproximadamente 2%u MB de dados serão armazenados neste diretório.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

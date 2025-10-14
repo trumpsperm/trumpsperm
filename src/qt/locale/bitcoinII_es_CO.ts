@@ -1335,24 +1335,24 @@ El proceso de migración creará una copia de seguridad de la billetera antes de
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB de espacio disponible</numerusform>
-            <numerusform>%n GB de espacio disponible</numerusform>
+            <numerusform>%n MB de espacio disponible</numerusform>
+            <numerusform>%n MB de espacio disponible</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(de %n GB necesario)</numerusform>
-            <numerusform>(de %n GB necesarios)</numerusform>
+            <numerusform>(de %n MB necesario)</numerusform>
+            <numerusform>(de %n MB necesarios)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB necesario para completar la cadena)</numerusform>
-            <numerusform>(%n GB necesarios para completar la cadena)</numerusform>
+            <numerusform>(%n MB necesario para completar la cadena)</numerusform>
+            <numerusform>(%n MB necesarios para completar la cadena)</numerusform>
         </translation>
     </message>
     <message>
@@ -1360,12 +1360,12 @@ El proceso de migración creará una copia de seguridad de la billetera antes de
         <translation type="unfinished">Elegir directorio de datos</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Se almacenarán al menos %1 GB de datos en este directorio, que aumentarán con el tiempo.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Se almacenarán al menos %1 MB de datos en este directorio, que aumentarán con el tiempo.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Se almacenarán aproximadamente %1 GB de datos en este directorio.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Se almacenarán aproximadamente %1 MB de datos en este directorio.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1412,8 +1412,8 @@ El proceso de migración creará una copia de seguridad de la billetera antes de
         <translation type="unfinished">La sincronización inicial consume muchos recursos y es posible que exponga problemas de hardware en la computadora que anteriormente pasaron desapercibidos. Cada vez que ejecutes %1, seguirá descargando desde el punto en el que quedó.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Al hacer clic en OK, %1 iniciará el proceso de descarga y procesará la cadena de bloques %4 completa (%2 GB), empezando con la transacción más antigua en %3 cuando %4 se ejecutó inicialmente.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Al hacer clic en OK, %1 iniciará el proceso de descarga y procesará la cadena de bloques %4 completa (%2 MB), empezando con la transacción más antigua en %3 cuando %4 se ejecutó inicialmente.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4073,8 +4073,8 @@ Ir a "Archivo &gt; Abrir billetera" para cargar una.
         <translation type="unfinished">No se puede actualizar una billetera dividida no HD de la versión %i a la versión %i sin actualizar para admitir el pool de claves anterior a la división. Usa la versión %i o no especifiques la versión.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Es posible que el espacio en disco %s no tenga capacidad para los archivos de bloque. Aproximadamente %u GB de datos se almacenarán en este directorio.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Es posible que el espacio en disco %s no tenga capacidad para los archivos de bloque. Aproximadamente %u MB de datos se almacenarán en este directorio.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

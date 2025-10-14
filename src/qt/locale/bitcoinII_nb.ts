@@ -1207,33 +1207,33 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(av %n GB som trengs)</numerusform>
-            <numerusform>(av %n GB som trengs)</numerusform>
+            <numerusform>(av %n MB som trengs)</numerusform>
+            <numerusform>(av %n MB som trengs)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB kreves for hele kjeden)</numerusform>
-            <numerusform>(%n GB kreves for hele kjeden)</numerusform>
+            <numerusform>(%n MB kreves for hele kjeden)</numerusform>
+            <numerusform>(%n MB kreves for hele kjeden)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Minst %1 GB data vil bli lagret i denne mappen og den vil vokse over tid.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Minst %1 MB data vil bli lagret i denne mappen og den vil vokse over tid.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Omtrent %1GB data vil bli lagret i denne mappen.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Omtrent %1MB data vil bli lagret i denne mappen.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1280,8 +1280,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Gjenoppretting av denne innstillingen krever at du laster ned hele blockchain på nytt. Det er raskere å laste ned hele kjeden først og beskjære den senere Deaktiver noen avanserte funksjoner.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>

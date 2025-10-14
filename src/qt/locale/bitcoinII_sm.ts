@@ -1299,25 +1299,25 @@ O le fa'amaoniga o le malaga o le a fai se kopi o le 'aofa'i a'o le'i fa'aauau l
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB o le avanoa o avanoa</numerusform>
+            <numerusform>%n MB o le avanoa o avanoa</numerusform>
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(o le %n GB e manaʻomia)</numerusform>
+            <numerusform>(o le %n MB e manaʻomia)</numerusform>
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB e manaʻomia mo le faʻaputuga atoa)</numerusform>
+            <numerusform>(%n MB e manaʻomia mo le faʻaputuga atoa)</numerusform>
             <numerusform />
             <numerusform />
         </translation>
@@ -1327,12 +1327,12 @@ O le fa'amaoniga o le malaga o le a fai se kopi o le 'aofa'i a'o le'i fa'aauau l
         <translation type="unfinished">Filifili le katalogi o faʻamatalaga</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">O le itiiti ifo i le %1 GB o fa'amaoniga o le a teuina i lenei lisi, ma o le a fa'ateleina i le taimi.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">O le itiiti ifo i le %1 MB o fa'amaoniga o le a teuina i lenei lisi, ma o le a fa'ateleina i le taimi.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">E tusa ma le %1 GB o fa'amaoniga o le a teu i lenei fa'amaoniga.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">E tusa ma le %1 MB o fa'amaoniga o le a teu i lenei fa'amaoniga.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1384,8 +1384,8 @@ O le fa'amaoniga o le malaga o le a fai se kopi o le 'aofa'i a'o le'i fa'aauau l
         <translation type="unfinished">O le fa'atasi muamua lenei e matua faigata, ma e ono fa'aalia ai ni fa'afitauli i masini fa'atekonolosi o lau komepiuta e le'i matauina muamua. O taimi uma e te fa'agaoioia ai le %1, o le a faʻaauau pea ona sii mai mai le mea na fa'amuta ai.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">A e kiliki i le OK, o le %1 o le a amata ona download ma fa'agasolo i le %4 blockchain atoa (%2 GB) amata mai i muamua o vadega i %3 i le taimi na fa'avae ai %4.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">A e kiliki i le OK, o le %1 o le a amata ona download ma fa'agasolo i le %4 blockchain atoa (%2 MB) amata mai i muamua o vadega i %3 i le taimi na fa'avae ai %4.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

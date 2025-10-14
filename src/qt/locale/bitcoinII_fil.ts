@@ -888,33 +888,33 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(of %n GB needed)</numerusform>
-            <numerusform>(of %n GB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB needed for full chain)</numerusform>
-            <numerusform>(%n GB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Kahit na %1 GB na datos ay maiimbak sa direktoryong ito, ito ay lalaki sa pagtagal.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Kahit na %1 MB na datos ay maiimbak sa direktoryong ito, ito ay lalaki sa pagtagal.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Humigit-kumulang na %1 GB na data ay maiimbak sa direktoryong ito.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Humigit-kumulang na %1 MB na data ay maiimbak sa direktoryong ito.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>

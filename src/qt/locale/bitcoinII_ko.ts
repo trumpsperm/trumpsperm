@@ -426,7 +426,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 메가바이트</translation>
     </message>
     <message>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished">%1 기가바이트</translation>
     </message>
     <message>
@@ -1351,21 +1351,21 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">비트코인</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%nGB의 가용 공간</numerusform>
+            <numerusform>%nMB의 가용 공간</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB가 필요합니다.)</numerusform>
+            <numerusform>(%n MB가 필요합니다.)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(Full 체인이 되려면 %n GB 가 필요합니다.)</numerusform>
+            <numerusform>(Full 체인이 되려면 %n MB 가 필요합니다.)</numerusform>
         </translation>
     </message>
     <message>
@@ -1373,12 +1373,12 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">데이터 디렉토리를 선택하세요</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">최소 %1 GB의 데이터가 이 디렉토리에 저장되며 시간이 지남에 따라 증가할 것입니다.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">최소 %1 MB의 데이터가 이 디렉토리에 저장되며 시간이 지남에 따라 증가할 것입니다.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">약 %1 GB의 데이터가 이 디렉토리에 저장됩니다.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">약 %1 MB의 데이터가 이 디렉토리에 저장됩니다.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1424,16 +1424,16 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">이 설정을 되돌리면 전체 블록 체인을 다시 다운로드 해야 합니다. 전체 체인을 먼저 다운로드하고 나중에 정리하는 것이 더 빠릅니다. 일부 고급 기능을 비활성화합니다.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">초기 동기화는 매우 오래 걸리며 이전에는 본 적 없는 하드웨어 문제를 발생시킬 수 있습니다. %1을 실행할 때마다 중단 된 곳에서 다시 계속 다운로드 됩니다.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">OK를 클릭하면, %1는 %4가 최초 출시된 %3에 있는 가장 오래된 트랜잭션들부터 시작하여 전체 %4 블록체인 (%2GB)을 내려 받고 처리하기 시작합니다.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">OK를 클릭하면, %1는 %4가 최초 출시된 %3에 있는 가장 오래된 트랜잭션들부터 시작하여 전체 %4 블록체인 (%2MB)을 내려 받고 처리하기 시작합니다.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

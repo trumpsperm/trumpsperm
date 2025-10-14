@@ -1354,27 +1354,27 @@ Proces migrácie vytvorí zálohu peňaženky pred samotnou migráciou. Tento z�
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB voľného miesta</numerusform>
-            <numerusform>%n GB voľného miesta</numerusform>
-            <numerusform>%n GB voľného miesta</numerusform>
+            <numerusform>%n MB voľného miesta</numerusform>
+            <numerusform>%n MB voľného miesta</numerusform>
+            <numerusform>%n MB voľného miesta</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(z %n GB potrebného)</numerusform>
-            <numerusform>(z %n GB potrebných)</numerusform>
-            <numerusform>(z %n GB potrebných)</numerusform>
+            <numerusform>(z %n MB potrebného)</numerusform>
+            <numerusform>(z %n MB potrebných)</numerusform>
+            <numerusform>(z %n MB potrebných)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB potrebný pre plný reťazec)</numerusform>
-            <numerusform>(%n GB potrebné pre plný reťazec)</numerusform>
-            <numerusform>(%n GB potrebných pre plný reťazec)</numerusform>
+            <numerusform>(%n MB potrebný pre plný reťazec)</numerusform>
+            <numerusform>(%n MB potrebné pre plný reťazec)</numerusform>
+            <numerusform>(%n MB potrebných pre plný reťazec)</numerusform>
         </translation>
     </message>
     <message>
@@ -1382,12 +1382,12 @@ Proces migrácie vytvorí zálohu peňaženky pred samotnou migráciou. Tento z�
         <translation type="unfinished">Vyberte si adresár s dátami</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">V tejto zložke bude uložených aspoň %1 GB dát a postupom času sa bude zväčšovať.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">V tejto zložke bude uložených aspoň %1 MB dát a postupom času sa bude zväčšovať.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Približne %1 GB dát bude uložených v tejto zložke.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Približne %1 MB dát bude uložených v tejto zložke.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1439,8 +1439,8 @@ Proces migrácie vytvorí zálohu peňaženky pred samotnou migráciou. Tento z�
         <translation type="unfinished">Prvá synchronizácia je veľmi náročná a môžu sa tak vďaka nej začat na Vašom počítači prejavovať doteraz skryté hardwarové problémy. Vždy, keď spustíte %1, bude sťahovanie pokračovať tam, kde naposledy skončilo.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Hneď po stlačení OK, %1 začne sťahovať a spracovávať celý %4 reťazec blokov (%2GB), začínajúc najstaršími transakciami z roku %3, kedy bol %4 spustený.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Hneď po stlačení OK, %1 začne sťahovať a spracovávať celý %4 reťazec blokov (%2MB), začínajúc najstaršími transakciami z roku %3, kedy bol %4 spustený.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4115,8 +4115,8 @@ Choďte do Súbor &gt; Otvoriť Peňaženku, pre načítanie peňaženky.
         <translation type="unfinished">Nie je možné vylepšiť peňaženku bez rozdelenia HD z verzie %i na verziu %i bez upgradovania na podporu kľúčov pred rozdelením. Prosím použite verziu %i alebo nezadávajte verziu.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Miesto na disku pre %s nemusí obsiahnuť súbory blokov. V tomto priečinku bude uložených okolo %u GB údajov.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Miesto na disku pre %s nemusí obsiahnuť súbory blokov. V tomto priečinku bude uložených okolo %u MB údajov.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

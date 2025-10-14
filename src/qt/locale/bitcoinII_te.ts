@@ -1234,33 +1234,33 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">బిట్కోయిన్</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB స్థలం అందుబాటులో ఉంది</numerusform>
-            <numerusform>%n GB స్థలం అందుబాటులో ఉంది</numerusform>
+            <numerusform>%n MB స్థలం అందుబాటులో ఉంది</numerusform>
+            <numerusform>%n MB స్థలం అందుబాటులో ఉంది</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(అవసరమైన %n GB)</numerusform>
-            <numerusform>(అవసరమైన %n GB)</numerusform>
+            <numerusform>(అవసరమైన %n MB)</numerusform>
+            <numerusform>(అవసరమైన %n MB)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(పూర్తి గొలుసు కోసం %n GB అవసరం)</numerusform>
-            <numerusform>(పూర్తి గొలుసు కోసం %n GB అవసరం)</numerusform>
+            <numerusform>(పూర్తి గొలుసు కోసం %n MB అవసరం)</numerusform>
+            <numerusform>(పూర్తి గొలుసు కోసం %n MB అవసరం)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">ఈ డైరెక్టరీలో కనీసం %1 GB డేటా నిల్వ చేయబడుతుంది మరియు ఇది కాలక్రమేణా పెరుగుతుంది.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">ఈ డైరెక్టరీలో కనీసం %1 MB డేటా నిల్వ చేయబడుతుంది మరియు ఇది కాలక్రమేణా పెరుగుతుంది.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">ఈ డైరెక్టరీలో సుమారు %1 GB డేటా నిల్వ చేయబడుతుంది.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">ఈ డైరెక్టరీలో సుమారు %1 MB డేటా నిల్వ చేయబడుతుంది.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1303,8 +1303,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">బ్లాక్ చైన్ నిల్వను పరిమితం చేయండి</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>Use the default data directory</source>

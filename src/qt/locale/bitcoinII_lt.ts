@@ -987,7 +987,7 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -995,15 +995,15 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(reikalinga %n GB)</numerusform>
-            <numerusform>(reikalinga %n GB)</numerusform>
-            <numerusform>(reikalinga %n GB)</numerusform>
+            <numerusform>(reikalinga %n MB)</numerusform>
+            <numerusform>(reikalinga %n MB)</numerusform>
+            <numerusform>(reikalinga %n MB)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1011,12 +1011,12 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Šiame kataloge bus saugomi bent %1 GB duomenų, kurie laikui bėgant didės.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Šiame kataloge bus saugomi bent %1 MB duomenų, kurie laikui bėgant didės.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Šiame kataloge bus saugoma maždaug apie %1 GB duomenų.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Šiame kataloge bus saugoma maždaug apie %1 MB duomenų.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1056,8 +1056,8 @@ Pasirašymas galimas tik su 'legacy' tipo adresais.</translation>
         <translation type="unfinished">Kadangi tai yra pirmas kartas, kai programa paleidžiama, galite pasirinkti, kur %1 išsaugos savo duomenis.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>

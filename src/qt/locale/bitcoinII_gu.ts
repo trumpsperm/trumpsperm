@@ -1363,24 +1363,24 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">બીટકોઈન </translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>1%n GB ની જગ્યા ઉપલબ્ધ છે</numerusform>
-            <numerusform>%n GB ની જગ્યા ઉપલબ્ધ છે</numerusform>
+            <numerusform>1%n MB ની જગ્યા ઉપલબ્ધ છે</numerusform>
+            <numerusform>%n MB ની જગ્યા ઉપલબ્ધ છે</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(1%n GB ની જરૂર છે)</numerusform>
-            <numerusform>(%n GB ની જરૂર છે)</numerusform>
+            <numerusform>(1%n MB ની જરૂર છે)</numerusform>
+            <numerusform>(%n MB ની જરૂર છે)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(સંપૂર્ણ સાંકળ માટે 1%n GB જરૂરી છે)</numerusform>
-            <numerusform>(સંપૂર્ણ સાંકળ માટે %n GB જરૂરી છે)</numerusform>
+            <numerusform>(સંપૂર્ણ સાંકળ માટે 1%n MB જરૂરી છે)</numerusform>
+            <numerusform>(સંપૂર્ણ સાંકળ માટે %n MB જરૂરી છે)</numerusform>
         </translation>
     </message>
     <message>
@@ -1388,12 +1388,12 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">ડેટા ડિરેક્ટરી પસંદ કરો</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">આ નિર્દેશિકામાં ઓછામાં ઓછો %1 GB ડેટા સંગ્રહિત થશે, અને તે સમય જતાં વધશે.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">આ નિર્દેશિકામાં ઓછામાં ઓછો %1 MB ડેટા સંગ્રહિત થશે, અને તે સમય જતાં વધશે.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">આ ડિરેક્ટરીમાં અંદાજે %1 GB ડેટા સ્ટોર કરવામાં આવશે.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">આ ડિરેક્ટરીમાં અંદાજે %1 MB ડેટા સ્ટોર કરવામાં આવશે.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1440,16 +1440,16 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">આ સેટિંગને પાછું ફેરવવા માટે સમગ્ર બ્લોકચેનને ફરીથી ડાઉનલોડ કરવાની જરૂર છે. પહેલા સંપૂર્ણ શૃંખલાને ડાઉનલોડ કરવી અને પછીથી તેને કાપવું વધુ ઝડપી છે. કેટલીક અદ્યતન સુવિધાઓને અક્ષમ કરે છે.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">જીબી (GB)</translation>
+        <source> MB</source>
+        <translation type="unfinished">જીબી (MB)</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">આ પ્રારંભિક સિંક્રનાઇઝેશન ખૂબ જ માગણી કરે છે, અને તમારા કમ્પ્યુટર સાથેની હાર્ડવેર સમસ્યાઓનો પર્દાફાશ કરી શકે છે જે અગાઉ કોઈનું ધ્યાન ગયું ન હતું. દરેક વખતે જ્યારે તમે ચાલુ કરો %1, ત્યારે તે ડાઉનલોડ કરવાનું ચાલુ રાખશે જ્યાંથી તેણે છોડ્યું હતું.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">જ્યારે તમે ઓકે ક્લિક કરો છો,%1સંપૂર્ણ ડાઉનલોડ અને પ્રક્રિયા કરવાનું શરૂ કરશે%4બ્લોક ચેન (સાંકળ) (%2GB) માં સૌથી પહેલાના વ્યવહારોથી શરૂ થાય છે%3જ્યારે%4શરૂઆતમાં લોન્ચ કર્યું.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">જ્યારે તમે ઓકે ક્લિક કરો છો,%1સંપૂર્ણ ડાઉનલોડ અને પ્રક્રિયા કરવાનું શરૂ કરશે%4બ્લોક ચેન (સાંકળ) (%2MB) માં સૌથી પહેલાના વ્યવહારોથી શરૂ થાય છે%3જ્યારે%4શરૂઆતમાં લોન્ચ કર્યું.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

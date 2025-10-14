@@ -1347,24 +1347,24 @@ Això és ideal per a carteres de mode només lectura.</translation>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB d'espai lliure disponible</numerusform>
-            <numerusform>%n GB d'espai lliure disponibles</numerusform>
+            <numerusform>%n MB d'espai lliure disponible</numerusform>
+            <numerusform>%n MB d'espai lliure disponibles</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(Un GB necessari)</numerusform>
-            <numerusform>(de %n GB necessàris)</numerusform>
+            <numerusform>(Un MB necessari)</numerusform>
+            <numerusform>(de %n MB necessàris)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(Un GB necessari per a la cadena completa)</numerusform>
-            <numerusform>(Un GB necessari per a la cadena completa)</numerusform>
+            <numerusform>(Un MB necessari per a la cadena completa)</numerusform>
+            <numerusform>(Un MB necessari per a la cadena completa)</numerusform>
         </translation>
     </message>
     <message>
@@ -1372,12 +1372,12 @@ Això és ideal per a carteres de mode només lectura.</translation>
         <translation type="unfinished">Trieu un directori de dades</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Almenys %1 GB de dades s'emmagatzemaran en aquest directori, i creixerà amb el temps.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Almenys %1 MB de dades s'emmagatzemaran en aquest directori, i creixerà amb el temps.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Aproximadament %1GB de dades seran emmagetzamades en aquest directori.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Aproximadament %1MB de dades seran emmagetzamades en aquest directori.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1424,8 +1424,8 @@ Això és ideal per a carteres de mode només lectura.</translation>
         <translation type="unfinished">Aquesta sincronització inicial és molt exigent i pot exposar problemes de maquinari amb l'equip que anteriorment havien passat desapercebuts. Cada vegada que executeu %1, continuarà descarregant des del punt on es va deixar.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Quan feu clic a D'acord, %1 començarà a descarregar i processar la cadena de blocs %4 completa (%2 GB) començant per les primeres transaccions de %3, any de llençament inicial de %4.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Quan feu clic a D'acord, %1 començarà a descarregar i processar la cadena de blocs %4 completa (%2 MB) començant per les primeres transaccions de %3, any de llençament inicial de %4.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

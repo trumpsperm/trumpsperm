@@ -1178,23 +1178,23 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ប៊ីតខញ</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%nGB នៃកន្លែងទំនេរ</numerusform>
+            <numerusform>%nMB នៃកន្លែងទំនេរ</numerusform>
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(នៃ%n GB ដែលត្រូវការ)</numerusform>
+            <numerusform>(នៃ%n MB ដែលត្រូវការ)</numerusform>
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB ត្រូវការសម្រាប់ខ្សែសង្វាក់ពេញលេញ)</numerusform>
+            <numerusform>(%n MB ត្រូវការសម្រាប់ខ្សែសង្វាក់ពេញលេញ)</numerusform>
             <numerusform />
         </translation>
     </message>
@@ -1219,12 +1219,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">កំណត់ការផ្ទុកខ្សែសង្វាក់ប្លុកទៅ</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">នៅពេលអ្នកចុចយល់ព្រម %1វានឹងចាប់ផ្តើមទាញយក និងដំណើរការខ្សែសង្វាក់ប្លុក%4ពេញលេញ (%2GB) ដោយចាប់ផ្តើមជាមួយនឹងប្រតិបត្តិការដំបូងបំផុតនៅ%3ពេល%4ចាប់ផ្តើមដំបូង។</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">នៅពេលអ្នកចុចយល់ព្រម %1វានឹងចាប់ផ្តើមទាញយក និងដំណើរការខ្សែសង្វាក់ប្លុក%4ពេញលេញ (%2MB) ដោយចាប់ផ្តើមជាមួយនឹងប្រតិបត្តិការដំបូងបំផុតនៅ%3ពេល%4ចាប់ផ្តើមដំបូង។</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1371,7 +1371,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;ជម្រើសការកែសម្រួលឡើងវិញ</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">ជីហ្គាប៊ៃ </translation>
     </message>
     <message>

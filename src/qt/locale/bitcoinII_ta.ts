@@ -985,25 +985,25 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform>(%n ஜிபி தேவை)</numerusform>
             <numerusform>(%n ஜிபி தேவை)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
         <translation type="unfinished">குறைந்தது %1 ஜிபி தரவு இந்த அடைவில் சேமிக்கப்படும், மேலும் காலப்போக்கில் அது வளரும்.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
         <translation type="unfinished">இந்த அடைவில் %1 ஜிபி தரவு சேமிக்கப்படும்.</translation>
     </message>
     <message numerus="yes">
@@ -1199,7 +1199,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">பிரவுன் &amp; தடுப்பு சேமிப்பு</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">ஜிபி</translation>
     </message>
     <message>

@@ -420,7 +420,7 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         </translation>
     </message>
     <message>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished">%1 Gb</translation>
     </message>
     <message>
@@ -1323,24 +1323,24 @@ Het migratieproces maakt voorafgaand aan het migreren een backup van de wallet. 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB beschikbare ruimte </numerusform>
-            <numerusform>%n GB beschikbare ruimte </numerusform>
+            <numerusform>%n MB beschikbare ruimte </numerusform>
+            <numerusform>%n MB beschikbare ruimte </numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(van %n GB nodig)</numerusform>
-            <numerusform>(van %n GB nodig)</numerusform>
+            <numerusform>(van %n MB nodig)</numerusform>
+            <numerusform>(van %n MB nodig)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB nodig voor volledige keten)</numerusform>
-            <numerusform>(%n GB nodig voor volledige keten)</numerusform>
+            <numerusform>(%n MB nodig voor volledige keten)</numerusform>
+            <numerusform>(%n MB nodig voor volledige keten)</numerusform>
         </translation>
     </message>
     <message>
@@ -1348,12 +1348,12 @@ Het migratieproces maakt voorafgaand aan het migreren een backup van de wallet. 
         <translation type="unfinished">Stel gegevensmap in</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Tenminste %1 GB aan data zal worden opgeslagen in deze map, en dit zal naarmate de tijd voortschrijdt groeien.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Tenminste %1 MB aan data zal worden opgeslagen in deze map, en dit zal naarmate de tijd voortschrijdt groeien.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Gemiddeld %1 GB aan data zal worden opgeslagen in deze map.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Gemiddeld %1 MB aan data zal worden opgeslagen in deze map.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1400,16 +1400,16 @@ Het migratieproces maakt voorafgaand aan het migreren een backup van de wallet. 
         <translation type="unfinished">Om deze instelling weer ongedaan te maken moet de volledige blockchain opnieuw gedownload worden. Het is sneller om eerst de volledige blockchain te downloaden en deze later te prunen. Schakelt een aantal geavanceerde functies uit.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Deze initiële synchronisatie is heel veeleisend, en kan hardware problemen met uw computer blootleggen die voorheen onopgemerkt bleven. Elke keer dat %1 gebruikt word, zal verdergegaan worden waar gebleven is.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Als u op OK klikt, dan zal %1 beginnen met downloaden en verwerken van de volledige %4 blokketen (%2GB) startend met de eerste transacties in %3 toen %4 initeel werd gestart.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Als u op OK klikt, dan zal %1 beginnen met downloaden en verwerken van de volledige %4 blokketen (%2MB) startend met de eerste transacties in %3 toen %4 initeel werd gestart.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -3941,8 +3941,8 @@ Ga naar Bestand &gt; Wallet openen om een wallet te laden.
         <translation type="unfinished">Kan een non HD split wallet niet upgraden van versie %i naar versie %i zonder pre split keypool te ondersteunen. Gebruik versie %i of specificeer geen versienummer.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Schijfruimte voor %s is mogelijk niet geschikt voor de blokbestanden. In deze map wordt ongeveer %u GB aan gegevens opgeslagen.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Schijfruimte voor %s is mogelijk niet geschikt voor de blokbestanden. In deze map wordt ongeveer %u MB aan gegevens opgeslagen.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

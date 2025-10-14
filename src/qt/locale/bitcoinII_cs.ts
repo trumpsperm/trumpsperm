@@ -1265,27 +1265,27 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB místa k dispozici</numerusform>
-            <numerusform>%n GB místa k dispozici</numerusform>
-            <numerusform>%n GB místa k dispozici</numerusform>
+            <numerusform>%n MB místa k dispozici</numerusform>
+            <numerusform>%n MB místa k dispozici</numerusform>
+            <numerusform>%n MB místa k dispozici</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(z %n GB požadovaných)</numerusform>
-            <numerusform>(z %n GB požadovaných)</numerusform>
-            <numerusform>(z %n GB požadovaných)</numerusform>
+            <numerusform>(z %n MB požadovaných)</numerusform>
+            <numerusform>(z %n MB požadovaných)</numerusform>
+            <numerusform>(z %n MB požadovaných)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB požadovaných pro plný řetězec)</numerusform>
-            <numerusform>(%n GB požadovaných pro plný řetězec)</numerusform>
-            <numerusform>(%n GB požadovaných pro plný řetězec)</numerusform>
+            <numerusform>(%n MB požadovaných pro plný řetězec)</numerusform>
+            <numerusform>(%n MB požadovaných pro plný řetězec)</numerusform>
+            <numerusform>(%n MB požadovaných pro plný řetězec)</numerusform>
         </translation>
     </message>
     <message>
@@ -1293,12 +1293,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Vyberte adresář dat</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Bude proto potřebovat do tohoto adresáře uložit nejméně %1 GB dat – tohle číslo navíc bude v průběhu času růst.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Bude proto potřebovat do tohoto adresáře uložit nejméně %1 MB dat – tohle číslo navíc bude v průběhu času růst.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Bude proto potřebovat do tohoto adresáře uložit přibližně %1 GB dat.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Bude proto potřebovat do tohoto adresáře uložit přibližně %1 MB dat.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1346,16 +1346,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Vrácení tohoto nastavení vyžaduje opětovné stažení celého blockchainu. Je rychlejší stáhnout celý řetězec nejprve a prořezat jej později. Některé pokročilé funkce budou zakázány, dokud celý blockchain nebude stažen nanovo.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Prvotní synchronizace je velice náročná, a mohou se tak díky ní začít na tvém počítači projevovat dosud skryté hardwarové problémy. Pokaždé, když spustíš %1, bude stahování pokračovat tam, kde skončilo.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Jakmile stiskneš OK, %1 začne stahovat a zpracovávat celý %4ový blockchain (%2 GB), počínaje nejstaršími transakcemi z roku %3, kdy byl %4 spuštěn.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Jakmile stiskneš OK, %1 začne stahovat a zpracovávat celý %4ový blockchain (%2 MB), počínaje nejstaršími transakcemi z roku %3, kdy byl %4 spuštěn.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -3959,8 +3959,8 @@ Přejděte do Soubor &gt; Otevřít peněženku pro načtení peněženky.
         <translation type="unfinished">Nelze zvýšit verzi ne-HD dělené peněženky z verze %i na verzi %i bez aktualizace podporující pre-split keypool. Použijte prosím verzi %i nebo verzi neuvádějte.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Místo na disku pro  %s nemusí obsahovat soubory bloku. V tomto adresáři bude uloženo přibližně  %u GB dat.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Místo na disku pro  %s nemusí obsahovat soubory bloku. V tomto adresáři bude uloženo přibližně  %u MB dat.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

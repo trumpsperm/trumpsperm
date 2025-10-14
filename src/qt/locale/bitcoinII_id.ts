@@ -923,21 +923,21 @@ Proses migrasi akan mencadangkan dompet sebelum melakukan pemindahan. Fail cadan
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB ruang tersedia</numerusform>
+            <numerusform>%n MB ruang tersedia</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(dari %n GB yang dibutuhkan)</numerusform>
+            <numerusform>(dari %n MB yang dibutuhkan)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB dibutuhkan untuk rantai penuh)</numerusform>
+            <numerusform>(%n MB dibutuhkan untuk rantai penuh)</numerusform>
         </translation>
     </message>
     <message>
@@ -945,12 +945,12 @@ Proses migrasi akan mencadangkan dompet sebelum melakukan pemindahan. Fail cadan
         <translation type="unfinished">Pilih direktori data</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Setidaknya %1 GB data akan disimpan di direktori ini dan akan berkembang seiring berjalannya waktu.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Setidaknya %1 MB data akan disimpan di direktori ini dan akan berkembang seiring berjalannya waktu.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">%1 GB data akan disimpan di direktori ini.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">%1 MB data akan disimpan di direktori ini.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -996,16 +996,16 @@ Proses migrasi akan mencadangkan dompet sebelum melakukan pemindahan. Fail cadan
         <translation type="unfinished">Mengembalikan pengaturan perlu mengunduh ulang seluruh blockchain. Lebih cepat mengunduh rantai penuh terlebih dahulu dan memangkasnya kemudian. Menonaktifkan beberapa fitur lanjutan.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Sinkronisasi awal sangat berat dan mungkin akan menunjukkan permasalahan pada perangkat keras komputer Anda yang sebelumnya tidak tampak. Setiap kali Anda menjalankan %1, aplikasi ini akan melanjutkan pengunduhan dari posisi terakhir.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Ketika Anda mengklik OK, %1 akan mulai mengunduh dan memproses %4 block chain penuh (%2 GB) dimulai dari transaksi-transaksi awal di %3 saat %4 diluncurkan pertama kali.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Ketika Anda mengklik OK, %1 akan mulai mengunduh dan memproses %4 block chain penuh (%2 MB) dimulai dari transaksi-transaksi awal di %3 saat %4 diluncurkan pertama kali.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -1527,8 +1527,8 @@ Proses migrasi akan mencadangkan dompet sebelum melakukan pemindahan. Fail cadan
         <translation type="unfinished">%s meminta mendengarkan di port %u. Port ini dianggap "buruk" dan oleh karena itu tidak mungkin peer lain akan terhubung kesini. Lihat doc/p2p-bad-ports.md untuk detail dan daftar lengkap.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Ruang penyimpanan %s mungkin tidak mengakomodasi berkas blok. Perkiraan %u GB data akan disimpan di direktori ini.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Ruang penyimpanan %s mungkin tidak mengakomodasi berkas blok. Perkiraan %u MB data akan disimpan di direktori ini.</translation>
     </message>
     <message>
         <source>Error loading wallet. Wallet requires blocks to be downloaded, and software does not currently support loading wallets while blocks are being downloaded out of order when using assumeutxo snapshots. Wallet should be able to load successfully after node sync reaches height %s</source>

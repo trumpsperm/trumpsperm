@@ -398,7 +398,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 Мегабайт</translation>
     </message>
     <message>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished">%1 Гигабайт</translation>
     </message>
     <message>
@@ -1327,21 +1327,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Биткоин</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform>%n ГБ свободни</numerusform>
             <numerusform>%nГигабайти свободни</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform>фе</numerusform>
             <numerusform>(от %n гигабайта са нужни)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1352,12 +1352,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Изберете директория за данни</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Най малко %1 GB данни ще бъдат запаметени в тази директория, и ще нарастват през времето.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Най малко %1 MB данни ще бъдат запаметени в тази директория, и ще нарастват през времето.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Около %1 GB данни ще бъдат запаметени в тази директория.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Около %1 MB данни ще бъдат запаметени в тази директория.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1404,7 +1404,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Връщането на тази настройка изисква повторно изтегляне на цялата секторна верига. По-бързо е първо да изтеглите пълната верига и да я подрязвате по-късно. Деактивира някои разширени функции.</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished">ГБ</translation>
     </message>
     <message>
@@ -1592,7 +1592,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Съкратете &amp;блоковото хранилище до</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">ГБ</translation>
     </message>
     <message>

@@ -441,8 +441,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 MB (百萬位元組)</translation>
     </message>
     <message>
-        <source>%1 GB</source>
-        <translation type="unfinished">%1 GB (十億位元組)</translation>
+        <source>%1 MB</source>
+        <translation type="unfinished">%1 MB (十億位元組)</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -1313,21 +1313,21 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%nGB可用</numerusform>
+            <numerusform>%nMB可用</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(需要 %n GB)</numerusform>
+            <numerusform>(需要 %n MB)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>（完整區塊鏈需要％n GB）</numerusform>
+            <numerusform>（完整區塊鏈需要％n MB）</numerusform>
         </translation>
     </message>
     <message>
@@ -1335,12 +1335,12 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">指定數據質料目錄</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">在這個目錄中至少會存放 %1 GB 的資料，並且還會隨時間增加。</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">在這個目錄中至少會存放 %1 MB 的資料，並且還會隨時間增加。</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">在這個目錄中大約會存放 %1 GB 的資料。</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">在這個目錄中大約會存放 %1 MB 的資料。</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1390,8 +1390,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">一開始的同步作業非常的耗費資源，並且可能會暴露出之前沒被發現的電腦硬體問題。每次執行 %1 的時候都會繼續先前未完成的下載。</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">當你點擊「確認」，%1會開始下載，並從%3年最早的交易，處裡整個%4區塊鏈(大小:%2GB)</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">當你點擊「確認」，%1會開始下載，並從%3年最早的交易，處裡整個%4區塊鏈(大小:%2MB)</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -1595,8 +1595,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">修剪區塊資料大小到</translation>
     </message>
     <message>
-        <source>GB</source>
-        <translation type="unfinished">GB (十億位元組)</translation>
+        <source>MB</source>
+        <translation type="unfinished">MB (十億位元組)</translation>
     </message>
     <message>
         <source>Reverting this setting requires re-downloading the entire blockchain.</source>
@@ -4053,8 +4053,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">無法在不支援「分割前的金鑰池」（pre split keypool）的情況下把「非分割HD錢包」（non HD split wallet）從版本%i升级到%i。請使用版本號%i，或壓根不要指定版本號。</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">%s的硬碟空間可能無法容納區塊文件。 大約要在這個目錄中儲存 %uGB的數據。</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">%s的硬碟空間可能無法容納區塊文件。 大約要在這個目錄中儲存 %uMB的數據。</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

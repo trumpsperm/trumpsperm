@@ -1339,24 +1339,24 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%nGB διαθέσιμου χώρου</numerusform>
-            <numerusform>%nGB διαθέσιμου χώρου</numerusform>
+            <numerusform>%nMB διαθέσιμου χώρου</numerusform>
+            <numerusform>%nMB διαθέσιμου χώρου</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(από το %n GB που απαιτείται)</numerusform>
-            <numerusform>(από τα %n GB που απαιτούνται)</numerusform>
+            <numerusform>(από το %n MB που απαιτείται)</numerusform>
+            <numerusform>(από τα %n MB που απαιτούνται)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB απαιτούνται για την πλήρη αλυσίδα)</numerusform>
-            <numerusform>(%n GB απαιτούνται για την πλήρη αλυσίδα)</numerusform>
+            <numerusform>(%n MB απαιτούνται για την πλήρη αλυσίδα)</numerusform>
+            <numerusform>(%n MB απαιτούνται για την πλήρη αλυσίδα)</numerusform>
         </translation>
     </message>
     <message>
@@ -1364,12 +1364,12 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Επιλογή καταλόγου δεδομένων</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Τουλάχιστον %1 GB δεδομένων θα αποθηκευτούν σε αυτόν τον κατάλογο και θα αυξηθεί με την πάροδο του χρόνου.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Τουλάχιστον %1 MB δεδομένων θα αποθηκευτούν σε αυτόν τον κατάλογο και θα αυξηθεί με την πάροδο του χρόνου.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Περίπου %1 GB δεδομένων θα αποθηκεύονται σε αυτόν τον κατάλογο.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Περίπου %1 MB δεδομένων θα αποθηκεύονται σε αυτόν τον κατάλογο.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1416,8 +1416,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Αυτός ο αρχικός συγχρονισμός είναι πολύ απαιτητικός και μπορεί να εκθέσει προβλήματα υλικού με τον υπολογιστή σας, τα οποία προηγουμένως είχαν περάσει απαρατήρητα. Κάθε φορά που θα εκτελέσετε το %1, θα συνεχίσει να κατεβαίνει εκεί όπου έχει σταματήσει.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Αφού πατήσετε OK, το %1 θα ξεκινήσει τη λήψη και την επεξεργασία της πλήρους αλυσίδας μπλοκ %4 (%2GB) ξεκινώντας με τις πρώτες συναλλαγές στο %3 όταν πρωτο-ξεκίνησε το %4.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Αφού πατήσετε OK, το %1 θα ξεκινήσει τη λήψη και την επεξεργασία της πλήρους αλυσίδας μπλοκ %4 (%2MB) ξεκινώντας με τις πρώτες συναλλαγές στο %3 όταν πρωτο-ξεκίνησε το %4.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

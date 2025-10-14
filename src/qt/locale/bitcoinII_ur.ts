@@ -1195,21 +1195,21 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">بٹ کوائن</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1244,7 +1244,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">اس ترتیب کو واپس کرنے کے لیے پورے بلاکچین کو دوبارہ ڈاؤن لوڈ کرنے کی ضرورت ہے۔ پہلے پوری چین کو ڈاؤن لوڈ کرنا اور بعد میں اسے کاٹنا تیز تر ہے۔ کچھ جدید خصوصیات کو غیر فعال کرتا ہے۔</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished">جی بی</translation>
     </message>
     <message>
@@ -1396,7 +1396,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">اور نیٹ ورک</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">جی بی</translation>
     </message>
     <message>

@@ -1185,33 +1185,33 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB fri plads tilgængelig</numerusform>
-            <numerusform>%n GB fri plads tilgængelig</numerusform>
+            <numerusform>%n MB fri plads tilgængelig</numerusform>
+            <numerusform>%n MB fri plads tilgængelig</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(ud af %n GB nødvendig)</numerusform>
-            <numerusform>(ud af %n GB nødvendig)</numerusform>
+            <numerusform>(ud af %n MB nødvendig)</numerusform>
+            <numerusform>(ud af %n MB nødvendig)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB nødvendig for komplet kæde)</numerusform>
-            <numerusform>(%n GB nødvendig for komplet kæde)</numerusform>
+            <numerusform>(%n MB nødvendig for komplet kæde)</numerusform>
+            <numerusform>(%n MB nødvendig for komplet kæde)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Mindst %1 GB data vil blive gemt i denne mappe, og det vil vokse over tid.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Mindst %1 MB data vil blive gemt i denne mappe, og det vil vokse over tid.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Omtrent %1 GB data vil blive gemt i denne mappe.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Omtrent %1 MB data vil blive gemt i denne mappe.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1258,16 +1258,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ændring af denne indstilling senere kræver gendownload af hele blokkæden. Det er hurtigere at downloade den komplette kæde først og beskære den senere. Slår nogle avancerede funktioner fra.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Denne indledningsvise synkronisering er meget krævende, og den kan potentielt afsløre hardwareproblemer med din computer, som du ellers ikke har lagt mærke til. Hver gang, du kører %1, vil den fortsætte med at downloade, hvor den sidst slap.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Når du klikker OK, vil %1 begynde at downloade og bearbejde den fulde %4-blokkæde (%2 GB), startende med de tidligste transaktioner i %3, da %4 først startede.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Når du klikker OK, vil %1 begynde at downloade og bearbejde den fulde %4-blokkæde (%2 MB), startende med de tidligste transaktioner i %3, da %4 først startede.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

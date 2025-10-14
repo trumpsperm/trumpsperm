@@ -763,29 +763,29 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Um það bil %1 GB af gögnum verða geymd í þessari möppu.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Um það bil %1 MB af gögnum verða geymd í þessari möppu.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1183,8 +1183,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%s tókst ekki að staðfesta -assumeutxo skyndimyndastöðu. Þetta gefur til kynna vélbúnaðarvandamál, eða villu í hugbúnaðinum, eða slæma hugbúnaðarbreytingu sem gerði kleift að hlaða ógildri skyndimynd. Sem afleiðing af þessu mun hnúturinn lokast og hætta að nota hvaða ástand sem var byggt á skyndimyndinni og endurstilla keðjuhæðina úr %d í %d. Við næstu endurræsingu mun hnúturinn halda áfram samstillingu frá %d án þess að nota nokkur skyndimyndagögn. Vinsamlegast tilkynntu þetta atvik til %s, þar á meðal hvernig þú náðir myndinni. Ógilt skyndimynd chainstate verður skilið eftir á disknum ef það er gagnlegt við að greina vandamálið sem olli þessari villu.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Diskapláss fyrir %s rúmar kannski ekki blokkarskrárnar. Um það bil %u GB af gögnum verða geymd í þessari möppu.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Diskapláss fyrir %s rúmar kannski ekki blokkarskrárnar. Um það bil %u MB af gögnum verða geymd í þessari möppu.</translation>
     </message>
     <message>
         <source>Error loading wallet. Wallet requires blocks to be downloaded, and software does not currently support loading wallets while blocks are being downloaded out of order when using assumeutxo snapshots. Wallet should be able to load successfully after node sync reaches height %s</source>

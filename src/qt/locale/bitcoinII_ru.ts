@@ -1298,7 +1298,7 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform>%n ГБ места доступно</numerusform>
             <numerusform>%n ГБ места доступно</numerusform>
@@ -1306,7 +1306,7 @@ The migration process will create a backup of the wallet before migrating. This 
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform>(из требуемого %n ГБ)</numerusform>
             <numerusform>(из требуемых %n ГБ)</numerusform>
@@ -1314,7 +1314,7 @@ The migration process will create a backup of the wallet before migrating. This 
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform>(%n ГБ необходим для полной цепочки)</numerusform>
             <numerusform>(%n ГБ необходимо для полной цепочки)</numerusform>
@@ -1326,11 +1326,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Выберите каталог для данных</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
         <translation type="unfinished">В этот каталог будет сохранено не менее %1 ГБ данных, и со временем их объём будет увеличиваться.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
         <translation type="unfinished">В этот каталог будет сохранено приблизительно %1 ГБ данных.</translation>
     </message>
     <message numerus="yes">
@@ -1379,7 +1379,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Возврат этого параметра в прежнее положение потребует повторного скачивания всей цепочки блоков. Быстрее будет сначала скачать полную цепочку и обрезать позднее. Отключает некоторые расширенные функции.</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished"> ГБ</translation>
     </message>
     <message>
@@ -1387,7 +1387,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Эта первичная синхронизация очень требовательна к ресурсам и может выявить проблемы с аппаратным обеспечением вашего компьютера, которые ранее оставались незамеченными. Каждый раз, когда вы запускаете %1, скачивание будет продолжено с места остановки.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
         <translation type="unfinished">Когда вы нажмете ОК, %1 начнет загружать и обрабатывать полную цепочку блоков %4 (%2 ГБ)  начиная с самых ранних транзакций в %3, когда %4 был первоначально запущен.</translation>
     </message>
     <message>
@@ -1575,7 +1575,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Обрезать &amp;объём хранимых блоков до</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">ГБ</translation>
     </message>
     <message>

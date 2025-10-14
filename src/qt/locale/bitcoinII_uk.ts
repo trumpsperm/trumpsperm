@@ -462,7 +462,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 МБ</translation>
     </message>
     <message>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished">%1 ГБ</translation>
     </message>
     <message>
@@ -1404,7 +1404,7 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform>Доступний простір: %n ГБ</numerusform>
             <numerusform>Доступний простір: %n ГБ</numerusform>
@@ -1412,7 +1412,7 @@ The migration process will create a backup of the wallet before migrating. This 
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform>(в той час, як необхідно %n ГБ)</numerusform>
             <numerusform>(в той час, як необхідно %n ГБ)</numerusform>
@@ -1420,7 +1420,7 @@ The migration process will create a backup of the wallet before migrating. This 
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform>(%n ГБ необхідно для повного блокчейну)</numerusform>
             <numerusform>(%n ГБ необхідно для повного блокчейну)</numerusform>
@@ -1432,11 +1432,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Вибрати каталог даних</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
         <translation type="unfinished">Принаймні, %1 ГБ даних буде збережено в цьому каталозі, і воно з часом зростатиме.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
         <translation type="unfinished">Близько %1 ГБ даних буде збережено в цьому каталозі.</translation>
     </message>
     <message numerus="yes">
@@ -1485,7 +1485,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Повернення цього параметра вимагає повторне завантаження всього блокчейну. Швидше спочатку завантажити повний блокчейн і скоротити його пізніше. Вимикає деякі розширені функції.</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished">ГБ</translation>
     </message>
     <message>
@@ -1493,7 +1493,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Ця початкова синхронізація є дуже вимогливою, і може виявити проблеми з апаратним забезпеченням комп'ютера, які раніше не були непоміченими. Кожен раз, коли ви запускаєте %1, він буде продовжувати завантаження там, де він зупинився.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
         <translation type="unfinished">Після натискання кнопки «OK» %1 почне завантажувати та обробляти повний блокчейн %4 (%2 ГБ), починаючи з найбільш ранніх транзакцій у %3, коли було запущено %4.</translation>
     </message>
     <message>
@@ -1698,7 +1698,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">Скоротити обсяг сховища &amp;блоків до</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">ГБ</translation>
     </message>
     <message>
@@ -4214,7 +4214,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Неможливо оновити розділений не-HD гаманець з версії %i до версії %i без оновлення для підтримки попередньо розділеного пула ключів. Використовуйте версію %i або не вказуйте версію.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
         <translation type="unfinished">Дисковий простір для %s може не вмістити файли блоків. Приблизно %u ГБ даних буде зберігатися в цьому каталозі.</translation>
     </message>
     <message>

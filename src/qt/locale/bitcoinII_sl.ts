@@ -1281,30 +1281,30 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB prostora na voljo</numerusform>
-            <numerusform>%n GB prostora na voljo</numerusform>
-            <numerusform>%n GB prostora na voljo</numerusform>
-            <numerusform>%n GB prostora na voljo</numerusform>
+            <numerusform>%n MB prostora na voljo</numerusform>
+            <numerusform>%n MB prostora na voljo</numerusform>
+            <numerusform>%n MB prostora na voljo</numerusform>
+            <numerusform>%n MB prostora na voljo</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform>(od potrebnih %n GiB)</numerusform>
             <numerusform>(od potrebnih %n GiB)</numerusform>
             <numerusform>(od potrebnih %n GiB)</numerusform>
-            <numerusform>(od potrebnih %n GB)</numerusform>
+            <numerusform>(od potrebnih %n MB)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB potreben za celotno verigo blokov)</numerusform>
-            <numerusform>(%n GB potrebna za celotno verigo blokov)</numerusform>
-            <numerusform>(%n GB potrebni za celotno verigo blokov)</numerusform>
-            <numerusform>(%n GB potrebnih za celotno verigo blokov)</numerusform>
+            <numerusform>(%n MB potreben za celotno verigo blokov)</numerusform>
+            <numerusform>(%n MB potrebna za celotno verigo blokov)</numerusform>
+            <numerusform>(%n MB potrebni za celotno verigo blokov)</numerusform>
+            <numerusform>(%n MB potrebnih za celotno verigo blokov)</numerusform>
         </translation>
     </message>
     <message>
@@ -1312,12 +1312,12 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Izberite direktorij za podatke</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">V  tem direktoriju bo shranjenih vsaj %1 GB podatkov, količina podatkov pa bo s časom naraščala.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">V  tem direktoriju bo shranjenih vsaj %1 MB podatkov, količina podatkov pa bo s časom naraščala.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">V tem direktoriju bo shranjenih približno %1 GB podatkov.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">V tem direktoriju bo shranjenih približno %1 MB podatkov.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1370,8 +1370,8 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Začetna sinhronizacija je zelo zahtevna in lahko odkrije probleme s strojno opremo v vašem računalniku, ki so prej bili neopaženi. Vsakič, ko zaženete %1, bo le-ta nadaljeval s prenosom, kjer je prejšnjič ostal.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Ko kliknete OK, bo %1 pričel prenašati in obdelovati celotno verigo blokov %4 (%2 GB), začenši s prvimi transakcijami iz %3, ko je bil %4 zagnan.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Ko kliknete OK, bo %1 pričel prenašati in obdelovati celotno verigo blokov %4 (%2 MB), začenši s prvimi transakcijami iz %3, ko je bil %4 zagnan.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -3972,8 +3972,8 @@ Za odpiranje denarnice kliknite Datoteka &gt; Odpri denarnico
         <translation type="unfinished">Ne morem nadgraditi nerazcepljene ne-HD denarnice z verzije %i na verzijo %i brez nadgradnje za podporo za ključe pred razcepitvijo. Prosim, uporabite verzijo %i ali pa ne izberite nobene verzije.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Prostor na disku za %s bo morda premajhen za datoteke z bloki. V tem direktoriju bo shranjenih približno %u GB podatkov.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Prostor na disku za %s bo morda premajhen za datoteke z bloki. V tem direktoriju bo shranjenih približno %u MB podatkov.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

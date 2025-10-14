@@ -440,7 +440,7 @@ La signature n'est possible qu'avec les adresses de type "patrimoine".</translat
         <translation type="unfinished">%1 Mo</translation>
     </message>
     <message>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished">%1 Go</translation>
     </message>
     <message>
@@ -1369,24 +1369,24 @@ Le processus de migration créera une sauvegarde du porte-monnaie avant la migra
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform>%n Go d’espace libre</numerusform>
             <numerusform>%n Go d’espace libre</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(of %n GB needed)</numerusform>
-            <numerusform>(of %n GB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB needed for full chain)</numerusform>
-            <numerusform>(%n GB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
         </translation>
     </message>
     <message>
@@ -1394,11 +1394,11 @@ Le processus de migration créera une sauvegarde du porte-monnaie avant la migra
         <translation type="unfinished">Choisissez un répertoire de donnée</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
         <translation type="unfinished">Au moins %1 Go de données seront stockés dans ce répertoire et sa taille augmentera avec le temps.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
         <translation type="unfinished">Approximativement %1 Go de données seront stockés dans ce répertoire.</translation>
     </message>
     <message numerus="yes">
@@ -1446,7 +1446,7 @@ Le processus de migration créera une sauvegarde du porte-monnaie avant la migra
         <translation type="unfinished">Rétablir ce paramètre à sa valeur antérieure exige de retélécharger la chaîne de blocs dans son intégralité. Il est plus rapide de télécharger la chaîne complète dans un premier temps et de l’élaguer ultérieurement. Désactive certaines fonctions avancées.</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished"> Go</translation>
     </message>
     <message>
@@ -1454,7 +1454,7 @@ Le processus de migration créera une sauvegarde du porte-monnaie avant la migra
         <translation type="unfinished">Cette synchronisation initiale est très exigeante et pourrait exposer des problèmes matériels dans votre ordinateur passés inaperçus auparavant. Chaque fois que vous exécuterez %1, le téléchargement reprendra où il s’était arrêté.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
         <translation type="unfinished">Quand vous cliquerez sur Valider, %1 commencera à télécharger et à traiter l’intégralité de la chaîne de blocs %4 (%2 Go) en débutant avec les transactions les plus anciennes de %3, quand %4 a été lancé initialement.</translation>
     </message>
     <message>
@@ -1659,7 +1659,7 @@ Le processus de migration créera une sauvegarde du porte-monnaie avant la migra
         <translation type="unfinished">Élaguer l’espace de stockage des &amp;blocs jusqu’à</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">Go</translation>
     </message>
     <message>
@@ -4063,7 +4063,7 @@ Accédez à Fichier &gt; Ouvrir un porte-monnaie pour en charger un.
         <translation type="unfinished">Impossible de mettre à niveau un porte-monnaie divisé non-HD de la version %i vers la version %i sans mise à niveau pour prendre en charge la réserve de clés antérieure à la division. Veuillez utiliser la version %i ou ne pas indiquer de version.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
         <translation type="unfinished">L'espace disque %s peut ne pas être suffisant pour les fichiers en bloc. Environ %u Go de données seront stockés dans ce répertoire.</translation>
     </message>
     <message>

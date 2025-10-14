@@ -1295,21 +1295,21 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">ٹ کوائن</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1320,11 +1320,11 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">د ډاټا د فولډر انتخاب کړئ</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">په دې ډایرکټرۍ کې لږ تر لږه د معلوماتو GB %1 ذخیره شي، او دا به د وخت په تیریدو سره وده وکړي."</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">په دې ډایرکټرۍ کې لږ تر لږه د معلوماتو MB %1 ذخیره شي، او دا به د وخت په تیریدو سره وده وکړي."</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
         <translation type="unfinished">"تقریباً %1 جی بی معلومات به په دې ډایرکټرۍ کې ذخیره شي.</translation>
     </message>
     <message numerus="yes">
@@ -1372,7 +1372,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">د دې تنظیم بدلول د ټول بلاکچین بیا ډاونلوډ کولو ته اړتیا لري. لومړی د بشپړ زنځیر ډاونلوډ کول او وروسته یې پرې کول ګړندي دي. ځینې پرمختللې ځانګړتیاوې غیر فعالوي</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished">په پښتو کې د "ګیګابایټ" په توګه ژباړل کېږي که چېرې دا د ذخیرې واحد وي. که تاسو د بل څه لپاره غواړئ، نو مهرباني وکړئ وضاحت وکړئ. </translation>
     </message>
     <message>
@@ -1380,9 +1380,9 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">"دا ابتدايي همغږي ډيره درانه ده، او ممکن ستاسو د کمپیوټر د هارډویر ستونزې ښکاره کړي چې مخکې نه وې معلومې شوې.هر ځل چې تاسو چلوي %1, دا به چیرته چې یې پرېښودل وو، ډاونلوډ کول دوام ورکړي</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
         <translation type="unfinished">کله چې تاسو OK کلیک کړئ, %1 
-"به د بشپړ ډاونلوډ او پروسس پیل کړي.%4بلاک چین%2 GB) د لومړیو معاملو سره پیل کول %3 کله %4 په لومړي سر کې پیل شو</translation>
+"به د بشپړ ډاونلوډ او پروسس پیل کړي.%4بلاک چین%2 MB) د لومړیو معاملو سره پیل کول %3 کله %4 په لومړي سر کې پیل شو</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -1573,7 +1573,7 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">پرون او د ذخیره بلاک کول تر</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">جي بي</translation>
     </message>
     <message>

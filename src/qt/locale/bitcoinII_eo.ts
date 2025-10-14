@@ -828,24 +828,24 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Bitmono</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform>%n gigabajto de libera loko disponeble</numerusform>
             <numerusform>%n gigabajtoj de libera loko disponebla.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(of %n GB needed)</numerusform>
-            <numerusform>(of %n GB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB needed for full chain)</numerusform>
-            <numerusform>(%n GB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
         </translation>
     </message>
     <message numerus="yes">

@@ -1253,24 +1253,24 @@ Während des Migrationsprozesses wird vor der Migration ein Backup der Wallet er
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB Speicherplatz verfügbar</numerusform>
-            <numerusform>%n GB Speicherplatz verfügbar</numerusform>
+            <numerusform>%n MB Speicherplatz verfügbar</numerusform>
+            <numerusform>%n MB Speicherplatz verfügbar</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(von %n GB benötigt)</numerusform>
-            <numerusform>(von %n GB benötigt)</numerusform>
+            <numerusform>(von %n MB benötigt)</numerusform>
+            <numerusform>(von %n MB benötigt)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB benötigt für komplette Blockchain)</numerusform>
-            <numerusform>(%n GB benötigt für komplette Blockchain)</numerusform>
+            <numerusform>(%n MB benötigt für komplette Blockchain)</numerusform>
+            <numerusform>(%n MB benötigt für komplette Blockchain)</numerusform>
         </translation>
     </message>
     <message>
@@ -1278,12 +1278,12 @@ Während des Migrationsprozesses wird vor der Migration ein Backup der Wallet er
         <translation type="unfinished">Datenverzeichnis auswählen</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Mindestens %1 GB Daten werden in diesem Verzeichnis gespeichert, und sie werden mit der Zeit zunehmen.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Mindestens %1 MB Daten werden in diesem Verzeichnis gespeichert, und sie werden mit der Zeit zunehmen.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Etwa %1 GB Daten werden in diesem Verzeichnis gespeichert.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Etwa %1 MB Daten werden in diesem Verzeichnis gespeichert.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1334,8 +1334,8 @@ Während des Migrationsprozesses wird vor der Migration ein Backup der Wallet er
         <translation type="unfinished">Diese initiale Synchronisation führt zu hoher Last und kann Hardwareprobleme, die bisher nicht aufgetreten sind, mit dem Computer verursachen. Jedes Mal, beim %1 ausführen, wird der Download zum letzten Synchronisationspunkt fortgesetzt.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Wenn Sie auf OK klicken, beginnt %1 mit dem Herunterladen und Verarbeiten der gesamten %4-Blockchain (%2GB), beginnend mit den frühesten Transaktionen in %3 beim ersten Start von %4.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Wenn Sie auf OK klicken, beginnt %1 mit dem Herunterladen und Verarbeiten der gesamten %4-Blockchain (%2MB), beginnend mit den frühesten Transaktionen in %3 beim ersten Start von %4.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4010,8 +4010,8 @@ Gehen Sie zu Datei &gt; Wallet Öffnen, um eine Wallet zu laden.
         <translation type="unfinished">Kann ein aufgespaltenes nicht-HD Wallet nicht von Version %i auf Version %i aktualisieren, ohne auf Unterstützung von Keypools vor der Aufspaltung zu aktualisieren. Bitte benutze Version%i oder keine bestimmte Version.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Der Speicherplatz für %s reicht möglicherweise nicht für die Block-Dateien aus. In diesem Verzeichnis werden ca. %u GB an Daten gespeichert.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Der Speicherplatz für %s reicht möglicherweise nicht für die Block-Dateien aus. In diesem Verzeichnis werden ca. %u MB an Daten gespeichert.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

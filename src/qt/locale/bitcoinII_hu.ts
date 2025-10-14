@@ -1369,21 +1369,21 @@ A migrációs folyamat készít biztonsági mentést a tárcáról migrálás el
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB szabad hely áll rendelkezésre</numerusform>
+            <numerusform>%n MB szabad hely áll rendelkezésre</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(a szükséges %n GB-ból)</numerusform>
+            <numerusform>(a szükséges %n MB-ból)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB szükséges a teljes lánchoz)</numerusform>
+            <numerusform>(%n MB szükséges a teljes lánchoz)</numerusform>
         </translation>
     </message>
     <message>
@@ -1391,12 +1391,12 @@ A migrációs folyamat készít biztonsági mentést a tárcáról migrálás el
         <translation type="unfinished">Adatkönyvtár kiválasztása</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Legalább %1 GB adatot fogunk ebben a könyvtárban tárolni és idővel ez egyre több lesz.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Legalább %1 MB adatot fogunk ebben a könyvtárban tárolni és idővel ez egyre több lesz.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Hozzávetőlegesen %1 GB adatot fogunk ebben a könyvtárban tárolni.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Hozzávetőlegesen %1 MB adatot fogunk ebben a könyvtárban tárolni.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1442,16 +1442,16 @@ A migrációs folyamat készít biztonsági mentést a tárcáról migrálás el
         <translation type="unfinished">A beállítás visszaállításához le kell tölteni a teljes blokkláncot. A teljes lánc letöltése és későbbi ritkítása ennél gyorsabb. Bizonyos haladó funkciókat letilt.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Az első szinkronizáció nagyon erőforrás-igényes és felszínre hozhat a számítógépében eddig rejtve maradt hardver problémákat. Minden %1 indításnál a program onnan folytatja a letöltést, ahol legutóbb abbahagyta.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Ha az OK-ra kattint, %1 megkezdi a teljes %4 blokklánc letöltését és feldolgozását (%2GB) a legkorábbi tranzakciókkal kezdve %3 -ben, amikor a %4 bevezetésre került.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Ha az OK-ra kattint, %1 megkezdi a teljes %4 blokklánc letöltését és feldolgozását (%2MB) a legkorábbi tranzakciókkal kezdve %3 -ben, amikor a %4 bevezetésre került.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4117,8 +4117,8 @@ A "Fájl &gt; Tárca megnyitása" menüben tölthet be egyet.
         <translation type="unfinished">Nem lehet frissíteni a nem HD szétválasztott tárcát %i verzióról %i verzióra az ezt támogató kulcstár frissítése nélkül. Kérjük használja a %i verziót vagy ne adjon meg verziót.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">A szabad terület %s talán nem elegendő a blokkfájlok tárolásához. Hozzávetőleg %u GB hely lesz felhasználva ebben a könyvtárban.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">A szabad terület %s talán nem elegendő a blokkfájlok tárolásához. Hozzávetőleg %u MB hely lesz felhasználva ebben a könyvtárban.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

@@ -1355,24 +1355,24 @@ Siirtoprosessi luo varmuuskopion lompakosta ennen siirtoa. Tämä varmuuskopioti
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB vapaata tilaa</numerusform>
-            <numerusform>%n GB vapaata tilaa</numerusform>
+            <numerusform>%n MB vapaata tilaa</numerusform>
+            <numerusform>%n MB vapaata tilaa</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(tarvitaan %n GB)</numerusform>
-            <numerusform>(tarvitaan %n GB)</numerusform>
+            <numerusform>(tarvitaan %n MB)</numerusform>
+            <numerusform>(tarvitaan %n MB)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(tarvitaan %n GB koko ketjua varten)</numerusform>
-            <numerusform>(tarvitaan %n GB koko ketjua varten)</numerusform>
+            <numerusform>(tarvitaan %n MB koko ketjua varten)</numerusform>
+            <numerusform>(tarvitaan %n MB koko ketjua varten)</numerusform>
         </translation>
     </message>
     <message>
@@ -1380,12 +1380,12 @@ Siirtoprosessi luo varmuuskopion lompakosta ennen siirtoa. Tämä varmuuskopioti
         <translation type="unfinished">Valitse data-kansio</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Ainakin %1 GB tietoa varastoidaan tähän hakemistoon ja tarve kasvaa ajan myötä.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Ainakin %1 MB tietoa varastoidaan tähän hakemistoon ja tarve kasvaa ajan myötä.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Noin %1 GB tietoa varastoidaan tähän hakemistoon.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Noin %1 MB tietoa varastoidaan tähän hakemistoon.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1432,16 +1432,16 @@ Siirtoprosessi luo varmuuskopion lompakosta ennen siirtoa. Tämä varmuuskopioti
         <translation type="unfinished">Tämän asetuksen peruuttaminen vaatii koko lohkoketjun uudelleenlataamisen. On nopeampaa ladata koko ketju ensin ja karsia se myöhemmin. Tämä myös poistaa käytöstä joitain edistyneitä toimintoja.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Tämä alustava synkronointi on erittäin vaativa ja saattaa tuoda esiin laiteongelmia, joita ei aikaisemmin ole havaittu. Aina kun ajat %1:n, jatketaan siitä kohdasta, mihin viimeksi jäätiin.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Kun napsautat OK, %1 alkaa ladata ja käsitellä koko %4 lohkoketjun (%2 GB) alkaen ensimmäisistä tapahtumista %3 kun %4 alun perin käynnistetty.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Kun napsautat OK, %1 alkaa ladata ja käsitellä koko %4 lohkoketjun (%2 MB) alkaen ensimmäisistä tapahtumista %3 kun %4 alun perin käynnistetty.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -1636,7 +1636,7 @@ Siirtoprosessi luo varmuuskopion lompakosta ennen siirtoa. Tämä varmuuskopioti
         <translation type="unfinished">Karsi lohkovaraston kooksi</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">Gt</translation>
     </message>
     <message>

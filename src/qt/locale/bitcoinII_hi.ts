@@ -679,24 +679,24 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB of space available</numerusform>
-            <numerusform>%n GB of space available</numerusform>
+            <numerusform>%n MB of space available</numerusform>
+            <numerusform>%n MB of space available</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(of %n GB needed)</numerusform>
-            <numerusform>(of %n GB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB needed for full chain)</numerusform>
-            <numerusform>(%n GB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
         </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">%s अनुरोध %u पोर्ट पर सुनने का. इस बंदरगाह को "खराब" माना जाता है और इस प्रकार यह संभावना नहीं है कि कोई भी सहकर्मी इससे जुड़ेगा। विवरण और पूरी सूची के लिए doc/p2p-bad-ports.md देखें।</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">%s के लिए डिस्क स्थान ब्लॉक फ़ाइलों को समायोजित नहीं कर सकता है। इस निर्देशिका में लगभग %u GB डेटा संग्रहीत किया जाएगा।</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">%s के लिए डिस्क स्थान ब्लॉक फ़ाइलों को समायोजित नहीं कर सकता है। इस निर्देशिका में लगभग %u MB डेटा संग्रहीत किया जाएगा।</translation>
     </message>
     <message>
         <source>Error loading wallet. Wallet requires blocks to be downloaded, and software does not currently support loading wallets while blocks are being downloaded out of order when using assumeutxo snapshots. Wallet should be able to load successfully after node sync reaches height %s</source>

@@ -385,29 +385,29 @@
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB av goymsluplássi tøkt</numerusform>
-            <numerusform>%n GB av goymsluplássi tøkt</numerusform>
+            <numerusform>%n MB av goymsluplássi tøkt</numerusform>
+            <numerusform>%n MB av goymsluplássi tøkt</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(av %n GB ið tørvur er á)</numerusform>
-            <numerusform>(av %n GB ið tørvur er á)</numerusform>
+            <numerusform>(av %n MB ið tørvur er á)</numerusform>
+            <numerusform>(av %n MB ið tørvur er á)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Á leið %1 GB av dátum verða goymd í hesi fíluskránni.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Á leið %1 MB av dátum verða goymd í hesi fíluskránni.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -430,8 +430,8 @@
         <translation type="unfinished">Vælkomin til %1.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>

@@ -197,7 +197,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 مگابایت</translation>
     </message>
     <message>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished">%1 گیگابایت</translation>
     </message>
     <message>
@@ -719,21 +719,21 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB of space available</numerusform>
+            <numerusform>%n MB of space available</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(of %n GB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -772,7 +772,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">شبکه</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">گیگابایت</translation>
     </message>
     <message>

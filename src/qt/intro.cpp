@@ -121,11 +121,11 @@ int GetPruneTargetGB()
 }
 } // namespace
 
-Intro::Intro(QWidget *parent, int64_t blockchain_size_gb, int64_t chain_state_size_gb) :
+Intro::Intro(QWidget *parent, int64_t blockchain_size_mb, int64_t chain_state_size_mb) :
     QDialog(parent, GUIUtil::dialog_flags),
     ui(new Ui::Intro),
-    m_blockchain_size_gb(blockchain_size_gb),
-    m_chain_state_size_gb(chain_state_size_gb),
+    m_blockchain_size_mb(blockchain_size_mb),
+    m_chain_state_size_mb(chain_state_size_mb),
     m_prune_target_gb{GetPruneTargetGB()}
 {
     ui->setupUi(this);
@@ -134,8 +134,8 @@ Intro::Intro(QWidget *parent, int64_t blockchain_size_gb, int64_t chain_state_si
 
     ui->lblExplanation1->setText(ui->lblExplanation1->text()
         .arg(CLIENT_NAME)
-        .arg(m_blockchain_size_gb)
-        .arg(2009)
+        .arg(m_blockchain_size_mb)
+        .arg(2025)
         .arg(tr("BitcoinII"))
     );
     ui->lblExplanation2->setText(ui->lblExplanation2->text().arg(CLIENT_NAME));
@@ -290,7 +290,7 @@ void Intro::setStatus(int status, const QString &message, quint64 bytesAvailable
     } else {
         m_bytes_available = bytesAvailable;
         if (ui->prune->isEnabled() && m_prune_checkbox_is_default) {
-            ui->prune->setChecked(m_bytes_available < (m_blockchain_size_gb + m_chain_state_size_gb + 10) * GB_BYTES);
+            ui->prune->setChecked(m_bytes_available < (m_blockchain_size_mb + m_chain_state_size_mb + 10) * MB_BYTES);
         }
         UpdateFreeSpaceLabel();
     }
@@ -301,11 +301,11 @@ void Intro::setStatus(int status, const QString &message, quint64 bytesAvailable
 void Intro::UpdateFreeSpaceLabel()
 {
     QString freeString = tr("%n GB of space available", "", m_bytes_available / GB_BYTES);
-    if (m_bytes_available < m_required_space_gb * GB_BYTES) {
-        freeString += " " + tr("(of %n GB needed)", "", m_required_space_gb);
+    if (m_bytes_available < m_required_space_mb * MB_BYTES) {
+        freeString += " " + tr("(of %n MB needed)", "", m_required_space_mb);
         ui->freeSpace->setStyleSheet("QLabel { color: #800000 }");
-    } else if (m_bytes_available / GB_BYTES - m_required_space_gb < 10) {
-        freeString += " " + tr("(%n GB needed for full chain)", "", m_required_space_gb);
+    } else if (m_bytes_available / MB_BYTES - m_required_space_mb < 10) {
+        freeString += " " + tr("(%n MB needed for full chain)", "", m_required_space_mb);
         ui->freeSpace->setStyleSheet("QLabel { color: #999900 }");
     } else {
         ui->freeSpace->setStyleSheet("");
@@ -376,11 +376,11 @@ QString Intro::getPathToCheck()
 
 void Intro::UpdatePruneLabels(bool prune_checked)
 {
-    m_required_space_gb = m_blockchain_size_gb + m_chain_state_size_gb;
-    QString storageRequiresMsg = tr("At least %1 GB of data will be stored in this directory, and it will grow over time.");
-    if (prune_checked && m_prune_target_gb <= m_blockchain_size_gb) {
-        m_required_space_gb = m_prune_target_gb + m_chain_state_size_gb;
-        storageRequiresMsg = tr("Approximately %1 GB of data will be stored in this directory.");
+    m_required_space_mb = m_blockchain_size_mb + m_chain_state_size_mb;
+    QString storageRequiresMsg = tr("At least %1 MB of data will be stored in this directory, and it will grow over time.");
+    if (prune_checked && m_prune_target_gb <= m_blockchain_size_mb) {
+        m_required_space_mb = m_prune_target_gb + m_chain_state_size_mb;
+        storageRequiresMsg = tr("Approximately %1 MB of data will be stored in this directory.");
     }
     ui->lblExplanation3->setVisible(prune_checked);
     ui->pruneGB->setEnabled(prune_checked);
@@ -392,7 +392,7 @@ void Intro::UpdatePruneLabels(bool prune_checked)
         tr("(sufficient to restore backups %n day(s) old)", "", expected_backup_days));
     ui->sizeWarningLabel->setText(
         tr("%1 will download and store a copy of the BitcoinII block chain.").arg(CLIENT_NAME) + " " +
-        storageRequiresMsg.arg(m_required_space_gb) + " " +
+        storageRequiresMsg.arg(m_required_space_mb) + " " +
         tr("The wallet will also be stored in this directory.")
     );
     this->adjustSize();

@@ -1051,33 +1051,33 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">სულ მცირე %1 GB მონაცემები შეინახება ამ დირექტორიაში და იგი დროთა განმავლობაში გაიზრდება.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">სულ მცირე %1 MB მონაცემები შეინახება ამ დირექტორიაში და იგი დროთა განმავლობაში გაიზრდება.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">დაახლოებით %1 GB მონაცემები შეინახება ამ დირექტორიაში.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">დაახლოებით %1 MB მონაცემები შეინახება ამ დირექტორიაში.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1112,8 +1112,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">რადგან ეს პროგრამა პირველად იხსნება, შეგიძლიათ აირჩიოთ თუ  სად შეინახოს %1 მონაცემები.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>Use the default data directory</source>

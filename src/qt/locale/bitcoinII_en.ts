@@ -1389,7 +1389,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+7"/>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1399,7 +1399,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="-10"/>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1424,26 +1424,26 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message numerus="yes">
         <location line="+164"/>
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB of space available</numerusform>
-            <numerusform>%n GB of space available</numerusform>
+            <numerusform>%n MB of space available</numerusform>
+            <numerusform>%n MB of space available</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+2"/>
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(of %n GB needed)</numerusform>
-            <numerusform>(of %n GB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
+            <numerusform>(of %n MB needed)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB needed for full chain)</numerusform>
-            <numerusform>(%n GB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
+            <numerusform>(%n MB needed for full chain)</numerusform>
         </translation>
     </message>
     <message>
@@ -1453,12 +1453,12 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
     </message>
     <message>
         <location line="+55"/>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
@@ -1806,7 +1806,7 @@ The migration process will create a backup of the wallet before migrating. This 
     </message>
     <message>
         <location line="+10"/>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2742,7 +2742,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     <message>
         <location line="+2"/>
-        <source>%1 GB</source>
+        <source>%1 MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5434,7 +5434,7 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
     <message>
         <location line="+4"/>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -751,21 +751,21 @@
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB dung lượng khả dụng</numerusform>
+            <numerusform>%n MB dung lượng khả dụng</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(of %n GB cần thiết)</numerusform>
+            <numerusform>(of %n MB cần thiết)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB cần cho toàn blockchain)</numerusform>
+            <numerusform>(%n MB cần cho toàn blockchain)</numerusform>
         </translation>
     </message>
     <message>
@@ -804,8 +804,8 @@
         <translation type="unfinished">Đảo ngược lại thiết lập này yêu cầu tại lại toàn bộ chuỗi khối. Tải về toàn bộ chuỗi khối trước và loại nó sau đó sẽ nhanh hơn. Vô hiệu hóa một số tính năng nâng cao.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Khi bạn nhấn OK, %1 sẽ bắt đầu tải xuống và xử lý toàn bộ chuỗi chính %4 (%2 GB), bắt đầu từ các giao dịch sớm nhất trong %3 khi %4 được khởi chạy ban đầu.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Khi bạn nhấn OK, %1 sẽ bắt đầu tải xuống và xử lý toàn bộ chuỗi chính %4 (%2 MB), bắt đầu từ các giao dịch sớm nhất trong %3 khi %4 được khởi chạy ban đầu.</translation>
     </message>
     </context>
 <context>

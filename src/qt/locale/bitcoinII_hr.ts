@@ -1206,7 +1206,7 @@ Potpisivanje je moguće samo sa 'legacy' adresama. </translation>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1214,28 +1214,28 @@ Potpisivanje je moguće samo sa 'legacy' adresama. </translation>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(od potrebnog prostora od %n GB)</numerusform>
-            <numerusform>(od potrebnog prostora od %n GB)</numerusform>
-            <numerusform>(od potrebnog %n GB)</numerusform>
+            <numerusform>(od potrebnog prostora od %n MB)</numerusform>
+            <numerusform>(od potrebnog prostora od %n MB)</numerusform>
+            <numerusform>(od potrebnog %n MB)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(potreban je %n GB za cijeli lanac)</numerusform>
-            <numerusform>(potrebna su %n GB-a za cijeli lanac)</numerusform>
-            <numerusform>(potrebno je %n GB-a za cijeli lanac)</numerusform>
+            <numerusform>(potreban je %n MB za cijeli lanac)</numerusform>
+            <numerusform>(potrebna su %n MB-a za cijeli lanac)</numerusform>
+            <numerusform>(potrebno je %n MB-a za cijeli lanac)</numerusform>
         </translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Bit će spremljeno barem %1 GB podataka u ovoj mapi te će se povećati tijekom vremena.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Bit će spremljeno barem %1 MB podataka u ovoj mapi te će se povećati tijekom vremena.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Otprilike %1 GB podataka bit će spremljeno u ovoj mapi.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Otprilike %1 MB podataka bit će spremljeno u ovoj mapi.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>

@@ -1270,24 +1270,24 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Bitkoin</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB ýer elýeter</numerusform>
-            <numerusform>%n GB ýer elýeter</numerusform>
+            <numerusform>%n MB ýer elýeter</numerusform>
+            <numerusform>%n MB ýer elýeter</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(zerur bolan %n GB-den)</numerusform>
-            <numerusform>(zerur bolan %n GB-den)</numerusform>
+            <numerusform>(zerur bolan %n MB-den)</numerusform>
+            <numerusform>(zerur bolan %n MB-den)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(Doly zynjyr üçin %n GB zerur)</numerusform>
-            <numerusform>(Doly zynjyr üçin %n GB zerur)</numerusform>
+            <numerusform>(Doly zynjyr üçin %n MB zerur)</numerusform>
+            <numerusform>(Doly zynjyr üçin %n MB zerur)</numerusform>
         </translation>
     </message>
     <message>
@@ -1295,12 +1295,12 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Maglumat katalogyny saýlaň</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Bu sanawda azyndan %1 GB maglumat saklanar we ol wagtyň geçmegi bilen köpeler.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Bu sanawda azyndan %1 MB maglumat saklanar we ol wagtyň geçmegi bilen köpeler.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Bu sanawda takmynan %1 GB maglumat saklanar.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Bu sanawda takmynan %1 MB maglumat saklanar.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1347,16 +1347,16 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Bu sazlamany yzyna gaýtarmaklyk tutuş blok zynjyryny gaýtadan ýükläp almak zerur. Ilki bilen tutuş zynjyry ýükläp almak we soň ony kesmek has çalt bolar. Käbir giňişleýin aýratynlyklary öçürer.</translation>
     </message>
     <message>
-        <source> GB</source>
-        <translation type="unfinished">GB</translation>
+        <source> MB</source>
+        <translation type="unfinished">MB</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Bu başdaky utgaşdyrma örän çylşyrymlydyr we kompýuteriňiziň ozal üns berilmedik enjam näsazlyklaryny ýüze çykaryp biler. Her sapar %1 işledeniňizde ol säginen ýerinden ýükläp almaga dowam eder.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">OK basanyňyzda, %1%4 başda işledilende %3-däki iň irki amallardan başlap doly %4blok zynjyryny (%2 GB) ýükläp we işläp başlar.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">OK basanyňyzda, %1%4 başda işledilende %3-däki iň irki amallardan başlap doly %4blok zynjyryny (%2 MB) ýükläp we işläp başlar.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -1543,8 +1543,8 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">&amp;Blok goruny çäklendir</translation>
     </message>
     <message>
-        <source>GB</source>
-        <translation type="unfinished">GB çenli</translation>
+        <source>MB</source>
+        <translation type="unfinished">MB çenli</translation>
     </message>
     <message>
         <source>Reverting this setting requires re-downloading the entire blockchain.</source>

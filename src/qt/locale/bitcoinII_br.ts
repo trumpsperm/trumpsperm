@@ -458,21 +458,21 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -495,7 +495,7 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation type="unfinished">Donemat</translation>
     </message>
     <message>
-        <source> GB</source>
+        <source> MB</source>
         <translation type="unfinished"> Ge</translation>
     </message>
     </context>
@@ -528,7 +528,7 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation type="unfinished">Dibarzhioù</translation>
     </message>
     <message>
-        <source>GB</source>
+        <source>MB</source>
         <translation type="unfinished">Ge</translation>
     </message>
     <message>

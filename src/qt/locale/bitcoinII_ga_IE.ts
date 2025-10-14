@@ -1366,27 +1366,27 @@ Cruthóidh an próiseas imirce cúltaca den sparán roimh imirce. Ainmneofar an 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB de spás ar fáil</numerusform>
-            <numerusform>%n GB de spás ar fáil</numerusform>
-            <numerusform>%n GB de spás ar fáil</numerusform>
+            <numerusform>%n MB de spás ar fáil</numerusform>
+            <numerusform>%n MB de spás ar fáil</numerusform>
+            <numerusform>%n MB de spás ar fáil</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(de %n GB teastáil)</numerusform>
-            <numerusform>(de %n GB teastáil)</numerusform>
-            <numerusform>(de %n GB teastáil)</numerusform>
+            <numerusform>(de %n MB teastáil)</numerusform>
+            <numerusform>(de %n MB teastáil)</numerusform>
+            <numerusform>(de %n MB teastáil)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB teastáil do slabhra iomlán)</numerusform>
-            <numerusform>(%n GB teastáil do slabhra iomlán)</numerusform>
-            <numerusform>(%n GB teastáil do slabhra iomlán)</numerusform>
+            <numerusform>(%n MB teastáil do slabhra iomlán)</numerusform>
+            <numerusform>(%n MB teastáil do slabhra iomlán)</numerusform>
+            <numerusform>(%n MB teastáil do slabhra iomlán)</numerusform>
         </translation>
     </message>
     <message>
@@ -1394,12 +1394,12 @@ Cruthóidh an próiseas imirce cúltaca den sparán roimh imirce. Ainmneofar an 
         <translation type="unfinished">Roghnaigh eolaire sonraí</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Ar a laghad stórálfar %1 GB de shonraí  sa comhadlann seo, agus fásfaidh sé le himeacht ama.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Ar a laghad stórálfar %1 MB de shonraí  sa comhadlann seo, agus fásfaidh sé le himeacht ama.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Stórálfar thart ar %1 GB de shonraí sa comhadlann seo.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Stórálfar thart ar %1 MB de shonraí sa comhadlann seo.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1451,8 +1451,8 @@ Cruthóidh an próiseas imirce cúltaca den sparán roimh imirce. Ainmneofar an 
         <translation type="unfinished">Tá an sioncrónú tosaigh seo an-dhian, agus d’fhéadfadh sé fadhbanna crua-earraí a nochtadh le do ríomhaire nach tugadh faoi deara roimhe seo. Gach uair a ritheann tú %1, leanfaidh sé ar aghaidh ag íoslódáil san áit ar fhág sé as.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Nuair a chliceálann tú OK, tosóidh %1 ag íosluchtú agus ag próiseáil slabhra iomlán %4 (%2 GB) ag tosú leis na hidirbhearta is luaithe i %3 nuair a seoladh %4 ar dtús.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Nuair a chliceálann tú OK, tosóidh %1 ag íosluchtú agus ag próiseáil slabhra iomlán %4 (%2 MB) ag tosú leis na hidirbhearta is luaithe i %3 nuair a seoladh %4 ar dtús.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4142,8 +4142,8 @@ Téigh go Comhad &gt; Oscail Sparán chun sparán a lódáil.
         <translation type="unfinished">Ní féidir sparán scoilte neamh-HD a uasghrádú ó leagan%igo leagan%i gan uasghrádú chun tacú le heochrach réamh-scoilte. Úsáid leagan %i nó níl aon leagan sonraithe.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Ní féidir spás diosca le haghaidh %sa chur san áireamh sna blocchomhaid. Stórálfar thart ar %u GB de shonraí san eolaire seo.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Ní féidir spás diosca le haghaidh %sa chur san áireamh sna blocchomhaid. Stórálfar thart ar %u MB de shonraí san eolaire seo.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

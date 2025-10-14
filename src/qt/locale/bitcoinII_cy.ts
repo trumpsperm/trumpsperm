@@ -1208,7 +1208,7 @@ Bydd y broses fudo yn creu copi wrth gefn o'r waled cyn mudo. Bydd y ffeil wrth 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1218,7 +1218,7 @@ Bydd y broses fudo yn creu copi wrth gefn o'r waled cyn mudo. Bydd y ffeil wrth 
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1228,7 +1228,7 @@ Bydd y broses fudo yn creu copi wrth gefn o'r waled cyn mudo. Bydd y ffeil wrth 
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
             <numerusform />
             <numerusform />
@@ -1242,12 +1242,12 @@ Bydd y broses fudo yn creu copi wrth gefn o'r waled cyn mudo. Bydd y ffeil wrth 
         <translation type="unfinished">Dewiswch gyfeiriadur data</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">O leiaf%1Bydd GB o ddata yn cael ei storio yn y cyfeiriadur hwn, a bydd yn tyfu dros amser.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">O leiaf%1Bydd MB o ddata yn cael ei storio yn y cyfeiriadur hwn, a bydd yn tyfu dros amser.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Oddeutu%1Bydd GB o ddata yn cael ei storio yn y cyfeiriadur hwn.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Oddeutu%1Bydd MB o ddata yn cael ei storio yn y cyfeiriadur hwn.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>

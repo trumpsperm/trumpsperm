@@ -1373,21 +1373,21 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB の空き容量</numerusform>
+            <numerusform>%n MB の空き容量</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(必要な %n GB のうち)</numerusform>
+            <numerusform>(必要な %n MB のうち)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(完全なチェーンには %n GB必要)</numerusform>
+            <numerusform>(完全なチェーンには %n MB必要)</numerusform>
         </translation>
     </message>
     <message>
@@ -1395,12 +1395,12 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">データ ディレクトリを選択</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">最低でも%1 GBのデータをこのディレクトリに保存する必要があります。またこのデータは時間とともに増加していきます。</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">最低でも%1 MBのデータをこのディレクトリに保存する必要があります。またこのデータは時間とともに増加していきます。</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">約%1 GBのデータがこのディレクトリに保存されます。</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">約%1 MBのデータがこのディレクトリに保存されます。</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1450,8 +1450,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">この初回同期には多大なリソースを消費し、あなたのコンピュータでこれまで見つからなかったハードウェア上の問題が発生する場合があります。%1 を実行する度に、中断された時点からダウンロードを再開します。</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">[OK] をクリックすると、%1 は %4 が最初に起動されたときの %3 のうち最も古い取引から開始して、完全な %4 ブロック チェーン ( %2 GB) のダウンロードと処理を開始します。</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">[OK] をクリックすると、%1 は %4 が最初に起動されたときの %3 のうち最も古い取引から開始して、完全な %4 ブロック チェーン ( %2 MB) のダウンロードと処理を開始します。</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4134,8 +4134,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">事前分割キープールをサポートするようアップグレードせずに、非HD分割ウォレットをバージョン%iからバージョン%iにアップグレードすることはできません。バージョン%iを使用するか、バージョンを指定しないでください。</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">%s のディスク容量では、ブロックファイルを保存しきれない可能性があります。およそ %u GB のデータがこのディレクトリに保存されます。</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">%s のディスク容量では、ブロックファイルを保存しきれない可能性があります。およそ %u MB のデータがこのディレクトリに保存されます。</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

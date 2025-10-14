@@ -1339,21 +1339,21 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">比特币</translation>
     </message>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>可用空间 %n GB</numerusform>
+            <numerusform>可用空间 %n MB</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(需要 %n GB的空间)</numerusform>
+            <numerusform>(需要 %n MB的空间)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(保存完整的链需要 %n GB)</numerusform>
+            <numerusform>(保存完整的链需要 %n MB)</numerusform>
         </translation>
     </message>
     <message>
@@ -1361,12 +1361,12 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">选择数据目录</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">此目录中至少会保存 %1 GB 的数据，并且大小还会随着时间增长。</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">此目录中至少会保存 %1 MB 的数据，并且大小还会随着时间增长。</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">会在此目录中存储约 %1 GB 的数据。</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">会在此目录中存储约 %1 MB 的数据。</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1416,8 +1416,8 @@ The migration process will create a backup of the wallet before migrating. This 
         <translation type="unfinished">初始化同步过程是非常吃力的，同时可能会暴露您之前没有注意到的电脑硬件问题。你每次启动%1时，它都会从之前中断的地方继续下载。</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">当你单击确认后，%1 将会从%4在%3年创始时最早的交易开始，下载并处理完整的 %4 区块链 (%2 GB)。</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">当你单击确认后，%1 将会从%4在%3年创始时最早的交易开始，下载并处理完整的 %4 区块链 (%2 MB)。</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4087,8 +4087,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">无法在不支持“拆分前的密钥池”（pre split keypool）的情况下把“非拆分HD钱包”（non HD split wallet）从版本%i升级到%i。请使用版本号%i，或者压根不要指定版本号。</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">%s的磁盘空间可能无法容纳区块文件。大约要在这个目录中储存 %uGB 的数据。</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">%s的磁盘空间可能无法容纳区块文件。大约要在这个目录中储存 %uMB 的数据。</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>

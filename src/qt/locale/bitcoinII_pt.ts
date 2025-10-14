@@ -1352,24 +1352,24 @@ O processo de migração criará uma cópia de segurança da carteira antes da m
 <context>
     <name>Intro</name>
     <message numerus="yes">
-        <source>%n GB of space available</source>
+        <source>%n MB of space available</source>
         <translation type="unfinished">
-            <numerusform>%n GB de espaço disponível</numerusform>
-            <numerusform>%n GB de espaço disponível</numerusform>
+            <numerusform>%n MB de espaço disponível</numerusform>
+            <numerusform>%n MB de espaço disponível</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(of %n GB needed)</source>
+        <source>(of %n MB needed)</source>
         <translation type="unfinished">
-            <numerusform>(de %n GB necessário)</numerusform>
-            <numerusform>(de %n GB necessários)</numerusform>
+            <numerusform>(de %n MB necessário)</numerusform>
+            <numerusform>(de %n MB necessários)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <source>(%n GB needed for full chain)</source>
+        <source>(%n MB needed for full chain)</source>
         <translation type="unfinished">
-            <numerusform>(%n GB necessário para a cadeia completa)</numerusform>
-            <numerusform>(%n GB necessários para a cadeia completa)</numerusform>
+            <numerusform>(%n MB necessário para a cadeia completa)</numerusform>
+            <numerusform>(%n MB necessários para a cadeia completa)</numerusform>
         </translation>
     </message>
     <message>
@@ -1377,12 +1377,12 @@ O processo de migração criará uma cópia de segurança da carteira antes da m
         <translation type="unfinished">Escolha a pasta dos dados</translation>
     </message>
     <message>
-        <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
-        <translation type="unfinished">Serão armazenados nesta pasta pelo menos %1 GB de dados, que irão aumentar com o tempo.</translation>
+        <source>At least %1 MB of data will be stored in this directory, and it will grow over time.</source>
+        <translation type="unfinished">Serão armazenados nesta pasta pelo menos %1 MB de dados, que irão aumentar com o tempo.</translation>
     </message>
     <message>
-        <source>Approximately %1 GB of data will be stored in this directory.</source>
-        <translation type="unfinished">Serão guardados nesta pasta aproximadamente %1 GB de dados.</translation>
+        <source>Approximately %1 MB of data will be stored in this directory.</source>
+        <translation type="unfinished">Serão guardados nesta pasta aproximadamente %1 MB de dados.</translation>
     </message>
     <message numerus="yes">
         <source>(sufficient to restore backups %n day(s) old)</source>
@@ -1433,8 +1433,8 @@ O processo de migração criará uma cópia de segurança da carteira antes da m
         <translation type="unfinished">Esta sincronização inicial é muito exigente e pode expor problemas de hardware no seu computador que anteriormente tinham passado despercebidos. Sempre que executar o %1, este continuará a descarregar a partir do ponto em que foi interrompido.</translation>
     </message>
     <message>
-        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
-        <translation type="unfinished">Quando clicar em OK, %1 começará a descarregar e a processar toda a cadeia de blocos de %4 (%2 GB), começando com as primeiras transações em %3 quando %4 foi lançado inicialmente.</translation>
+        <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 MB) starting with the earliest transactions in %3 when %4 initially launched.</source>
+        <translation type="unfinished">Quando clicar em OK, %1 começará a descarregar e a processar toda a cadeia de blocos de %4 (%2 MB), começando com as primeiras transações em %3 quando %4 foi lançado inicialmente.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -4112,8 +4112,8 @@ Vá ao menu Ficheiro &gt; Abrir carteira para carregar uma carteira
         <translation type="unfinished">Não é possível atualizar uma carteira não dividida em HD da versão %i para a versão %i sem atualizar para suportar o conjunto de chaves pré-dividido. Por favor, use a versão %i ou nenhuma versão especificada.</translation>
     </message>
     <message>
-        <source>Disk space for %s may not accommodate the block files. Approximately %u GB of data will be stored in this directory.</source>
-        <translation type="unfinished">O espaço em disco para %s pode não acomodar os ficheiros de bloco. Serão armazenados neste diretório aproximadamente %u GB de dados.</translation>
+        <source>Disk space for %s may not accommodate the block files. Approximately %u MB of data will be stored in this directory.</source>
+        <translation type="unfinished">O espaço em disco para %s pode não acomodar os ficheiros de bloco. Serão armazenados neste diretório aproximadamente %u MB de dados.</translation>
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
