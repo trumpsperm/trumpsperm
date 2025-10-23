@@ -1,30 +1,71 @@
-- name: Download & unpack ZIP (strict)
-  env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    ZIP_URL: ${{ github.event.inputs.url }}
-  run: |
-    set -euo pipefail
-    if ! command -v unzip >/dev/null 2>&1; then
-      sudo apt-get update -y >/dev/null
-      sudo apt-get install -y unzip >/dev/null
-    fi
-    HTTP_CODE=$(curl -sSL -w '%{http_code}' -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/octet-stream" -o sync.zip "$ZIP_URL")
-    if [ "$HTTP_CODE" != "200" ]; then
-      echo "Download failed: HTTP $HTTP_CODE"
-      exit 1
-    fi
-    if ! unzip -tq sync.zip >/dev/null 2>&1; then
-      head -c 300 sync.zip || true
-      exit 1
-    fi
-    rm -rf unpack
-    mkdir -p unpack
-    unzip -q -o sync.zip -d unpack
-    shopt -s dotglob nullglob
-    if [ -d unpack/* ] && [ "$(ls -1 unpack | wc -l)" = "1" ]; then
-      mv unpack/* unpack_root && rm -rf unpack && mv unpack_root unpack
-    fi
-    if [ ! -d unpack ] || [ -z "$(ls -A unpack)" ]; then
-      echo "Nothing unpacked (unpack/ is empty or missing)"
-      exit 1
-    fi
+name: Zip Sync
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Direct URL to ZIP
+        required: true
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download & unpack ZIP (strict)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ZIP_URL: ${{ github.event.inputs.url }}
+        run: |
+          set -euo pipefail
+          if ! command -v unzip >/dev/null 2>&1; then
+            sudo apt-get update -y >/dev/null
+            sudo apt-get install -y unzip >/dev/null
+          fi
+          HTTP_CODE=$(curl -sSL -w '%{http_code}' -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/octet-stream" -o sync.zip "$ZIP_URL")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "Download failed: HTTP $HTTP_CODE"
+            exit 1
+          fi
+          if ! unzip -tq sync.zip >/dev/null 2>&1; then
+            head -c 300 sync.zip || true
+            exit 1
+          fi
+          rm -rf unpack
+          mkdir -p unpack
+          unzip -q -o sync.zip -d unpack
+          shopt -s dotglob nullglob
+          if [ -d unpack/* ] && [ "$(ls -1 unpack | wc -l)" = "1" ]; then
+            mv unpack/* unpack_root && rm -rf unpack && mv unpack_root unpack
+          fi
+          if [ ! -d unpack ] || [ -z "$(ls -A unpack)" ]; then
+            echo "Nothing unpacked (unpack/ is empty or missing)"
+            exit 1
+          fi
+
+      - name: Clean working tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s dotglob extglob
+          rm -rf !(.git|.github)
+
+      - name: Copy new contents
+        run: |
+          set -euo pipefail
+          [ -d unpack ]
+          rsync -a --delete unpack/ .
+
+      - name: Commit & push
+        run: |
+          set -euo pipefail
+          git config user.name "zip-sync[bot]"
+          git config user.email "zip-sync[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Sync from ZIP"
+          git push
