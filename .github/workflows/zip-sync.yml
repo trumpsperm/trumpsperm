@@ -5,15 +5,17 @@ on:
       url:
         description: Direct URL to ZIP
         required: true
+
 jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download & unpack ZIP (strict)
+      - name: Download & unpack ZIP (strict, tmpdir)
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,35 +27,39 @@ jobs:
             sudo apt-get update -y >/dev/null
             sudo apt-get install -y unzip >/dev/null
           fi
+
+          TMPDIR="$(mktemp -d)"
+          echo "UNPACK_DIR=$TMPDIR" >> "$GITHUB_ENV"
+
           HTTP_CODE=$(curl -sSL -w '%{http_code}' \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/octet-stream" \
-            -o sync.zip "$ZIP_URL")
+            -o "$TMPDIR/sync.zip" "$ZIP_URL")
           if [ "$HTTP_CODE" != "200" ]; then echo "Download failed: HTTP $HTTP_CODE"; exit 1; fi
-          unzip -tq sync.zip >/dev/null 2>&1 || { head -c 300 sync.zip || true; exit 1; }
-          rm -rf unpack
-          mkdir -p unpack
-          unzip -q -o sync.zip -d unpack
+
+          unzip -tq "$TMPDIR/sync.zip" >/dev/null 2>&1 || { head -c 300 "$TMPDIR/sync.zip" || true; exit 1; }
+
+          unzip -q -o "$TMPDIR/sync.zip" -d "$TMPDIR/unpack"
+
           shopt -s dotglob nullglob
-          if [ -d unpack/* ] && [ "$(ls -1 unpack | wc -l)" = "1" ]; then
-            mv unpack/* unpack_root && rm -rf unpack && mv unpack_root unpack
+          if [ -d "$TMPDIR/unpack"/* ] && [ "$(ls -1 "$TMPDIR/unpack" | wc -l)" = "1" ]; then
+            mv "$TMPDIR/unpack"/* "$TMPDIR/unpack_root"
+            rm -rf "$TMPDIR/unpack"
+            mv "$TMPDIR/unpack_root" "$TMPDIR/unpack"
           fi
-          [ -d unpack ] && [ -n "$(ls -A unpack)" ]
 
-      - name: Clean working tree
-        shell: bash
-        run: |
-          set -euo pipefail
-          shopt -s dotglob extglob
-          rm -rf !(.git|.github)
+          [ -d "$TMPDIR/unpack" ] && [ -n "$(ls -A "$TMPDIR/unpack")" ]
 
-      - name: Copy new contents
+      - name: Copy new contents (rsync --delete)
         shell: bash
         run: |
           set -xeuo pipefail
-          test -d unpack || { echo "unpack missing"; exit 1; }
-          test -n "$(ls -A unpack)" || { echo "unpack is empty"; exit 1; }
-          rsync -av --delete --exclude '.git' --exclude '.github' unpack/ .
+          test -d "$UNPACK_DIR/unpack" || { echo "unpack missing"; exit 1; }
+          test -n "$(ls -A "$UNPACK_DIR/unpack")" || { echo "unpack is empty"; exit 1; }
+          rsync -av --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            "$UNPACK_DIR/unpack"/ .
 
       - name: Commit & push
         shell: bash
