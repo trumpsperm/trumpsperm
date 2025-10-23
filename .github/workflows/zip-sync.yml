@@ -1,0 +1,47 @@
+name: Zip Sync
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Direct URL to ZIP
+        required: true
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download ZIP
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/octet-stream" \
+            -L "${{ github.event.inputs.url }}" -o sync.zip
+          mkdir unpack && unzip -q sync.zip -d unpack
+          shopt -s dotglob nullglob
+          if [ -d unpack/* ] && [ "$(ls -1 unpack | wc -l)" = "1" ]; then
+            mv unpack/* unpack_root && rm -rf unpack && mv unpack_root unpack
+          fi
+
+      - name: Clean working tree (keep .git and workflows)
+        shell: bash
+        run: |
+          shopt -s dotglob extglob
+          rm -rf !(.git|.github)
+
+      - name: Copy new contents
+        run: rsync -a --delete unpack/ .
+
+      - name: Commit & push
+        run: |
+          git config user.name "zip-sync[bot]"
+          git config user.email "zip-sync[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Sync from ZIP"
+          git push
