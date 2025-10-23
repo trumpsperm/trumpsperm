@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +16,7 @@
 namespace ipc {
 class Protocol;
 
-//! IPC process interface for spawning bitcoinII processes and serving requests
+//! IPC process interface for spawning trumpsperm processes and serving requests
 //! in processes that have been spawned.
 //!
 //! There will be different implementations of this interface depending on the

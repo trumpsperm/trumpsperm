@@ -1,10 +1,10 @@
-# Multiprocess BitcoinII
+# Multiprocess Trumpsperm
 
 _This document describes usage of the multiprocess feature. For design information, see the [design/multiprocess.md](design/multiprocess.md) file._
 
 ## Build Option
 
-On Unix systems, the `-DWITH_MULTIPROCESS=ON` build option can be passed to build the supplemental `bitcoinII-node` and `bitcoinII-gui` multiprocess executables.
+On Unix systems, the `-DWITH_MULTIPROCESS=ON` build option can be passed to build the supplemental `trumpsperm-node` and `trumpsperm-gui` multiprocess executables.
 
 ## Debugging
 
@@ -12,7 +12,7 @@ The `-debug=ipc` command line option can be used to see requests and responses b
 
 ## Installation
 
-The multiprocess feature requires [Cap'n Proto](https://capnproto.org/) and [libmultiprocess](https://github.com/bitcoinII-core/libmultiprocess) as dependencies. A simple way to get started using it without installing these dependencies manually is to use the [depends system](../depends) with the `MULTIPROCESS=1` [dependency option](../depends#dependency-options) passed to make:
+The multiprocess feature requires [Cap'n Proto](https://capnproto.org/) and [libmultiprocess](https://github.com/trumpsperm-core/libmultiprocess) as dependencies. A simple way to get started using it without installing these dependencies manually is to use the [depends system](../depends) with the `MULTIPROCESS=1` [dependency option](../depends#dependency-options) passed to make:
 
 ```
 cd <BITCOINII_SOURCE_DIRECTORY>
@@ -21,16 +21,16 @@ make -C depends NO_QT=1 MULTIPROCESS=1
 HOST_PLATFORM="x86_64-pc-linux-gnu"
 cmake -B build --toolchain=depends/$HOST_PLATFORM/toolchain.cmake
 cmake --build build
-build/bin/bitcoinII-node -regtest -printtoconsole -debug=ipc
-BITCOINIID=$(pwd)/build/bin/bitcoinII-node build/test/functional/test_runner.py
+build/bin/trumpsperm-node -regtest -printtoconsole -debug=ipc
+BITCOINIID=$(pwd)/build/bin/trumpsperm-node build/test/functional/test_runner.py
 ```
 
 The `cmake` build will pick up settings and library locations from the depends directory, so there is no need to pass `-DWITH_MULTIPROCESS=ON` as a separate flag when using the depends system (it's controlled by the `MULTIPROCESS=1` option).
 
-Alternately, you can install [Cap'n Proto](https://capnproto.org/) and [libmultiprocess](https://github.com/bitcoinII-core/libmultiprocess) packages on your system, and just run `cmake -B build -DWITH_MULTIPROCESS=ON` without using the depends system. The `cmake` build will be able to locate the installed packages via [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/). See [Installation](https://github.com/bitcoinII-core/libmultiprocess/blob/master/doc/install.md) section of the libmultiprocess readme for install steps. See [build-unix.md](build-unix.md) and [build-osx.md](build-osx.md) for information about installing dependencies in general.
+Alternately, you can install [Cap'n Proto](https://capnproto.org/) and [libmultiprocess](https://github.com/trumpsperm-core/libmultiprocess) packages on your system, and just run `cmake -B build -DWITH_MULTIPROCESS=ON` without using the depends system. The `cmake` build will be able to locate the installed packages via [pkg-config](https://www.freedesktop.org/wiki/Software/pkg-config/). See [Installation](https://github.com/trumpsperm-core/libmultiprocess/blob/master/doc/install.md) section of the libmultiprocess readme for install steps. See [build-unix.md](build-unix.md) and [build-osx.md](build-osx.md) for information about installing dependencies in general.
 
 ## Usage
 
-`bitcoinII-node` is a drop-in replacement for `bitcoinIId`, and `bitcoinII-gui` is a drop-in replacement for `bitcoinII-qt`, and there are no differences in use or external behavior between the new and old executables. But internally after [#10102](https://github.com/bitcoinII/bitcoinII/pull/10102), `bitcoinII-gui` will spawn a `bitcoinII-node` process to run P2P and RPC code, communicating with it across a socket pair, and `bitcoinII-node` will spawn `bitcoinII-wallet` to run wallet code, also communicating over a socket pair. This will let node, wallet, and GUI code run in separate address spaces for better isolation, and allow future improvements like being able to start and stop components independently on different machines and environments.
-[#19460](https://github.com/bitcoinII/bitcoinII/pull/19460) also adds a new `bitcoinII-node` `-ipcbind` option and a `bitcoinIId-wallet` `-ipcconnect` option to allow new wallet processes to connect to an existing node process.
-And [#19461](https://github.com/bitcoinII/bitcoinII/pull/19461) adds a new `bitcoinII-gui` `-ipcconnect` option to allow new GUI processes to connect to an existing node process.
+`trumpsperm-node` is a drop-in replacement for `trumpspermd`, and `trumpsperm-gui` is a drop-in replacement for `trumpsperm-qt`, and there are no differences in use or external behavior between the new and old executables. But internally after [#10102](https://github.com/trumpsperm/trumpsperm/pull/10102), `trumpsperm-gui` will spawn a `trumpsperm-node` process to run P2P and RPC code, communicating with it across a socket pair, and `trumpsperm-node` will spawn `trumpsperm-wallet` to run wallet code, also communicating over a socket pair. This will let node, wallet, and GUI code run in separate address spaces for better isolation, and allow future improvements like being able to start and stop components independently on different machines and environments.
+[#19460](https://github.com/trumpsperm/trumpsperm/pull/19460) also adds a new `trumpsperm-node` `-ipcbind` option and a `trumpspermd-wallet` `-ipcconnect` option to allow new wallet processes to connect to an existing node process.
+And [#19461](https://github.com/trumpsperm/trumpsperm/pull/19461) adds a new `trumpsperm-gui` `-ipcconnect` option to allow new GUI processes to connect to an existing node process.

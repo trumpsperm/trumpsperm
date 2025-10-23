@@ -7,8 +7,8 @@
 export LC_ALL=C
 
 # Fixes permission issues when there is a container UID/GID mismatch with the owner
-# of the mounted bitcoinII src dir.
-git config --global --add safe.directory /bitcoinII
+# of the mounted trumpsperm src dir.
+git config --global --add safe.directory /trumpsperm
 
 export PATH="/python_build/bin:${PATH}"
 export LINT_RUNNER_PATH="/lint_test_runner"

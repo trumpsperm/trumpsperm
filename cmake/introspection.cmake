@@ -1,6 +1,6 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@ include(CheckCXXSourceCompiles)
 include(CheckCXXSymbolExists)
 include(CheckIncludeFileCXX)
 
-# The following HAVE_{HEADER}_H variables go to the bitcoinII-build-config.h header.
+# The following HAVE_{HEADER}_H variables go to the trumpsperm-build-config.h header.
 check_include_file_cxx(sys/prctl.h HAVE_SYS_PRCTL_H)
 check_include_file_cxx(sys/resources.h HAVE_SYS_RESOURCES_H)
 check_include_file_cxx(sys/vmmeter.h HAVE_SYS_VMMETER_H)

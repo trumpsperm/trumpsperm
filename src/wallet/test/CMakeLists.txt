@@ -1,12 +1,12 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 # Do not use generator expressions in test sources because the
 # SOURCES property is processed to gather test suite macros.
-target_sources(test_bitcoinII
+target_sources(test_trumpsperm
   PRIVATE
     init_test_fixture.cpp
     wallet_test_fixture.cpp
@@ -25,4 +25,4 @@ target_sources(test_bitcoinII
     walletdb_tests.cpp
     walletload_tests.cpp
 )
-target_link_libraries(test_bitcoinII bitcoinII_wallet)
+target_link_libraries(test_trumpsperm trumpsperm_wallet)

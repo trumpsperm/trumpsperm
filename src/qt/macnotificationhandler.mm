@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,7 +16,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.bitcoinIIfoundation.BitcoinII-Qt";
+        return @"org.trumpspermfoundation.Trumpsperm-Qt";
     } else {
         return [self __bundleIdentifier];
     }

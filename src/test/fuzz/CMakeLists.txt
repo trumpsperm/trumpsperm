@@ -1,6 +1,6 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -130,7 +130,7 @@ add_executable(fuzz
   txrequest.cpp
   # Visual Studio 2022 version 17.12 introduced a bug
   # that causes an internal compiler error.
-  # See: https://github.com/bitcoinII/bitcoinII/issues/31303
+  # See: https://github.com/trumpsperm/trumpsperm/issues/31303
   $<$<VERSION_LESS:${MSVC_VERSION},1942>:utxo_snapshot.cpp>
   utxo_total_supply.cpp
   validation_load_mempool.cpp
@@ -140,9 +140,9 @@ add_executable(fuzz
 target_link_libraries(fuzz
   core_interface
   test_fuzz
-  bitcoinII_cli
-  bitcoinII_common
-  bitcoinII_util
+  trumpsperm_cli
+  trumpsperm_common
+  trumpsperm_util
   minisketch
   leveldb
   univalue

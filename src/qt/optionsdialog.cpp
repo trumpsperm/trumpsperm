@@ -1,15 +1,16 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <bitcoinII-build-config.h> // IWYU pragma: keep
+#include <trumpsperm-build-config.h> // IWYU pragma: keep
 
 #include <qt/optionsdialog.h>
 #include <qt/forms/ui_optionsdialog.h>
 
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermunits.h>
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
@@ -128,8 +129,8 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet)
     /* remove Window tab on Mac */
     ui->tabWidget->removeTab(ui->tabWidget->indexOf(ui->tabWindow));
     /* hide launch at startup option on macOS */
-    ui->bitcoinIIAtStartup->setVisible(false);
-    ui->verticalLayout_Main->removeWidget(ui->bitcoinIIAtStartup);
+    ui->trumpspermAtStartup->setVisible(false);
+    ui->verticalLayout_Main->removeWidget(ui->trumpspermAtStartup);
     ui->verticalLayout_Main->removeItem(ui->horizontalSpacer_0_Main);
 #endif
 
@@ -150,10 +151,10 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet)
     /* Display elements init */
     QDir translations(":translations");
 
-    ui->bitcoinIIAtStartup->setToolTip(ui->bitcoinIIAtStartup->toolTip().arg(CLIENT_NAME));
-    ui->bitcoinIIAtStartup->setText(ui->bitcoinIIAtStartup->text().arg(CLIENT_NAME));
+    ui->trumpspermAtStartup->setToolTip(ui->trumpspermAtStartup->toolTip().arg(CLIENT_NAME));
+    ui->trumpspermAtStartup->setText(ui->trumpspermAtStartup->text().arg(CLIENT_NAME));
 
-    ui->openBitcoinIIConfButton->setToolTip(ui->openBitcoinIIConfButton->toolTip().arg(CLIENT_NAME));
+    ui->openTrumpspermConfButton->setToolTip(ui->openTrumpspermConfButton->toolTip().arg(CLIENT_NAME));
 
     ui->lang->setToolTip(ui->lang->toolTip().arg(CLIENT_NAME));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
@@ -180,7 +181,7 @@ OptionsDialog::OptionsDialog(QWidget* parent, bool enableWallet)
             ui->lang->addItem(locale.nativeLanguageName() + QString(" (") + langStr + QString(")"), QVariant(langStr));
         }
     }
-    ui->unit->setModel(new BitcoinIIUnits(this));
+    ui->unit->setModel(new TrumpspermUnits(this));
 
     /* Widget-to-option mapper */
     mapper = new QDataWidgetMapper(this);
@@ -284,7 +285,7 @@ void OptionsDialog::setCurrentTab(OptionsDialog::Tab tab)
 void OptionsDialog::setMapper()
 {
     /* Main */
-    mapper->addMapping(ui->bitcoinIIAtStartup, OptionsModel::StartAtStartup);
+    mapper->addMapping(ui->trumpspermAtStartup, OptionsModel::StartAtStartup);
     mapper->addMapping(ui->threadsScriptVerif, OptionsModel::ThreadsScriptVerif);
     mapper->addMapping(ui->databaseCache, OptionsModel::DatabaseCache);
     mapper->addMapping(ui->prune, OptionsModel::Prune);
@@ -295,7 +296,7 @@ void OptionsDialog::setMapper()
     mapper->addMapping(ui->coinControlFeatures, OptionsModel::CoinControlFeatures);
     mapper->addMapping(ui->subFeeFromAmount, OptionsModel::SubFeeFromAmount);
     mapper->addMapping(ui->externalSignerPath, OptionsModel::ExternalSignerPath);
-    mapper->addMapping(ui->m_enable_psbt_controls, OptionsModel::EnablePSBC2ontrols);
+    mapper->addMapping(ui->m_enable_psbt_controls, OptionsModel::EnablePSTPSontrols);
 
     /* Network */
     mapper->addMapping(ui->mapPortNatpmp, OptionsModel::MapPortNatpmp);
@@ -358,7 +359,7 @@ void OptionsDialog::on_resetButton_clicked()
     }
 }
 
-void OptionsDialog::on_openBitcoinIIConfButton_clicked()
+void OptionsDialog::on_openTrumpspermConfButton_clicked()
 {
     QMessageBox config_msgbox(this);
     config_msgbox.setIcon(QMessageBox::Information);
@@ -378,7 +379,7 @@ void OptionsDialog::on_openBitcoinIIConfButton_clicked()
     if (config_msgbox.clickedButton() != open_button) return;
 
     /* show an error if there was some problem opening the file */
-    if (!GUIUtil::openBitcoinIIConf())
+    if (!GUIUtil::openTrumpspermConf())
         QMessageBox::critical(this, tr("Error"), tr("The configuration file could not be opened."));
 }
 

@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +22,7 @@ static constexpr auto SHUTDOWN_POLLING_DELAY{200ms};
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* BitcoinIIGUI -- Size of icons in status bar */
+/* TrumpspermGUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -48,19 +49,16 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "BitcoinII"
+#define QAPP_ORG_NAME "Trumpsperm"
 #define QAPP_ORG_DOMAIN "Bitcoin-II.org"
-#define QAPP_APP_NAME_DEFAULT "BitcoinII-Qt"
-#define QAPP_APP_NAME_TESTNET "BitcoinII-Qt-testnet"
-#define QAPP_APP_NAME_TESTNET4 "BitcoinII-Qt-testnet4"
-#define QAPP_APP_NAME_SIGNET "BitcoinII-Qt-signet"
-#define QAPP_APP_NAME_REGTEST "BitcoinII-Qt-regtest"
+#define QAPP_APP_NAME_DEFAULT "Trumpsperm-Qt"
+#define QAPP_APP_NAME_TESTNET "Trumpsperm-Qt-testnet"
+#define QAPP_APP_NAME_TESTNET4 "Trumpsperm-Qt-testnet4"
+#define QAPP_APP_NAME_SIGNET "Trumpsperm-Qt-signet"
+#define QAPP_APP_NAME_REGTEST "Trumpsperm-Qt-regtest"
 
 /* One gigabyte (GB) in bytes */
 static constexpr uint64_t GB_BYTES{1000000000};
-
-/* One gigabyte (MB) in bytes */
-static constexpr uint64_t MB_BYTES{1000000};
 
 // Default prune target displayed in GUI.
 static constexpr int DEFAULT_PRUNE_TARGET_GB{2};

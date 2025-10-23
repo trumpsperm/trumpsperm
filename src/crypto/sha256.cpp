@@ -1,8 +1,8 @@
-// Copyright (c) 2014-2022 The BitcoinII Core developers
+// Copyright (c) 2014-2022 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <bitcoinII-build-config.h> // IWYU pragma: keep
+#include <trumpsperm-build-config.h> // IWYU pragma: keep
 
 #include <crypto/sha256.h>
 #include <crypto/common.h>

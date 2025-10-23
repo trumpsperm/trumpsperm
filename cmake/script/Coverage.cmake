@@ -1,6 +1,6 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +21,7 @@ execute_process(
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
-  COMMAND ${LCOV_COMMAND} --capture --directory src --test-name test_bitcoinII --output-file test_bitcoinII.info
+  COMMAND ${LCOV_COMMAND} --capture --directory src --test-name test_trumpsperm --output-file test_trumpsperm.info
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
@@ -31,22 +31,22 @@ execute_process(
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
-  COMMAND ${LCOV_FILTER_COMMAND} test_bitcoinII.info test_bitcoinII_filtered.info
+  COMMAND ${LCOV_FILTER_COMMAND} test_trumpsperm.info test_trumpsperm_filtered.info
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
-  COMMAND ${LCOV_COMMAND} --add-tracefile test_bitcoinII_filtered.info --output-file test_bitcoinII_filtered.info
+  COMMAND ${LCOV_COMMAND} --add-tracefile test_trumpsperm_filtered.info --output-file test_trumpsperm_filtered.info
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
-  COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_bitcoinII_filtered.info --output-file test_bitcoinII_coverage.info
+  COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_trumpsperm_filtered.info --output-file test_trumpsperm_coverage.info
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
-  COMMAND ${GENHTML_COMMAND} test_bitcoinII_coverage.info --output-directory test_bitcoinII.coverage
+  COMMAND ${GENHTML_COMMAND} test_trumpsperm_coverage.info --output-directory test_trumpsperm.coverage
   WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
   COMMAND_ERROR_IS_FATAL ANY
 )
@@ -77,7 +77,7 @@ execute_process(
   COMMAND_ERROR_IS_FATAL ANY
 )
 execute_process(
-  COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_bitcoinII_filtered.info --add-tracefile functional_test_filtered.info --output-file total_coverage.info
+  COMMAND ${LCOV_COMMAND} --add-tracefile baseline_filtered.info --add-tracefile test_trumpsperm_filtered.info --add-tracefile functional_test_filtered.info --output-file total_coverage.info
   COMMAND ${GREP_EXECUTABLE} "%"
   COMMAND ${AWK_EXECUTABLE} "{ print substr($3,2,50) \"/\" $5 }"
   OUTPUT_FILE coverage_percent.txt

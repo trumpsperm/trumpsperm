@@ -1,13 +1,14 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOINII_QT_RPCCONSOLE_H
 #define BITCOINII_QT_RPCCONSOLE_H
 
-#include <bitcoinII-build-config.h> // IWYU pragma: keep
+#include <trumpsperm-build-config.h> // IWYU pragma: keep
 
 #include <qt/clientmodel.h>
 #include <qt/guiutil.h>
@@ -39,7 +40,7 @@ class QMenu;
 class QItemSelection;
 QT_END_NAMESPACE
 
-/** Local BitcoinII RPC console. */
+/** Local Trumpsperm RPC console. */
 class RPCConsole: public QWidget
 {
     Q_OBJECT

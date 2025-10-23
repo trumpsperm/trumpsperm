@@ -1,6 +1,6 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -44,28 +44,28 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS forms)
 
 # TODO: The file(GLOB ...) command should be replaced with an explicit
 # file list. Such a change must be synced with the corresponding change
-# to https://github.com/bitcoinII-core/bitcoinII-maintainer-tools/blob/main/update-translations.py
+# to https://github.com/trumpsperm-core/trumpsperm-maintainer-tools/blob/main/update-translations.py
 file(GLOB ts_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} locale/*.ts)
 set_source_files_properties(${ts_files} PROPERTIES OUTPUT_LOCATION ${CMAKE_CURRENT_BINARY_DIR}/locale)
 qt5_add_translation(qm_files ${ts_files})
 
-configure_file(bitcoinII_locale.qrc bitcoinII_locale.qrc USE_SOURCE_PERMISSIONS COPYONLY)
+configure_file(trumpsperm_locale.qrc trumpsperm_locale.qrc USE_SOURCE_PERMISSIONS COPYONLY)
 
-# The bitcoinIIqt sources have to include headers in
+# The trumpspermqt sources have to include headers in
 # order to parse them to collect translatable strings.
-add_library(bitcoinIIqt STATIC EXCLUDE_FROM_ALL
+add_library(trumpspermqt STATIC EXCLUDE_FROM_ALL
   bantablemodel.cpp
   bantablemodel.h
-  bitcoinII.cpp
-  bitcoinII.h
-  bitcoinIIaddressvalidator.cpp
-  bitcoinIIaddressvalidator.h
-  bitcoinIIamountfield.cpp
-  bitcoinIIamountfield.h
-  bitcoinIIgui.cpp
-  bitcoinIIgui.h
-  bitcoinIIunits.cpp
-  bitcoinIIunits.h
+  trumpsperm.cpp
+  trumpsperm.h
+  trumpspermaddressvalidator.cpp
+  trumpspermaddressvalidator.h
+  trumpspermamountfield.cpp
+  trumpspermamountfield.h
+  trumpspermgui.cpp
+  trumpspermgui.h
+  trumpspermunits.cpp
+  trumpspermunits.h
   clientmodel.cpp
   clientmodel.h
   csvmodelwriter.cpp
@@ -112,15 +112,15 @@ add_library(bitcoinIIqt STATIC EXCLUDE_FROM_ALL
   utilitydialog.h
   $<$<PLATFORM_ID:Windows>:winshutdownmonitor.cpp>
   $<$<PLATFORM_ID:Windows>:winshutdownmonitor.h>
-  bitcoinII.qrc
-  ${CMAKE_CURRENT_BINARY_DIR}/bitcoinII_locale.qrc
+  trumpsperm.qrc
+  ${CMAKE_CURRENT_BINARY_DIR}/trumpsperm_locale.qrc
 )
-target_compile_definitions(bitcoinIIqt
+target_compile_definitions(trumpspermqt
   PUBLIC
     QT_NO_KEYWORDS
     QT_USE_QSTRINGBUILDER
 )
-target_include_directories(bitcoinIIqt
+target_include_directories(trumpspermqt
   PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
 )
@@ -128,12 +128,12 @@ set_property(SOURCE macnotificationhandler.mm
   # Ignore warnings "'NSUserNotificationCenter' is deprecated: first deprecated in macOS 11.0".
   APPEND PROPERTY COMPILE_OPTIONS -Wno-deprecated-declarations
 )
-target_link_libraries(bitcoinIIqt
+target_link_libraries(trumpspermqt
   PUBLIC
     Qt5::Widgets
   PRIVATE
     core_interface
-    bitcoinII_cli
+    trumpsperm_cli
     leveldb
     Boost::headers
     $<TARGET_NAME_IF_EXISTS:QRencode::QRencode>
@@ -142,7 +142,7 @@ target_link_libraries(bitcoinIIqt
 )
 
 if(ENABLE_WALLET)
-  target_sources(bitcoinIIqt
+  target_sources(trumpspermqt
     PRIVATE
       addressbookpage.cpp
       addressbookpage.h
@@ -205,59 +205,59 @@ if(ENABLE_WALLET)
       walletview.cpp
       walletview.h
   )
-  target_link_libraries(bitcoinIIqt
+  target_link_libraries(trumpspermqt
     PRIVATE
-      bitcoinII_wallet
+      trumpsperm_wallet
       Qt5::Network
   )
 endif()
 
 if(WITH_DBUS)
-  target_link_libraries(bitcoinIIqt PRIVATE Qt5::DBus)
+  target_link_libraries(trumpspermqt PRIVATE Qt5::DBus)
 endif()
 
 if(qt_lib_type STREQUAL "STATIC_LIBRARY")
   # We want to define static plugins to link ourselves, thus preventing
   # automatic linking against a "sane" set of default static plugins.
-  qt5_import_plugins(bitcoinIIqt
+  qt5_import_plugins(trumpspermqt
       EXCLUDE_BY_TYPE bearer iconengines imageformats platforms styles
   )
 endif()
 
-add_executable(bitcoinII-qt
+add_executable(trumpsperm-qt
   main.cpp
-  ../init/bitcoinII-qt.cpp
+  ../init/trumpsperm-qt.cpp
 )
 
-add_windows_resources(bitcoinII-qt res/bitcoinII-qt-res.rc)
+add_windows_resources(trumpsperm-qt res/trumpsperm-qt-res.rc)
 
-target_link_libraries(bitcoinII-qt
+target_link_libraries(trumpsperm-qt
   core_interface
-  bitcoinIIqt
-  bitcoinII_node
+  trumpspermqt
+  trumpsperm_node
 )
 
-import_plugins(bitcoinII-qt)
-install_binary_component(bitcoinII-qt HAS_MANPAGE)
+import_plugins(trumpsperm-qt)
+install_binary_component(trumpsperm-qt HAS_MANPAGE)
 if(WIN32)
-  set_target_properties(bitcoinII-qt PROPERTIES WIN32_EXECUTABLE TRUE)
+  set_target_properties(trumpsperm-qt PROPERTIES WIN32_EXECUTABLE TRUE)
 endif()
 
 if(WITH_MULTIPROCESS)
-  add_executable(bitcoinII-gui
+  add_executable(trumpsperm-gui
     main.cpp
-    ../init/bitcoinII-gui.cpp
+    ../init/trumpsperm-gui.cpp
   )
-  target_link_libraries(bitcoinII-gui
+  target_link_libraries(trumpsperm-gui
     core_interface
-    bitcoinIIqt
-    bitcoinII_node
-    bitcoinII_ipc
+    trumpspermqt
+    trumpsperm_node
+    trumpsperm_ipc
   )
-  import_plugins(bitcoinII-gui)
-  install_binary_component(bitcoinII-gui)
+  import_plugins(trumpsperm-gui)
+  install_binary_component(trumpsperm-gui)
   if(WIN32)
-    set_target_properties(bitcoinII-gui PROPERTIES WIN32_EXECUTABLE TRUE)
+    set_target_properties(trumpsperm-gui PROPERTIES WIN32_EXECUTABLE TRUE)
   endif()
 endif()
 
@@ -323,10 +323,10 @@ else()
   file(GLOB ui_files ${CMAKE_CURRENT_SOURCE_DIR}/forms/*.ui)
   add_custom_target(translate
     COMMAND ${CMAKE_COMMAND} -E env XGETTEXT=${XGETTEXT_EXECUTABLE} COPYRIGHT_HOLDERS=${COPYRIGHT_HOLDERS} ${Python3_EXECUTABLE} ${PROJECT_SOURCE_DIR}/share/qt/extract_strings_qt.py ${translatable_sources}
-    COMMAND Qt5::lupdate -no-obsolete -I ${PROJECT_SOURCE_DIR}/src -locations relative ${CMAKE_CURRENT_SOURCE_DIR}/bitcoinIIstrings.cpp ${ui_files} ${qt_translatable_sources} -ts ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoinII_en.ts
-    COMMAND Qt5::lconvert -drop-translations -o ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoinII_en.xlf -i ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoinII_en.ts
-    COMMAND ${SED_EXECUTABLE} -i.old -e "s|source-language=\"en\" target-language=\"en\"|source-language=\"en\"|" -e "/<target xml:space=\"preserve\"><\\/target>/d" ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoinII_en.xlf
-    COMMAND ${CMAKE_COMMAND} -E rm ${CMAKE_CURRENT_SOURCE_DIR}/locale/bitcoinII_en.xlf.old
+    COMMAND Qt5::lupdate -no-obsolete -I ${PROJECT_SOURCE_DIR}/src -locations relative ${CMAKE_CURRENT_SOURCE_DIR}/trumpspermstrings.cpp ${ui_files} ${qt_translatable_sources} -ts ${CMAKE_CURRENT_SOURCE_DIR}/locale/trumpsperm_en.ts
+    COMMAND Qt5::lconvert -drop-translations -o ${CMAKE_CURRENT_SOURCE_DIR}/locale/trumpsperm_en.xlf -i ${CMAKE_CURRENT_SOURCE_DIR}/locale/trumpsperm_en.ts
+    COMMAND ${SED_EXECUTABLE} -i.old -e "s|source-language=\"en\" target-language=\"en\"|source-language=\"en\"|" -e "/<target xml:space=\"preserve\"><\\/target>/d" ${CMAKE_CURRENT_SOURCE_DIR}/locale/trumpsperm_en.xlf
+    COMMAND ${CMAKE_COMMAND} -E rm ${CMAKE_CURRENT_SOURCE_DIR}/locale/trumpsperm_en.xlf.old
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src
     VERBATIM
   )

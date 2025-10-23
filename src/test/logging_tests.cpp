@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -224,7 +225,7 @@ BOOST_FIXTURE_TEST_CASE(logging_Conf, LogSetup)
         ResetLogger();
         ArgsManager args;
         args.AddArg("-loglevel", "...", ArgsManager::ALLOW_ANY, OptionsCategory::DEBUG_TEST);
-        const char* argv_test[] = {"bitcoinIId", "-loglevel=debug"};
+        const char* argv_test[] = {"trumpspermd", "-loglevel=debug"};
         std::string err;
         BOOST_REQUIRE(args.ParseParameters(2, argv_test, err));
 
@@ -238,7 +239,7 @@ BOOST_FIXTURE_TEST_CASE(logging_Conf, LogSetup)
         ResetLogger();
         ArgsManager args;
         args.AddArg("-loglevel", "...", ArgsManager::ALLOW_ANY, OptionsCategory::DEBUG_TEST);
-        const char* argv_test[] = {"bitcoinIId", "-loglevel=net:trace"};
+        const char* argv_test[] = {"trumpspermd", "-loglevel=net:trace"};
         std::string err;
         BOOST_REQUIRE(args.ParseParameters(2, argv_test, err));
 
@@ -257,7 +258,7 @@ BOOST_FIXTURE_TEST_CASE(logging_Conf, LogSetup)
         ResetLogger();
         ArgsManager args;
         args.AddArg("-loglevel", "...", ArgsManager::ALLOW_ANY, OptionsCategory::DEBUG_TEST);
-        const char* argv_test[] = {"bitcoinIId", "-loglevel=debug", "-loglevel=net:trace", "-loglevel=http:info"};
+        const char* argv_test[] = {"trumpspermd", "-loglevel=debug", "-loglevel=net:trace", "-loglevel=http:info"};
         std::string err;
         BOOST_REQUIRE(args.ParseParameters(4, argv_test, err));
 

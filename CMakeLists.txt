@@ -1,6 +1,6 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -24,10 +24,10 @@ endif()
 #=============================
 # Project / Package metadata
 #=============================
-set(CLIENT_NAME "BitcoinII Core")
+set(CLIENT_NAME "Trumpsperm Core")
 set(CLIENT_VERSION_MAJOR 29)
 set(CLIENT_VERSION_MINOR 0)
-set(CLIENT_VERSION_BUILD 1)
+set(CLIENT_VERSION_BUILD 0)
 set(CLIENT_VERSION_RC 0)
 set(CLIENT_VERSION_IS_RELEASE "true")
 set(COPYRIGHT_YEAR "2025")
@@ -48,10 +48,10 @@ set(CMAKE_TRY_COMPILE_PLATFORM_VARIABLES
   CMAKE_CXX_LINK_EXECUTABLE
 )
 
-project(BitcoinIICore
+project(TrumpspermCore
   VERSION ${CLIENT_VERSION_MAJOR}.${CLIENT_VERSION_MINOR}.${CLIENT_VERSION_BUILD}
-  DESCRIPTION "BitcoinII client software"
-  HOMEPAGE_URL "https://Bitcoin-II.org/"
+  DESCRIPTION "Trumpsperm client software"
+  HOMEPAGE_URL "https://trumpsperm.cafe/"
   LANGUAGES NONE
 )
 
@@ -62,7 +62,7 @@ endif()
 
 set(COPYRIGHT_HOLDERS "The %s developers")
 set(COPYRIGHT_HOLDERS_FINAL "The ${CLIENT_NAME} developers")
-set(CLIENT_BUGREPORT "https://github.com/Bitcoin-II/BitcoinII/issues")
+set(CLIENT_BUGREPORT "https://github.com/trumpsperm/trumpsperm/issues")
 
 #=============================
 # Language setup
@@ -92,16 +92,16 @@ endif()
 #=============================
 include(CMakeDependentOption)
 # When adding a new option, end the <help_text> with a full stop for consistency.
-option(BUILD_DAEMON "Build bitcoinIId executable." ON)
-option(BUILD_GUI "Build bitcoinII-qt executable." OFF)
-option(BUILD_CLI "Build bitcoinII-cli executable." ON)
+option(BUILD_DAEMON "Build trumpspermd executable." ON)
+option(BUILD_GUI "Build trumpsperm-qt executable." OFF)
+option(BUILD_CLI "Build trumpsperm-cli executable." ON)
 
-option(BUILD_TESTS "Build test_bitcoinII executable." ON)
-option(BUILD_TX "Build bitcoinII-tx executable." ${BUILD_TESTS})
-option(BUILD_UTIL "Build bitcoinII-util executable." ${BUILD_TESTS})
+option(BUILD_TESTS "Build test_trumpsperm executable." ON)
+option(BUILD_TX "Build trumpsperm-tx executable." ${BUILD_TESTS})
+option(BUILD_UTIL "Build trumpsperm-util executable." ${BUILD_TESTS})
 
-option(BUILD_UTIL_CHAINSTATE "Build experimental bitcoinII-chainstate executable." OFF)
-option(BUILD_KERNEL_LIB "Build experimental bitcoinIIkernel library." ${BUILD_UTIL_CHAINSTATE})
+option(BUILD_UTIL_CHAINSTATE "Build experimental trumpsperm-chainstate executable." OFF)
+option(BUILD_KERNEL_LIB "Build experimental trumpspermkernel library." ${BUILD_UTIL_CHAINSTATE})
 
 option(ENABLE_WALLET "Enable wallet." ON)
 option(WITH_SQLITE "Enable SQLite wallet support." ${ENABLE_WALLET})
@@ -130,7 +130,7 @@ if(WITH_BDB)
     endif()
   endif()
 endif()
-cmake_dependent_option(BUILD_WALLET_TOOL "Build bitcoinII-wallet tool." ${BUILD_TESTS} "ENABLE_WALLET" OFF)
+cmake_dependent_option(BUILD_WALLET_TOOL "Build trumpsperm-wallet tool." ${BUILD_TESTS} "ENABLE_WALLET" OFF)
 
 option(ENABLE_HARDENING "Attempt to harden the resulting executables." ON)
 option(REDUCE_EXPORTS "Attempt to reduce exported symbols in the resulting executables." OFF)
@@ -157,7 +157,7 @@ endif()
 
 cmake_dependent_option(WITH_DBUS "Enable DBus support." ON "CMAKE_SYSTEM_NAME STREQUAL \"Linux\" AND BUILD_GUI" OFF)
 
-option(WITH_MULTIPROCESS "Build multiprocess bitcoinII-node and bitcoinII-gui executables in addition to monolithic bitcoinIId and bitcoinII-qt executables. Requires libmultiprocess library. Experimental." OFF)
+option(WITH_MULTIPROCESS "Build multiprocess trumpsperm-node and trumpsperm-gui executables in addition to monolithic trumpspermd and trumpsperm-qt executables. Requires libmultiprocess library. Experimental." OFF)
 if(WITH_MULTIPROCESS)
   find_package(Libmultiprocess REQUIRED COMPONENTS Lib)
   find_package(LibmultiprocessNative REQUIRED COMPONENTS Bin
@@ -165,7 +165,7 @@ if(WITH_MULTIPROCESS)
   )
 endif()
 
-cmake_dependent_option(BUILD_GUI_TESTS "Build test_bitcoinII-qt executable." ON "BUILD_GUI;BUILD_TESTS" OFF)
+cmake_dependent_option(BUILD_GUI_TESTS "Build test_trumpsperm-qt executable." ON "BUILD_GUI;BUILD_TESTS" OFF)
 if(BUILD_GUI)
   set(qt_components Core Gui Widgets LinguistTools)
   if(ENABLE_WALLET)
@@ -184,7 +184,7 @@ if(BUILD_GUI)
   unset(qt_components)
 endif()
 
-option(BUILD_BENCH "Build bench_bitcoinII executable." OFF)
+option(BUILD_BENCH "Build bench_trumpsperm executable." OFF)
 option(BUILD_FUZZ_BINARY "Build fuzz binary." OFF)
 option(BUILD_FOR_FUZZING "Build for fuzzing. Enabling this will disable all other targets and override BUILD_FUZZ_BINARY." OFF)
 
@@ -316,7 +316,7 @@ if(WIN32)
 
   # Workaround producing large object files, which cannot be handled by the assembler.
   # More likely to happen with no, or lower levels of optimisation.
-  # See discussion in https://github.com/bitcoinII/bitcoinII/issues/28109.
+  # See discussion in https://github.com/trumpsperm/trumpsperm/issues/28109.
   if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     try_append_cxx_flags("/bigobj" TARGET core_interface_debug SKIP_LINK)
   else()
@@ -606,8 +606,8 @@ endif()
 #       in the future after reordering Guix script commands to
 #       perform binary checks after the installation step.
 # Relevant discussions:
-# - https://github.com/hebasto/bitcoinII/pull/236#issuecomment-2183120953
-# - https://github.com/bitcoinII/bitcoinII/pull/30312#issuecomment-2191235833
+# - https://github.com/hebasto/trumpsperm/pull/236#issuecomment-2183120953
+# - https://github.com/trumpsperm/trumpsperm/pull/30312#issuecomment-2191235833
 # NetBSD always requires runtime paths to be set for executables.
 if(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
   set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
@@ -632,26 +632,26 @@ message("\n")
 message("Configure summary")
 message("=================")
 message("Executables:")
-message("  bitcoinIId ............................ ${BUILD_DAEMON}")
+message("  trumpspermd ............................ ${BUILD_DAEMON}")
 if(BUILD_DAEMON AND WITH_MULTIPROCESS)
-  set(bitcoinII_daemon_status ON)
+  set(trumpsperm_daemon_status ON)
 else()
-  set(bitcoinII_daemon_status OFF)
+  set(trumpsperm_daemon_status OFF)
 endif()
-message("  bitcoinII-node (multiprocess) ......... ${bitcoinII_daemon_status}")
-message("  bitcoinII-qt (GUI) .................... ${BUILD_GUI}")
+message("  trumpsperm-node (multiprocess) ......... ${trumpsperm_daemon_status}")
+message("  trumpsperm-qt (GUI) .................... ${BUILD_GUI}")
 if(BUILD_GUI AND WITH_MULTIPROCESS)
-  set(bitcoinII_gui_status ON)
+  set(trumpsperm_gui_status ON)
 else()
-  set(bitcoinII_gui_status OFF)
+  set(trumpsperm_gui_status OFF)
 endif()
-message("  bitcoinII-gui (GUI, multiprocess) ..... ${bitcoinII_gui_status}")
-message("  bitcoinII-cli ......................... ${BUILD_CLI}")
-message("  bitcoinII-tx .......................... ${BUILD_TX}")
-message("  bitcoinII-util ........................ ${BUILD_UTIL}")
-message("  bitcoinII-wallet ...................... ${BUILD_WALLET_TOOL}")
-message("  bitcoinII-chainstate (experimental) ... ${BUILD_UTIL_CHAINSTATE}")
-message("  libbitcoinIIkernel (experimental) ..... ${BUILD_KERNEL_LIB}")
+message("  trumpsperm-gui (GUI, multiprocess) ..... ${trumpsperm_gui_status}")
+message("  trumpsperm-cli ......................... ${BUILD_CLI}")
+message("  trumpsperm-tx .......................... ${BUILD_TX}")
+message("  trumpsperm-util ........................ ${BUILD_UTIL}")
+message("  trumpsperm-wallet ...................... ${BUILD_WALLET_TOOL}")
+message("  trumpsperm-chainstate (experimental) ... ${BUILD_UTIL_CHAINSTATE}")
+message("  libtrumpspermkernel (experimental) ..... ${BUILD_KERNEL_LIB}")
 message("Optional features:")
 message("  wallet support ...................... ${ENABLE_WALLET}")
 if(ENABLE_WALLET)
@@ -664,9 +664,9 @@ message("  USDT tracing ........................ ${WITH_USDT}")
 message("  QR code (GUI) ....................... ${WITH_QRENCODE}")
 message("  DBus (GUI, Linux only) .............. ${WITH_DBUS}")
 message("Tests:")
-message("  test_bitcoinII ........................ ${BUILD_TESTS}")
-message("  test_bitcoinII-qt ..................... ${BUILD_GUI_TESTS}")
-message("  bench_bitcoinII ....................... ${BUILD_BENCH}")
+message("  test_trumpsperm ........................ ${BUILD_TESTS}")
+message("  test_trumpsperm-qt ..................... ${BUILD_GUI_TESTS}")
+message("  bench_trumpsperm ....................... ${BUILD_BENCH}")
 message("  fuzz binary ......................... ${BUILD_FUZZ_BINARY}")
 message("")
 if(CMAKE_CROSSCOMPILING)

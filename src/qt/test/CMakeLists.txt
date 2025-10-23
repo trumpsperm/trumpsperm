@@ -1,34 +1,34 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 set(CMAKE_AUTOMOC_MOC_OPTIONS "-p${CMAKE_CURRENT_SOURCE_DIR}")
 
-add_executable(test_bitcoinII-qt
+add_executable(test_trumpsperm-qt
   apptests.cpp
   optiontests.cpp
   rpcnestedtests.cpp
   test_main.cpp
   uritests.cpp
   util.cpp
-  ../../init/bitcoinII-qt.cpp
+  ../../init/trumpsperm-qt.cpp
 )
 
-target_link_libraries(test_bitcoinII-qt
+target_link_libraries(test_trumpsperm-qt
   core_interface
-  bitcoinIIqt
+  trumpspermqt
   test_util
-  bitcoinII_node
+  trumpsperm_node
   Boost::headers
   Qt5::Test
 )
 
-import_plugins(test_bitcoinII-qt)
+import_plugins(test_trumpsperm-qt)
 
 if(ENABLE_WALLET)
-  target_sources(test_bitcoinII-qt
+  target_sources(test_trumpsperm-qt
     PRIVATE
       addressbooktests.cpp
       wallettests.cpp
@@ -36,15 +36,15 @@ if(ENABLE_WALLET)
   )
 endif()
 
-add_test(NAME test_bitcoinII-qt
-  COMMAND test_bitcoinII-qt
+add_test(NAME test_trumpsperm-qt
+  COMMAND test_trumpsperm-qt
 )
 if(WIN32 AND VCPKG_TARGET_TRIPLET)
   # On Windows, vcpkg configures Qt with `-opengl dynamic`, which makes
   # the "minimal" platform plugin unusable due to internal Qt bugs.
-  set_tests_properties(test_bitcoinII-qt PROPERTIES
+  set_tests_properties(test_trumpsperm-qt PROPERTIES
     ENVIRONMENT "QT_QPA_PLATFORM=windows"
   )
 endif()
 
-install_binary_component(test_bitcoinII-qt)
+install_binary_component(test_trumpsperm-qt)

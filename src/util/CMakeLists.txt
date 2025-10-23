@@ -1,10 +1,10 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-add_library(bitcoinII_util STATIC EXCLUDE_FROM_ALL
+add_library(trumpsperm_util STATIC EXCLUDE_FROM_ALL
   asmap.cpp
   batchpriority.cpp
   bip32.cpp
@@ -38,11 +38,11 @@ add_library(bitcoinII_util STATIC EXCLUDE_FROM_ALL
   ../sync.cpp
 )
 
-target_link_libraries(bitcoinII_util
+target_link_libraries(trumpsperm_util
   PRIVATE
     core_interface
-    bitcoinII_clientversion
-    bitcoinII_crypto
+    trumpsperm_clientversion
+    trumpsperm_crypto
     $<$<PLATFORM_ID:Windows>:ws2_32>
     $<$<PLATFORM_ID:Windows>:iphlpapi>
 )

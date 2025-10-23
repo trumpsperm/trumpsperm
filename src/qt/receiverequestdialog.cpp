@@ -1,13 +1,14 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/receiverequestdialog.h>
 #include <qt/forms/ui_receiverequestdialog.h>
 
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermunits.h>
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 #include <qt/qrimagewidget.h>
@@ -16,7 +17,7 @@
 #include <QDialog>
 #include <QString>
 
-#include <bitcoinII-build-config.h> // IWYU pragma: keep
+#include <trumpsperm-build-config.h> // IWYU pragma: keep
 
 ReceiveRequestDialog::ReceiveRequestDialog(QWidget* parent)
     : QDialog(parent, GUIUtil::dialog_flags),
@@ -46,7 +47,7 @@ void ReceiveRequestDialog::setInfo(const SendCoinsRecipient &_info)
 {
     this->info = _info;
     setWindowTitle(tr("Request payment to %1").arg(info.label.isEmpty() ? info.address : info.label));
-    QString uri = GUIUtil::formatBitcoinIIURI(info);
+    QString uri = GUIUtil::formatTrumpspermURI(info);
 
 #ifdef USE_QRCODE
     if (ui->qr_code->setQR(uri, info.address)) {
@@ -99,12 +100,12 @@ void ReceiveRequestDialog::setInfo(const SendCoinsRecipient &_info)
 void ReceiveRequestDialog::updateDisplayUnit()
 {
     if (!model) return;
-    ui->amount_content->setText(BitcoinIIUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), info.amount));
+    ui->amount_content->setText(TrumpspermUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), info.amount));
 }
 
 void ReceiveRequestDialog::on_btnCopyURI_clicked()
 {
-    GUIUtil::setClipboard(GUIUtil::formatBitcoinIIURI(info));
+    GUIUtil::setClipboard(GUIUtil::formatTrumpspermURI(info));
 }
 
 void ReceiveRequestDialog::on_btnCopyAddress_clicked()

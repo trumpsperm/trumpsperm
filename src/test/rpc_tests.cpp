@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -556,20 +557,20 @@ BOOST_AUTO_TEST_CASE(help_example)
 {
     // test different argument types
     const RPCArgList& args = {{"foo", "bar"}, {"b", true}, {"n", 1}};
-    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", args), "> bitcoinII-cli -named test foo=bar b=true n=1\n");
+    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", args), "> trumpsperm-cli -named test foo=bar b=true n=1\n");
     BOOST_CHECK_EQUAL(HelpExampleRpcNamed("test", args), "> curl --user myusername --data-binary '{\"jsonrpc\": \"2.0\", \"id\": \"curltest\", \"method\": \"test\", \"params\": {\"foo\":\"bar\",\"b\":true,\"n\":1}}' -H 'content-type: application/json' http://127.0.0.1:8333/\n");
 
     // test shell escape
-    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"foo", "b'ar"}}), "> bitcoinII-cli -named test foo='b'''ar'\n");
-    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"foo", "b\"ar"}}), "> bitcoinII-cli -named test foo='b\"ar'\n");
-    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"foo", "b ar"}}), "> bitcoinII-cli -named test foo='b ar'\n");
+    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"foo", "b'ar"}}), "> trumpsperm-cli -named test foo='b'''ar'\n");
+    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"foo", "b\"ar"}}), "> trumpsperm-cli -named test foo='b\"ar'\n");
+    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"foo", "b ar"}}), "> trumpsperm-cli -named test foo='b ar'\n");
 
     // test object params
     UniValue obj_value(UniValue::VOBJ);
     obj_value.pushKV("foo", "bar");
     obj_value.pushKV("b", false);
     obj_value.pushKV("n", 1);
-    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"name", obj_value}}), "> bitcoinII-cli -named test name='{\"foo\":\"bar\",\"b\":false,\"n\":1}'\n");
+    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"name", obj_value}}), "> trumpsperm-cli -named test name='{\"foo\":\"bar\",\"b\":false,\"n\":1}'\n");
     BOOST_CHECK_EQUAL(HelpExampleRpcNamed("test", {{"name", obj_value}}), "> curl --user myusername --data-binary '{\"jsonrpc\": \"2.0\", \"id\": \"curltest\", \"method\": \"test\", \"params\": {\"name\":{\"foo\":\"bar\",\"b\":false,\"n\":1}}}' -H 'content-type: application/json' http://127.0.0.1:8333/\n");
 
     // test array params
@@ -577,7 +578,7 @@ BOOST_AUTO_TEST_CASE(help_example)
     arr_value.push_back("bar");
     arr_value.push_back(false);
     arr_value.push_back(1);
-    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"name", arr_value}}), "> bitcoinII-cli -named test name='[\"bar\",false,1]'\n");
+    BOOST_CHECK_EQUAL(HelpExampleCliNamed("test", {{"name", arr_value}}), "> trumpsperm-cli -named test name='[\"bar\",false,1]'\n");
     BOOST_CHECK_EQUAL(HelpExampleRpcNamed("test", {{"name", arr_value}}), "> curl --user myusername --data-binary '{\"jsonrpc\": \"2.0\", \"id\": \"curltest\", \"method\": \"test\", \"params\": {\"name\":[\"bar\",false,1]}}' -H 'content-type: application/json' http://127.0.0.1:8333/\n");
 
     // test types don't matter for shell

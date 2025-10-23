@@ -1,6 +1,6 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +9,7 @@ include_guard(GLOBAL)
 # Illumos/SmartOS requires linking with -lsocket if
 # using getifaddrs & freeifaddrs.
 # See:
-# - https://github.com/bitcoinII/bitcoinII/pull/21486
+# - https://github.com/trumpsperm/trumpsperm/pull/21486
 # - https://smartos.org/man/3socket/getifaddrs
 function(test_append_socket_library target)
   if (NOT TARGET ${target})

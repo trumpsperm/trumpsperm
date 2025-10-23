@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2024-present The BitcoinII Core developers
+# Copyright (c) 2024-present The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -23,7 +23,7 @@ from test_framework.messages import (
 from test_framework.p2p import (
     P2PInterface,
 )
-from test_framework.test_framework import BitcoinIITestFramework
+from test_framework.test_framework import TrumpspermTestFramework
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -33,7 +33,7 @@ from test_framework.wallet import (
     MiniWalletMode,
 )
 
-# 1sat2/vB feerate denominated in BC2/KvB
+# 1sat2/vB feerate denominated in TPS/KvB
 FEERATE_1SAT2_VB = Decimal("0.00001000")
 # Number of seconds to wait to ensure no getdata is received
 GETDATA_WAIT = 60
@@ -54,7 +54,7 @@ def cleanup(func):
             self.nodes[0].setmocktime(0)
     return wrapper
 
-class PackageRelayTest(BitcoinIITestFramework):
+class PackageRelayTest(TrumpspermTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

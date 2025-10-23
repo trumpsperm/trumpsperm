@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -258,7 +259,7 @@ BOOST_FIXTURE_TEST_CASE(Merge, MergeTestingSetup)
 
     // If check below fails, should manually dump the results with:
     //
-    //   SETTINGS_MERGE_TEST_OUT=results.txt ./test_bitcoinII --run_test=settings_tests/Merge
+    //   SETTINGS_MERGE_TEST_OUT=results.txt ./test_trumpsperm --run_test=settings_tests/Merge
     //
     // And verify diff against previous results to make sure the changes are expected.
     //

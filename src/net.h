@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -685,7 +686,7 @@ public:
      * `shared_ptr` (instead of `unique_ptr`) is used to avoid premature close of
      * the underlying file descriptor by one thread while another thread is
      * poll(2)-ing it for activity.
-     * @see https://github.com/bitcoinII/bitcoinII/issues/21744 for details.
+     * @see https://github.com/trumpsperm/trumpsperm/issues/21744 for details.
      */
     std::shared_ptr<Sock> m_sock GUARDED_BY(m_sock_mutex);
 

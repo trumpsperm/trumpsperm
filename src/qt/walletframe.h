@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,9 +23,9 @@ QT_END_NAMESPACE
 
 /**
  * A container for embedding all wallet-related
- * controls into BitcoinIIGUI. The purpose of this class is to allow future
+ * controls into TrumpspermGUI. The purpose of this class is to allow future
  * refinements of the wallet controls with minimal need for further
- * modifications to BitcoinIIGUI, thus greatly simplifying merges while
+ * modifications to TrumpspermGUI, thus greatly simplifying merges while
  * reducing the risk of breaking top-level stuff.
  */
 class WalletFrame : public QFrame
@@ -83,7 +84,7 @@ public Q_SLOTS:
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
 
-    /** Load Partially Signed BitcoinII Transaction */
+    /** Load Partially Signed Trumpsperm Transaction */
     void gotoLoadPSBT(bool from_clipboard = false);
 
     /** Encrypt the wallet */

@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -624,12 +625,12 @@ BOOST_AUTO_TEST_CASE(knapsack_solver_test)
         add_coin(available_coins, *wallet,  4*COIN); // now we have 5+6+7+8+18+20+30+100+200+300+400 = 1094 cents
         const auto result14 = KnapsackSolver(KnapsackGroupOutputs(available_coins, *wallet, filter_confirmed), 95 * CENT, CENT);
         BOOST_CHECK(result14);
-        BOOST_CHECK_EQUAL(result14->GetSelectedValue(), 1 * COIN);  // we should get 1 BC2 in 1 coin
+        BOOST_CHECK_EQUAL(result14->GetSelectedValue(), 1 * COIN);  // we should get 1 TPS in 1 coin
         BOOST_CHECK_EQUAL(result14->GetInputSet().size(), 1U);
 
         const auto result15 = KnapsackSolver(KnapsackGroupOutputs(available_coins, *wallet, filter_confirmed), 195 * CENT, CENT);
         BOOST_CHECK(result15);
-        BOOST_CHECK_EQUAL(result15->GetSelectedValue(), 2 * COIN);  // we should get 2 BC2 in 1 coin
+        BOOST_CHECK_EQUAL(result15->GetSelectedValue(), 2 * COIN);  // we should get 2 TPS in 1 coin
         BOOST_CHECK_EQUAL(result15->GetInputSet().size(), 1U);
 
         // empty the wallet and start again, now with fractions of a cent, to test small change avoidance
@@ -1176,10 +1177,10 @@ BOOST_AUTO_TEST_CASE(coin_grinder_tests)
         int max_selection_weight = 10'000; // WU
         const auto& res = CoinGrinder(target, dummy_params, m_node, max_selection_weight, [&](CWallet& wallet) {
             CoinsResult available_coins;
-            for (int j = 0; j < 60; ++j) { // 60 UTXO --> 19,8 BC2 total --> 60 × 272 WU = 16320 WU
+            for (int j = 0; j < 60; ++j) { // 60 UTXO --> 19,8 TPS total --> 60 × 272 WU = 16320 WU
                 add_coin(available_coins, wallet, CAmount(0.33 * COIN), CFeeRate(5000), 144, false, 0, true);
             }
-            for (int i = 0; i < 10; i++) { // 10 UTXO --> 20 BC2 total --> 10 × 272 WU = 2720 WU
+            for (int i = 0; i < 10; i++) { // 10 UTXO --> 20 TPS total --> 10 × 272 WU = 2720 WU
                 add_coin(available_coins, wallet, CAmount(2 * COIN), CFeeRate(5000), 144, false, 0, true);
             }
             return available_coins;
@@ -1249,7 +1250,7 @@ BOOST_AUTO_TEST_CASE(coin_grinder_tests)
         int max_selection_weight = 400'000; // WU
         const auto& res = CoinGrinder(target, dummy_params, m_node, max_selection_weight, [&](CWallet& wallet) {
             CoinsResult available_coins;
-            // Expected Result: 4 + 3 + 2 + 1 = 10 BC2 at 400 vB
+            // Expected Result: 4 + 3 + 2 + 1 = 10 TPS at 400 vB
             add_coin(available_coins, wallet, CAmount(4 * COIN), CFeeRate(5000), 144, false, 0, true, 100);
             add_coin(available_coins, wallet, CAmount(3 * COIN), CFeeRate(5000), 144, false, 0, true, 100);
             add_coin(available_coins, wallet, CAmount(2 * COIN), CFeeRate(5000), 144, false, 0, true, 100);
@@ -1366,7 +1367,7 @@ BOOST_AUTO_TEST_CASE(srd_tests)
         const auto& res = SelectCoinsSRD(target, dummy_params, m_node, max_selection_weight, [&](CWallet& wallet) {
             CoinsResult available_coins;
             for (int j = 0; j < 10; ++j) {
-                /* 10 × 1 BC2 + 10 × 2 BC2 = 30 BC2. 20 × 272 WU = 5440 WU */
+                /* 10 × 1 TPS + 10 × 2 TPS = 30 TPS. 20 × 272 WU = 5440 WU */
                 add_coin(available_coins, wallet, CAmount(1 * COIN), CFeeRate(0), 144, false, 0, true);
                 add_coin(available_coins, wallet, CAmount(2 * COIN), CFeeRate(0), 144, false, 0, true);
             }
@@ -1384,10 +1385,10 @@ BOOST_AUTO_TEST_CASE(srd_tests)
         int max_selection_weight = 10000; // WU
         const auto& res = SelectCoinsSRD(target, dummy_params, m_node, max_selection_weight, [&](CWallet& wallet) {
             CoinsResult available_coins;
-            for (int j = 0; j < 60; ++j) { // 60 UTXO --> 19,8 BC2 total --> 60 × 272 WU = 16320 WU
+            for (int j = 0; j < 60; ++j) { // 60 UTXO --> 19,8 TPS total --> 60 × 272 WU = 16320 WU
                 add_coin(available_coins, wallet, CAmount(0.33 * COIN), CFeeRate(0), 144, false, 0, true);
             }
-            for (int i = 0; i < 10; i++) { // 10 UTXO --> 20 BC2 total --> 10 × 272 WU = 2720 WU
+            for (int i = 0; i < 10; i++) { // 10 UTXO --> 20 TPS total --> 10 × 272 WU = 2720 WU
                 add_coin(available_coins, wallet, CAmount(2 * COIN), CFeeRate(0), 144, false, 0, true);
             }
             return available_coins;
@@ -1438,9 +1439,9 @@ BOOST_AUTO_TEST_CASE(check_max_selection_weight)
     int max_weight = MAX_STANDARD_TX_WEIGHT - WITNESS_SCALE_FACTOR * (cs_params.tx_noinputs_size + cs_params.change_output_size);
     {
         // Scenario 1:
-        // The actor starts with 1x 50.0 BC2 and 1515x 0.033 BC2 (~100.0 BC2 total) unspent outputs
-        // Then tries to spend 49.5 BC2
-        // The 50.0 BC2 output should be selected, because the transaction would otherwise be too large
+        // The actor starts with 1x 50.0 TPS and 1515x 0.033 TPS (~100.0 TPS total) unspent outputs
+        // Then tries to spend 49.5 TPS
+        // The 50.0 TPS output should be selected, because the transaction would otherwise be too large
 
         // Perform selection
 
@@ -1457,7 +1458,7 @@ BOOST_AUTO_TEST_CASE(check_max_selection_weight)
             m_node);
 
         BOOST_CHECK(result);
-        // Verify that the 50 BC2 UTXO was selected, and result is below max_weight
+        // Verify that the 50 TPS UTXO was selected, and result is below max_weight
         BOOST_CHECK(has_coin(result->GetInputSet(), CAmount(50 * COIN)));
         BOOST_CHECK_LE(result->GetWeight(), max_weight);
     }
@@ -1465,8 +1466,8 @@ BOOST_AUTO_TEST_CASE(check_max_selection_weight)
     {
         // Scenario 2:
 
-        // The actor starts with 400x 0.0625 BC2 and 2000x 0.025 BC2 (75.0 BC2 total) unspent outputs
-        // Then tries to spend 49.5 BC2
+        // The actor starts with 400x 0.0625 TPS and 2000x 0.025 TPS (75.0 TPS total) unspent outputs
+        // Then tries to spend 49.5 TPS
         // A combination of coins should be selected, such that the created transaction is not too large
 
         // Perform selection
@@ -1491,7 +1492,7 @@ BOOST_AUTO_TEST_CASE(check_max_selection_weight)
     {
         // Scenario 3:
 
-        // The actor starts with 1515x 0.033 BC2 (49.995 BC2 total) unspent outputs
+        // The actor starts with 1515x 0.033 TPS (49.995 TPS total) unspent outputs
         // No results should be returned, because the transaction would be too large
 
         // Perform selection
@@ -1523,10 +1524,10 @@ BOOST_AUTO_TEST_CASE(SelectCoins_effective_value_test)
     CoinsResult available_coins;
     {
         std::unique_ptr<CWallet> dummyWallet = NewWallet(m_node, /*wallet_name=*/"dummy");
-        add_coin(available_coins, *dummyWallet, 100000); // 0.001 BC2
+        add_coin(available_coins, *dummyWallet, 100000); // 0.001 TPS
     }
 
-    CAmount target{99900}; // 0.000999 BC2
+    CAmount target{99900}; // 0.000999 TPS
 
     FastRandomContext rand;
     CoinSelectionParams cs_params{

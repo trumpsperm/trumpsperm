@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -102,7 +103,7 @@ static void ProcessPCP()
 
         // Log message if we got NO_RESOURCES.
         if (no_resources) {
-            LogPrintLevel(BCLog::NET, BCLog::Level::Warning, "portmap: At least one mapping failed because of a NO_RESOURCES error. This usually indicates that the port is already used on the router. If this is the only instance of bitcoinII running on the network, this will resolve itself automatically. Otherwise, you might want to choose a different P2P port to prevent this conflict.\n");
+            LogPrintLevel(BCLog::NET, BCLog::Level::Warning, "portmap: At least one mapping failed because of a NO_RESOURCES error. This usually indicates that the port is already used on the router. If this is the only instance of trumpsperm running on the network, this will resolve itself automatically. Otherwise, you might want to choose a different P2P port to prevent this conflict.\n");
         }
 
         // Sanity-check returned lifetime.

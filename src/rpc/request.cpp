@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +21,7 @@
 #include <vector>
 
 /**
- * JSON-RPC protocol.  BitcoinII speaks version 1.0 for maximum compatibility,
+ * JSON-RPC protocol.  Trumpsperm speaks version 1.0 for maximum compatibility,
  * but uses JSON-RPC 1.1/2.0 standards for parts of the 1.0 standard that were
  * unspecified (HTTP errors and contents of 'error').
  *
@@ -28,7 +29,7 @@
  * 1.2 spec: http://jsonrpc.org/historical/json-rpc-over-http.html
  *
  * If the server receives a request with the JSON-RPC 2.0 marker `{"jsonrpc": "2.0"}`
- * then BitcoinII will respond with a strictly specified response.
+ * then Trumpsperm will respond with a strictly specified response.
  * It will only return an HTTP error code if an actual HTTP error is encountered
  * such as the endpoint is not found (404) or the request is not formatted correctly (500).
  * Otherwise the HTTP code is always OK (200) and RPC errors will be included in the

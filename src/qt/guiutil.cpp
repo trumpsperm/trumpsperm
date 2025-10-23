@@ -1,13 +1,14 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/guiutil.h>
 
-#include <qt/bitcoinIIaddressvalidator.h>
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermaddressvalidator.h>
+#include <qt/trumpspermunits.h>
 #include <qt/platformstyle.h>
 #include <qt/qvalidatedlineedit.h>
 #include <qt/sendcoinsrecipient.h>
@@ -137,10 +138,10 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a BitcoinII address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Trumpsperm address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
-    widget->setValidator(new BitcoinIIAddressEntryValidator(parent));
-    widget->setCheckValidator(new BitcoinIIAddressCheckValidator(parent));
+    widget->setValidator(new TrumpspermAddressEntryValidator(parent));
+    widget->setCheckValidator(new TrumpspermAddressCheckValidator(parent));
 }
 
 void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut)
@@ -148,10 +149,10 @@ void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut)
     QObject::connect(new QShortcut(shortcut, button), &QShortcut::activated, [button]() { button->animateClick(); });
 }
 
-bool parseBitcoinIIURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseTrumpspermURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no bitcoinII: URI
-    if(!uri.isValid() || uri.scheme() != QString("bitcoinII"))
+    // return if URI is not valid or is no trumpsperm: URI
+    if(!uri.isValid() || uri.scheme() != QString("trumpsperm"))
         return false;
 
     SendCoinsRecipient rv;
@@ -187,7 +188,7 @@ bool parseBitcoinIIURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if (!BitcoinIIUnits::parse(BitcoinIIUnit::BC2, i->second, &rv.amount)) {
+                if (!TrumpspermUnits::parse(TrumpspermUnit::TPS, i->second, &rv.amount)) {
                     return false;
                 }
             }
@@ -204,22 +205,22 @@ bool parseBitcoinIIURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseBitcoinIIURI(QString uri, SendCoinsRecipient *out)
+bool parseTrumpspermURI(QString uri, SendCoinsRecipient *out)
 {
     QUrl uriInstance(uri);
-    return parseBitcoinIIURI(uriInstance, out);
+    return parseTrumpspermURI(uriInstance, out);
 }
 
-QString formatBitcoinIIURI(const SendCoinsRecipient &info)
+QString formatTrumpspermURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
-    QString ret = QString("bitcoinII:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+    QString ret = QString("trumpsperm:%1").arg(bech_32 ? info.address.toUpper() : info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinIIUnits::format(BitcoinIIUnit::BC2, info.amount, false, BitcoinIIUnits::SeparatorStyle::NEVER));
+        ret += QString("?amount=%1").arg(TrumpspermUnits::format(TrumpspermUnit::TPS, info.amount, false, TrumpspermUnits::SeparatorStyle::NEVER));
         paramCount++;
     }
 
@@ -444,7 +445,7 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(PathToQString(pathDebug)));
 }
 
-bool openBitcoinIIConf()
+bool openTrumpspermConf()
 {
     fs::path pathConfig = gArgs.GetConfigFilePath();
 
@@ -456,7 +457,7 @@ bool openBitcoinIIConf()
 
     configFile.close();
 
-    /* Open bitcoinII.conf with the associated application */
+    /* Open trumpsperm.conf with the associated application */
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(PathToQString(pathConfig)));
 #ifdef Q_OS_MACOS
     // Workaround for macOS-specific behavior; see #15409.
@@ -520,15 +521,15 @@ fs::path static StartupShortcutPath()
 {
     ChainType chain = gArgs.GetChainType();
     if (chain == ChainType::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitcoinII.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Trumpsperm.lnk";
     if (chain == ChainType::TESTNET) // Remove this special case when testnet CBaseChainParams::DataDir() is incremented to "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitcoinII (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / fs::u8path(strprintf("BitcoinII (%s).lnk", ChainTypeToString(chain)));
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Trumpsperm (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / fs::u8path(strprintf("Trumpsperm (%s).lnk", ChainTypeToString(chain)));
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for BitcoinII*.lnk
+    // check for Trumpsperm*.lnk
     return fs::exists(StartupShortcutPath());
 }
 
@@ -603,8 +604,8 @@ fs::path static GetAutostartFilePath()
 {
     ChainType chain = gArgs.GetChainType();
     if (chain == ChainType::MAIN)
-        return GetAutostartDir() / "bitcoinII.desktop";
-    return GetAutostartDir() / fs::u8path(strprintf("bitcoinII-%s.desktop", ChainTypeToString(chain)));
+        return GetAutostartDir() / "trumpsperm.desktop";
+    return GetAutostartDir() / fs::u8path(strprintf("trumpsperm-%s.desktop", ChainTypeToString(chain)));
 }
 
 bool GetStartOnSystemStartup()
@@ -645,13 +646,13 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         ChainType chain = gArgs.GetChainType();
-        // Write a bitcoinII.desktop file to the autostart directory:
+        // Write a trumpsperm.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == ChainType::MAIN)
-            optionFile << "Name=BitcoinII\n";
+            optionFile << "Name=Trumpsperm\n";
         else
-            optionFile << strprintf("Name=BitcoinII (%s)\n", ChainTypeToString(chain));
+            optionFile << strprintf("Name=Trumpsperm (%s)\n", ChainTypeToString(chain));
         optionFile << "Exec=" << pszExePath << strprintf(" -min -chain=%s\n", ChainTypeToString(chain));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

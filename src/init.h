@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -38,7 +39,7 @@ void InitLogging(const ArgsManager& args);
 //!Parameter interaction: change current parameters depending on various rules
 void InitParameterInteraction(ArgsManager& args);
 
-/** Initialize bitcoinII core: Basic context setup.
+/** Initialize trumpsperm core: Basic context setup.
  *  @note This can be done before daemonization. Do not call Shutdown() if this function fails.
  *  @pre Parameters should be parsed and config file should be read.
  */
@@ -56,7 +57,7 @@ bool AppInitParameterInteraction(const ArgsManager& args);
  */
 bool AppInitSanityChecks(const kernel::Context& kernel);
 /**
- * Lock bitcoinII core critical directories.
+ * Lock trumpsperm core critical directories.
  * @note This should only be done after daemonization. Do not call Shutdown() if this function fails.
  * @pre Parameters should be parsed and config file should be read, AppInitSanityChecks should have been called.
  */
@@ -66,7 +67,7 @@ bool AppInitLockDirectories();
  */
 bool AppInitInterfaces(node::NodeContext& node);
 /**
- * BitcoinII core main initialization.
+ * Trumpsperm core main initialization.
  * @note This should only be done after daemonization. Call Shutdown() if this function fails.
  * @pre Parameters should be parsed and config file should be read, AppInitLockDirectories should have been called.
  */

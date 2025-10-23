@@ -7,7 +7,7 @@ To run linters locally with the same versions as the CI environment, use the inc
 Dockerfile:
 
 ```sh
-DOCKER_BUILDKIT=1 docker build -t bitcoinII-linter --file "./ci/lint_imagefile" ./ && docker run --rm -v $(pwd):/bitcoinII -it bitcoinII-linter
+DOCKER_BUILDKIT=1 docker build -t trumpsperm-linter --file "./ci/lint_imagefile" ./ && docker run --rm -v $(pwd):/trumpsperm -it trumpsperm-linter
 ```
 
 Building the container can be done every time, because it is fast when the
@@ -92,16 +92,16 @@ Usage: test/lint/git-subtree-check.sh [-r] DIR [COMMIT]
 
 To do a full check with `-r`, make sure that you have fetched the upstream repository branch in which the subtree is
 maintained:
-* for `src/secp256k1`: https://github.com/bitcoinII-core/secp256k1.git (branch master)
-* for `src/leveldb`: https://github.com/bitcoinII-core/leveldb-subtree.git (branch bitcoinII-fork)
-* for `src/crypto/ctaes`: https://github.com/bitcoinII-core/ctaes.git (branch master)
-* for `src/crc32c`: https://github.com/bitcoinII-core/crc32c-subtree.git (branch bitcoinII-fork)
-* for `src/minisketch`: https://github.com/bitcoinII-core/minisketch.git (branch master)
+* for `src/secp256k1`: https://github.com/trumpsperm-core/secp256k1.git (branch master)
+* for `src/leveldb`: https://github.com/trumpsperm-core/leveldb-subtree.git (branch trumpsperm-fork)
+* for `src/crypto/ctaes`: https://github.com/trumpsperm-core/ctaes.git (branch master)
+* for `src/crc32c`: https://github.com/trumpsperm-core/crc32c-subtree.git (branch trumpsperm-fork)
+* for `src/minisketch`: https://github.com/trumpsperm-core/minisketch.git (branch master)
 
 To do so, add the upstream repository as remote:
 
 ```
-git remote add --fetch secp256k1 https://github.com/bitcoinII-core/secp256k1.git
+git remote add --fetch secp256k1 https://github.com/trumpsperm-core/secp256k1.git
 ```
 
 lint_ignore_dirs.py

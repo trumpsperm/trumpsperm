@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# Copyright (c) 2022 The BitcoinII Core developers
+# Copyright (c) 2022 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-""" Example logging BitcoinII Core mempool events using the mempool:added,
+""" Example logging Trumpsperm Core mempool events using the mempool:added,
     mempool:removed, mempool:replaced, and mempool:rejected tracepoints. """
 
 import curses
@@ -121,16 +121,16 @@ int trace_replaced(struct pt_regs *ctx) {
 
 
 def main(pid):
-    print(f"Hooking into bitcoinIId with pid {pid}")
-    bitcoinIId_with_usdts = USDT(pid=int(pid))
+    print(f"Hooking into trumpspermd with pid {pid}")
+    trumpspermd_with_usdts = USDT(pid=int(pid))
 
     # attaching the trace functions defined in the BPF program
     # to the tracepoints
-    bitcoinIId_with_usdts.enable_probe(probe="mempool:added", fn_name="trace_added")
-    bitcoinIId_with_usdts.enable_probe(probe="mempool:removed", fn_name="trace_removed")
-    bitcoinIId_with_usdts.enable_probe(probe="mempool:replaced", fn_name="trace_replaced")
-    bitcoinIId_with_usdts.enable_probe(probe="mempool:rejected", fn_name="trace_rejected")
-    bpf = BPF(text=PROGRAM, usdt_contexts=[bitcoinIId_with_usdts])
+    trumpspermd_with_usdts.enable_probe(probe="mempool:added", fn_name="trace_added")
+    trumpspermd_with_usdts.enable_probe(probe="mempool:removed", fn_name="trace_removed")
+    trumpspermd_with_usdts.enable_probe(probe="mempool:replaced", fn_name="trace_replaced")
+    trumpspermd_with_usdts.enable_probe(probe="mempool:rejected", fn_name="trace_rejected")
+    bpf = BPF(text=PROGRAM, usdt_contexts=[trumpspermd_with_usdts])
 
     events = []
 
@@ -372,7 +372,7 @@ class Dashboard:
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("USAGE: ", sys.argv[0], "<pid of bitcoinIId>")
+        print("USAGE: ", sys.argv[0], "<pid of trumpspermd>")
         exit(1)
 
     pid = sys.argv[1]

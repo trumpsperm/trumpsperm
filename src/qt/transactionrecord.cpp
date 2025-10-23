@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -70,7 +71,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
 
             if (fAllFromMe) {
                 // Change is only really possible if we're the sender
-                // Otherwise, someone just sent bitcoinIIs to a change address, which should be shown
+                // Otherwise, someone just sent trumpsperms to a change address, which should be shown
                 if (wtx.txout_is_change[i]) {
                     continue;
                 }
@@ -85,7 +86,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
 
                 if (!std::get_if<CNoDestination>(&wtx.txout_address[i]))
                 {
-                    // Sent to BitcoinII Address
+                    // Sent to Trumpsperm Address
                     sub.type = TransactionRecord::SendToAddress;
                     sub.address = EncodeDestination(wtx.txout_address[i]);
                 }
@@ -121,7 +122,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const interface
                 sub.involvesWatchAddress = mine & ISMINE_WATCH_ONLY;
                 if (wtx.txout_address_is_mine[i])
                 {
-                    // Received by BitcoinII Address
+                    // Received by Trumpsperm Address
                     sub.type = TransactionRecord::RecvWithAddress;
                     sub.address = EncodeDestination(wtx.txout_address[i]);
                 }

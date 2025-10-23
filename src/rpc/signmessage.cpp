@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +21,7 @@ static RPCHelpMan verifymessage()
     return RPCHelpMan{"verifymessage",
         "Verify a signed message.",
         {
-            {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitcoinII address to use for the signature."},
+            {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The trumpsperm address to use for the signature."},
             {"signature", RPCArg::Type::STR, RPCArg::Optional::NO, "The signature provided by the signer in base 64 encoding (see signmessage)."},
             {"message", RPCArg::Type::STR, RPCArg::Optional::NO, "The message that was signed."},
         },

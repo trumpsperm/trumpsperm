@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -76,7 +77,7 @@ struct ChainTxData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * BitcoinII system.
+ * Trumpsperm system.
  */
 class CChainParams
 {
@@ -104,9 +105,9 @@ public:
     /** If this chain allows time to be mocked */
     bool IsMockableChain() const { return m_is_mockable_chain; }
     uint64_t PruneAfterHeight() const { return nPruneAfterHeight; }
-    /** Minimum free space (in MB) needed for data directory */
+    /** Minimum free space (in GB) needed for data directory */
     uint64_t AssumedBlockchainSize() const { return m_assumed_blockchain_size; }
-    /** Minimum free space (in MB) needed for data directory when pruned; Does not include prune target*/
+    /** Minimum free space (in GB) needed for data directory when pruned; Does not include prune target*/
     uint64_t AssumedChainStateSize() const { return m_assumed_chain_state_size; }
     /** Whether it is possible to mine blocks on demand (no retargeting) */
     bool MineBlocksOnDemand() const { return consensus.fPowNoRetargeting; }

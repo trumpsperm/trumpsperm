@@ -1,12 +1,12 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 include(AddWindowsResources)
 
-configure_file(${PROJECT_SOURCE_DIR}/cmake/bitcoinII-build-config.h.in bitcoinII-build-config.h USE_SOURCE_PERMISSIONS @ONLY)
+configure_file(${PROJECT_SOURCE_DIR}/cmake/trumpsperm-build-config.h.in trumpsperm-build-config.h USE_SOURCE_PERMISSIONS @ONLY)
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 
 #=============================
@@ -82,19 +82,19 @@ if(NOT CMAKE_ARCHIVE_OUTPUT_DIRECTORY)
 endif()
 
 add_custom_target(generate_build_info
-  BYPRODUCTS ${PROJECT_BINARY_DIR}/src/bitcoinII-build-info.h
-  COMMAND ${CMAKE_COMMAND} -DBUILD_INFO_HEADER_PATH=${PROJECT_BINARY_DIR}/src/bitcoinII-build-info.h -DSOURCE_DIR=${PROJECT_SOURCE_DIR} -P ${PROJECT_SOURCE_DIR}/cmake/script/GenerateBuildInfo.cmake
-  COMMENT "Generating bitcoinII-build-info.h"
+  BYPRODUCTS ${PROJECT_BINARY_DIR}/src/trumpsperm-build-info.h
+  COMMAND ${CMAKE_COMMAND} -DBUILD_INFO_HEADER_PATH=${PROJECT_BINARY_DIR}/src/trumpsperm-build-info.h -DSOURCE_DIR=${PROJECT_SOURCE_DIR} -P ${PROJECT_SOURCE_DIR}/cmake/script/GenerateBuildInfo.cmake
+  COMMENT "Generating trumpsperm-build-info.h"
   VERBATIM
 )
-add_library(bitcoinII_clientversion STATIC EXCLUDE_FROM_ALL
+add_library(trumpsperm_clientversion STATIC EXCLUDE_FROM_ALL
   clientversion.cpp
 )
-target_link_libraries(bitcoinII_clientversion
+target_link_libraries(trumpsperm_clientversion
   PRIVATE
     core_interface
 )
-add_dependencies(bitcoinII_clientversion generate_build_info)
+add_dependencies(trumpsperm_clientversion generate_build_info)
 
 add_subdirectory(crypto)
 add_subdirectory(util)
@@ -102,7 +102,7 @@ if(WITH_MULTIPROCESS)
   add_subdirectory(ipc)
 endif()
 
-add_library(bitcoinII_consensus STATIC EXCLUDE_FROM_ALL
+add_library(trumpsperm_consensus STATIC EXCLUDE_FROM_ALL
   arith_uint256.cpp
   consensus/merkle.cpp
   consensus/tx_check.cpp
@@ -115,10 +115,10 @@ add_library(bitcoinII_consensus STATIC EXCLUDE_FROM_ALL
   script/script_error.cpp
   uint256.cpp
 )
-target_link_libraries(bitcoinII_consensus
+target_link_libraries(trumpsperm_consensus
   PRIVATE
     core_interface
-    bitcoinII_crypto
+    trumpsperm_crypto
     secp256k1
 )
 
@@ -127,8 +127,8 @@ if(WITH_ZMQ)
 endif()
 
 # Home for common functionality shared by different executables and libraries.
-# Similar to `bitcoinII_util` library, but higher-level.
-add_library(bitcoinII_common STATIC EXCLUDE_FROM_ALL
+# Similar to `trumpsperm_util` library, but higher-level.
+add_library(trumpsperm_common STATIC EXCLUDE_FROM_ALL
   addresstype.cpp
   base58.cpp
   bech32.cpp
@@ -180,11 +180,11 @@ add_library(bitcoinII_common STATIC EXCLUDE_FROM_ALL
   script/signingprovider.cpp
   script/solver.cpp
 )
-target_link_libraries(bitcoinII_common
+target_link_libraries(trumpsperm_common
   PRIVATE
     core_interface
-    bitcoinII_consensus
-    bitcoinII_util
+    trumpsperm_consensus
+    trumpsperm_util
     univalue
     secp256k1
     Boost::headers
@@ -198,26 +198,26 @@ if(ENABLE_WALLET)
   add_subdirectory(wallet)
 
   if(BUILD_WALLET_TOOL)
-    add_executable(bitcoinII-wallet
-      bitcoinII-wallet.cpp
-      init/bitcoinII-wallet.cpp
+    add_executable(trumpsperm-wallet
+      trumpsperm-wallet.cpp
+      init/trumpsperm-wallet.cpp
       wallet/wallettool.cpp
     )
-    add_windows_resources(bitcoinII-wallet bitcoinII-wallet-res.rc)
-    target_link_libraries(bitcoinII-wallet
+    add_windows_resources(trumpsperm-wallet trumpsperm-wallet-res.rc)
+    target_link_libraries(trumpsperm-wallet
       core_interface
-      bitcoinII_wallet
-      bitcoinII_common
-      bitcoinII_util
+      trumpsperm_wallet
+      trumpsperm_common
+      trumpsperm_util
       Boost::headers
     )
-    install_binary_component(bitcoinII-wallet HAS_MANPAGE)
+    install_binary_component(trumpsperm-wallet HAS_MANPAGE)
   endif()
 endif()
 
 
-# P2P and RPC server functionality used by `bitcoinIId` and `bitcoinII-qt` executables.
-add_library(bitcoinII_node STATIC EXCLUDE_FROM_ALL
+# P2P and RPC server functionality used by `trumpspermd` and `trumpsperm-qt` executables.
+add_library(trumpsperm_node STATIC EXCLUDE_FROM_ALL
   addrdb.cpp
   addrman.cpp
   banman.cpp
@@ -309,15 +309,15 @@ add_library(bitcoinII_node STATIC EXCLUDE_FROM_ALL
   validation.cpp
   validationinterface.cpp
   versionbits.cpp
-  $<$<TARGET_EXISTS:bitcoinII_wallet>:wallet/init.cpp>
-  $<$<NOT:$<TARGET_EXISTS:bitcoinII_wallet>>:dummywallet.cpp>
+  $<$<TARGET_EXISTS:trumpsperm_wallet>:wallet/init.cpp>
+  $<$<NOT:$<TARGET_EXISTS:trumpsperm_wallet>>:dummywallet.cpp>
 )
-target_link_libraries(bitcoinII_node
+target_link_libraries(trumpsperm_node
   PRIVATE
     core_interface
-    bitcoinII_common
-    bitcoinII_util
-    $<TARGET_NAME_IF_EXISTS:bitcoinII_zmq>
+    trumpsperm_common
+    trumpsperm_util
+    $<TARGET_NAME_IF_EXISTS:trumpsperm_zmq>
     leveldb
     minisketch
     univalue
@@ -329,100 +329,100 @@ target_link_libraries(bitcoinII_node
 )
 
 
-# BitcoinII Core bitcoinIId.
+# Trumpsperm Core trumpspermd.
 if(BUILD_DAEMON)
-  add_executable(bitcoinIId
-    bitcoinIId.cpp
-    init/bitcoinIId.cpp
+  add_executable(trumpspermd
+    trumpspermd.cpp
+    init/trumpspermd.cpp
   )
-  add_windows_resources(bitcoinIId bitcoinIId-res.rc)
-  target_link_libraries(bitcoinIId
+  add_windows_resources(trumpspermd trumpspermd-res.rc)
+  target_link_libraries(trumpspermd
     core_interface
-    bitcoinII_node
-    $<TARGET_NAME_IF_EXISTS:bitcoinII_wallet>
+    trumpsperm_node
+    $<TARGET_NAME_IF_EXISTS:trumpsperm_wallet>
   )
-  install_binary_component(bitcoinIId HAS_MANPAGE)
+  install_binary_component(trumpspermd HAS_MANPAGE)
 endif()
 if(WITH_MULTIPROCESS AND BUILD_DAEMON)
-  add_executable(bitcoinII-node
-    bitcoinIId.cpp
-    init/bitcoinII-node.cpp
+  add_executable(trumpsperm-node
+    trumpspermd.cpp
+    init/trumpsperm-node.cpp
   )
-  target_link_libraries(bitcoinII-node
+  target_link_libraries(trumpsperm-node
     core_interface
-    bitcoinII_node
-    bitcoinII_ipc
-    $<TARGET_NAME_IF_EXISTS:bitcoinII_wallet>
+    trumpsperm_node
+    trumpsperm_ipc
+    $<TARGET_NAME_IF_EXISTS:trumpsperm_wallet>
   )
-  install_binary_component(bitcoinII-node)
+  install_binary_component(trumpsperm-node)
 endif()
 
 if(WITH_MULTIPROCESS AND BUILD_TESTS)
-    # bitcoinII_ipc_test library target is defined here in src/CMakeLists.txt
+    # trumpsperm_ipc_test library target is defined here in src/CMakeLists.txt
     # instead of src/test/CMakeLists.txt so capnp files in src/test/ are able to
     # reference capnp files in src/ipc/capnp/ by relative path. The Cap'n Proto
     # compiler only allows importing by relative path when the importing and
     # imported files are underneath the same compilation source prefix, so the
     # source prefix must be src/, not src/test/
-    add_library(bitcoinII_ipc_test STATIC EXCLUDE_FROM_ALL
+    add_library(trumpsperm_ipc_test STATIC EXCLUDE_FROM_ALL
       test/ipc_test.cpp
     )
-    target_capnp_sources(bitcoinII_ipc_test ${PROJECT_SOURCE_DIR}
+    target_capnp_sources(trumpsperm_ipc_test ${PROJECT_SOURCE_DIR}
       test/ipc_test.capnp
     )
-    add_dependencies(bitcoinII_ipc_test bitcoinII_ipc_headers)
+    add_dependencies(trumpsperm_ipc_test trumpsperm_ipc_headers)
 endif()
 
 
-add_library(bitcoinII_cli STATIC EXCLUDE_FROM_ALL
+add_library(trumpsperm_cli STATIC EXCLUDE_FROM_ALL
   compat/stdin.cpp
   rpc/client.cpp
 )
-target_link_libraries(bitcoinII_cli
+target_link_libraries(trumpsperm_cli
   PUBLIC
     core_interface
     univalue
 )
 
 
-# BitcoinII Core RPC client
+# Trumpsperm Core RPC client
 if(BUILD_CLI)
-  add_executable(bitcoinII-cli bitcoinII-cli.cpp)
-  add_windows_resources(bitcoinII-cli bitcoinII-cli-res.rc)
-  target_link_libraries(bitcoinII-cli
+  add_executable(trumpsperm-cli trumpsperm-cli.cpp)
+  add_windows_resources(trumpsperm-cli trumpsperm-cli-res.rc)
+  target_link_libraries(trumpsperm-cli
     core_interface
-    bitcoinII_cli
-    bitcoinII_common
-    bitcoinII_util
+    trumpsperm_cli
+    trumpsperm_common
+    trumpsperm_util
     libevent::core
     libevent::extra
   )
-  install_binary_component(bitcoinII-cli HAS_MANPAGE)
+  install_binary_component(trumpsperm-cli HAS_MANPAGE)
 endif()
 
 
 if(BUILD_TX)
-  add_executable(bitcoinII-tx bitcoinII-tx.cpp)
-  add_windows_resources(bitcoinII-tx bitcoinII-tx-res.rc)
-  target_link_libraries(bitcoinII-tx
+  add_executable(trumpsperm-tx trumpsperm-tx.cpp)
+  add_windows_resources(trumpsperm-tx trumpsperm-tx-res.rc)
+  target_link_libraries(trumpsperm-tx
     core_interface
-    bitcoinII_common
-    bitcoinII_util
+    trumpsperm_common
+    trumpsperm_util
     univalue
   )
-  install_binary_component(bitcoinII-tx HAS_MANPAGE)
+  install_binary_component(trumpsperm-tx HAS_MANPAGE)
 endif()
 
 
 if(BUILD_UTIL)
-  add_executable(bitcoinII-util bitcoinII-util.cpp)
-  add_windows_resources(bitcoinII-util bitcoinII-util-res.rc)
-  target_link_libraries(bitcoinII-util
+  add_executable(trumpsperm-util trumpsperm-util.cpp)
+  add_windows_resources(trumpsperm-util trumpsperm-util-res.rc)
+  target_link_libraries(trumpsperm-util
     core_interface
-    bitcoinII_common
-    bitcoinII_util
+    trumpsperm_common
+    trumpsperm_util
   )
-  install_binary_component(bitcoinII-util HAS_MANPAGE)
+  install_binary_component(trumpsperm-util HAS_MANPAGE)
 endif()
 
 
@@ -436,22 +436,22 @@ if(BUILD_KERNEL_LIB)
 endif()
 
 if(BUILD_UTIL_CHAINSTATE)
-  add_executable(bitcoinII-chainstate
-    bitcoinII-chainstate.cpp
+  add_executable(trumpsperm-chainstate
+    trumpsperm-chainstate.cpp
   )
   # TODO: The `SKIP_BUILD_RPATH` property setting can be deleted
   #       in the future after reordering Guix script commands to
   #       perform binary checks after the installation step.
   # Relevant discussions:
-  # - https://github.com/hebasto/bitcoinII/pull/236#issuecomment-2183120953
-  # - https://github.com/bitcoinII/bitcoinII/pull/30312#issuecomment-2191235833
-  set_target_properties(bitcoinII-chainstate PROPERTIES
+  # - https://github.com/hebasto/trumpsperm/pull/236#issuecomment-2183120953
+  # - https://github.com/trumpsperm/trumpsperm/pull/30312#issuecomment-2191235833
+  set_target_properties(trumpsperm-chainstate PROPERTIES
     SKIP_BUILD_RPATH OFF
   )
-  target_link_libraries(bitcoinII-chainstate
+  target_link_libraries(trumpsperm-chainstate
     PRIVATE
       core_interface
-      bitcoinIIkernel
+      trumpspermkernel
   )
 endif()
 

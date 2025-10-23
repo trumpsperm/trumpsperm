@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -68,7 +69,7 @@ public:
     virtual std::string getName() = 0;
 };
 
-//! Top-level interface for a bitcoinII node (bitcoinIId process).
+//! Top-level interface for a trumpsperm node (trumpspermd process).
 class Node
 {
 public:
@@ -108,7 +109,7 @@ public:
     //! would be ignored because it is also specified in the command line.
     virtual bool isSettingIgnored(const std::string& name) = 0;
 
-    //! Return setting value from <datadir>/settings.json or bitcoinII.conf.
+    //! Return setting value from <datadir>/settings.json or trumpsperm.conf.
     virtual common::SettingsValue getPersistentSetting(const std::string& name) = 0;
 
     //! Update a setting in <datadir>/settings.json.

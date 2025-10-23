@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -51,7 +52,7 @@ CAmount GetDustThreshold(const CTxOut& txout, const CFeeRate& dustRelayFeeIn)
     // public key + an ECDSA signature). For Segwit v1 Taproot outputs the minimum
     // satisfaction is lower (a single BIP340 signature) but this computation was
     // kept to not further reduce the dust level.
-    // See discussion in https://github.com/bitcoinII/bitcoinII/pull/22779 for details.
+    // See discussion in https://github.com/trumpsperm/trumpsperm/pull/22779 for details.
     if (txout.scriptPubKey.IsWitnessProgram(witnessversion, witnessprogram)) {
         // sum the sizes of the parts of a transaction input
         // with 75% segwit discount applied to the script size.

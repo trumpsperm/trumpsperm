@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,7 +19,7 @@ QT_BEGIN_NAMESPACE
 class QString;
 QT_END_NAMESPACE
 
-/** Class encapsulating BitcoinII Core startup and shutdown.
+/** Class encapsulating Trumpsperm Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
 class InitExecutor : public QObject

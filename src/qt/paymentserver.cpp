@@ -1,12 +1,13 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/paymentserver.h>
 
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermunits.h>
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 
@@ -35,7 +36,7 @@
 #include <QUrlQuery>
 
 const int BITCOINII_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOINII_IPC_PREFIX("bitcoinII:");
+const QString BITCOINII_IPC_PREFIX("trumpsperm:");
 
 //
 // Create a name that is unique for:
@@ -44,7 +45,7 @@ const QString BITCOINII_IPC_PREFIX("bitcoinII:");
 //
 static QString ipcServerName()
 {
-    QString name("BitcoinIIQt");
+    QString name("TrumpspermQt");
 
     // Append a simple hash of the datadir
     // Note that gArgs.GetDataDirNet() returns a different path
@@ -78,7 +79,7 @@ void PaymentServer::ipcParseCommandLine(int argc, char* argv[])
         QString arg(argv[i]);
         if (arg.startsWith("-")) continue;
 
-        if (arg.startsWith(BITCOINII_IPC_PREFIX, Qt::CaseInsensitive)) // bitcoinII: URI
+        if (arg.startsWith(BITCOINII_IPC_PREFIX, Qt::CaseInsensitive)) // trumpsperm: URI
         {
             savedPaymentRequests.insert(arg);
         }
@@ -128,7 +129,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer)
     : QObject(parent)
 {
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click bitcoinII: links
+    // on Mac: sent when you click trumpsperm: links
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -145,7 +146,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer)
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(nullptr, tr("Payment request error"),
-                tr("Cannot start bitcoinII: click-to-pay handler"));
+                tr("Cannot start trumpsperm: click-to-pay handler"));
         }
         else {
             connect(uriServer, &QLocalServer::newConnection, this, &PaymentServer::handleURIConnection);
@@ -156,7 +157,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer)
 PaymentServer::~PaymentServer() = default;
 
 //
-// OSX-specific way of handling bitcoinII: URIs
+// OSX-specific way of handling trumpsperm: URIs
 //
 bool PaymentServer::eventFilter(QObject *object, QEvent *event)
 {
@@ -191,18 +192,18 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith("bitcoinII://", Qt::CaseInsensitive))
+    if (s.startsWith("trumpsperm://", Qt::CaseInsensitive))
     {
-        Q_EMIT message(tr("URI handling"), tr("'bitcoinII://' is not a valid URI. Use 'bitcoinII:' instead."),
+        Q_EMIT message(tr("URI handling"), tr("'trumpsperm://' is not a valid URI. Use 'trumpsperm:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
-    else if (s.startsWith(BITCOINII_IPC_PREFIX, Qt::CaseInsensitive)) // bitcoinII: URI
+    else if (s.startsWith(BITCOINII_IPC_PREFIX, Qt::CaseInsensitive)) // trumpsperm: URI
     {
         QUrlQuery uri((QUrl(s)));
         // normal URI
         {
             SendCoinsRecipient recipient;
-            if (GUIUtil::parseBitcoinIIURI(s, &recipient))
+            if (GUIUtil::parseTrumpspermURI(s, &recipient))
             {
                 std::string error_msg;
                 const CTxDestination dest = DecodeDestination(recipient.address.toStdString(), error_msg);
@@ -223,7 +224,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid BitcoinII address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid Trumpsperm address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;

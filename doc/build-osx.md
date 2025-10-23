@@ -2,7 +2,7 @@
 
 **Updated for MacOS [15](https://www.apple.com/macos/macos-sequoia/)**
 
-This guide describes how to build bitcoinIId, command-line utilities, and GUI on macOS.
+This guide describes how to build trumpspermd, command-line utilities, and GUI on macOS.
 
 ## Preparation
 
@@ -16,7 +16,7 @@ macOS comes with a built-in Terminal located in:
 ### 1. Xcode Command Line Tools
 
 The Xcode Command Line Tools are a collection of build tools for macOS.
-These tools must be installed in order to build BitcoinII Core from source.
+These tools must be installed in order to build Trumpsperm Core from source.
 
 To install, run the following command from your terminal:
 
@@ -51,21 +51,21 @@ To install, run the following from your terminal:
 brew install cmake boost pkgconf libevent
 ```
 
-### 4. Clone BitcoinII repository
+### 4. Clone Trumpsperm repository
 
 `git` should already be installed by default on your system.
-Now that all the required dependencies are installed, let's clone the BitcoinII Core repository to a directory.
+Now that all the required dependencies are installed, let's clone the Trumpsperm Core repository to a directory.
 All build scripts and commands will run from this directory.
 
 ``` bash
-git clone https://github.com/bitcoinII/bitcoinII.git
+git clone https://github.com/trumpsperm/trumpsperm.git
 ```
 
 ### 5. Install Optional Dependencies
 
 #### Wallet Dependencies
 
-It is not necessary to build wallet functionality to run `bitcoinIId` or  `bitcoinII-qt`.
+It is not necessary to build wallet functionality to run `trumpspermd` or  `trumpsperm-qt`.
 
 ###### Descriptor Wallet Support
 
@@ -88,7 +88,7 @@ brew install berkeley-db@4
 
 ###### Qt
 
-BitcoinII Core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install
+Trumpsperm Core includes a GUI built with the cross-platform Qt Framework. To compile the GUI, we need to install
 Qt, libqrencode and pass `-DBUILD_GUI=ON`. Skip if you don't intend to use the GUI.
 
 ``` bash
@@ -98,7 +98,7 @@ brew install qt@5
 Note: Building may fail if Qt 6 is installed (`qt` or `qt@6`)
 
 Note: Building with Qt binaries downloaded from the Qt website is not officially supported.
-See the notes in [#7714](https://github.com/bitcoinII/bitcoinII/issues/7714).
+See the notes in [#7714](https://github.com/trumpsperm/trumpsperm/issues/7714).
 
 ###### libqrencode
 
@@ -140,14 +140,14 @@ brew install python
 
 #### Deploy Dependencies
 
-You can [deploy](#3-deploy-optional) a `.zip` containing the BitcoinII Core application.
+You can [deploy](#3-deploy-optional) a `.zip` containing the Trumpsperm Core application.
 It is required that you have `python` installed.
 
-## Building BitcoinII Core
+## Building Trumpsperm Core
 
 ### 1. Configuration
 
-There are many ways to configure BitcoinII Core, here are a few common examples:
+There are many ways to configure Trumpsperm Core, here are a few common examples:
 
 ##### Wallet (BDB + SQlite) Support, No GUI:
 
@@ -184,7 +184,7 @@ cmake -B build -LH
 ### 2. Compile
 
 After configuration, you are ready to compile.
-Run the following in your terminal to compile BitcoinII Core:
+Run the following in your terminal to compile Trumpsperm Core:
 
 ``` bash
 cmake --build build     # Use "-j N" here for N parallel jobs.
@@ -199,41 +199,41 @@ You can also create a  `.zip` containing the `.app` bundle by running the follow
 cmake --build build --target deploy
 ```
 
-## Running BitcoinII Core
+## Running Trumpsperm Core
 
-BitcoinII Core should now be available at `./build/bin/bitcoinIId`.
-If you compiled support for the GUI, it should be available at `./build/bin/bitcoinII-qt`.
+Trumpsperm Core should now be available at `./build/bin/trumpspermd`.
+If you compiled support for the GUI, it should be available at `./build/bin/trumpsperm-qt`.
 
-The first time you run `bitcoinIId` or `bitcoinII-qt`, it will start downloading the blockchain.
+The first time you run `trumpspermd` or `trumpsperm-qt`, it will start downloading the blockchain.
 This process could take many hours, or even days on slower than average systems.
 
 By default, blockchain and wallet data files will be stored in:
 
 ``` bash
-/Users/${USER}/Library/Application Support/BitcoinII/
+/Users/${USER}/Library/Application Support/Trumpsperm/
 ```
 
 Before running, you may create an empty configuration file:
 
 ```shell
-mkdir -p "/Users/${USER}/Library/Application Support/BitcoinII"
+mkdir -p "/Users/${USER}/Library/Application Support/Trumpsperm"
 
-touch "/Users/${USER}/Library/Application Support/BitcoinII/bitcoinII.conf"
+touch "/Users/${USER}/Library/Application Support/Trumpsperm/trumpsperm.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/BitcoinII/bitcoinII.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/Trumpsperm/trumpsperm.conf"
 ```
 
 You can monitor the download process by looking at the debug.log file:
 
 ```shell
-tail -f $HOME/Library/Application\ Support/BitcoinII/debug.log
+tail -f $HOME/Library/Application\ Support/Trumpsperm/debug.log
 ```
 
 ## Other commands:
 
 ```shell
-./build/bin/bitcoinIId -daemon      # Starts the bitcoinII daemon.
-./build/bin/bitcoinII-cli --help    # Outputs a list of command-line options.
-./build/bin/bitcoinII-cli help      # Outputs a list of RPC commands when the daemon is running.
-./build/bin/bitcoinII-qt -server # Starts the bitcoinII-qt server mode, allows bitcoinII-cli control
+./build/bin/trumpspermd -daemon      # Starts the trumpsperm daemon.
+./build/bin/trumpsperm-cli --help    # Outputs a list of command-line options.
+./build/bin/trumpsperm-cli help      # Outputs a list of RPC commands when the daemon is running.
+./build/bin/trumpsperm-qt -server # Starts the trumpsperm-qt server mode, allows trumpsperm-cli control
 ```

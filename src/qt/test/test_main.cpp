@@ -1,14 +1,15 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <bitcoinII-build-config.h> // IWYU pragma: keep
+#include <trumpsperm-build-config.h> // IWYU pragma: keep
 
 #include <interfaces/init.h>
 #include <interfaces/node.h>
-#include <qt/bitcoinII.h>
+#include <qt/trumpsperm.h>
 #include <qt/guiconstants.h>
 #include <qt/test/apptests.h>
 #include <qt/test/optiontests.h>
@@ -77,7 +78,7 @@ int main(int argc, char* argv[])
     int num_test_failures{0};
 
     {
-        BitcoinIIApplication app;
+        TrumpspermApplication app;
         app.createNode(*init);
 
         AppTests app_tests(app);

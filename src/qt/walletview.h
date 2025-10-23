@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +9,7 @@
 #define BITCOINII_QT_WALLETVIEW_H
 
 #include <consensus/amount.h>
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermunits.h>
 
 #include <QStackedWidget>
 
@@ -55,7 +56,7 @@ private:
     ClientModel* clientModel{nullptr};
 
     //!
-    //! The wallet model represents a bitcoinII wallet, and offers access to
+    //! The wallet model represents a trumpsperm wallet, and offers access to
     //! the list of transactions, address book and sending functionality.
     //!
     WalletModel* const walletModel;
@@ -121,7 +122,7 @@ Q_SIGNALS:
     /** Encryption status of wallet changed */
     void encryptionStatusChanged();
     /** Notify that a new transaction appeared */
-    void incomingTransaction(const QString& date, BitcoinIIUnit unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& walletName);
+    void incomingTransaction(const QString& date, TrumpspermUnit unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& walletName);
     /** Notify that the out of sync warning icon has been pressed */
     void outOfSyncWarningClicked();
 };

@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +14,7 @@
 #include <limits>
 #include <map>
 #include <vector>
-
+#include "amount.h"
 namespace Consensus {
 
 /**
@@ -98,6 +99,11 @@ struct Params {
     /** Don't warn about unknown BIP 9 activations below this height.
      * This prevents us from warning about the CSV and segwit activations. */
     int MinBIP9WarningHeight;
+
+         // --- Premine (one-shot) ---
+     CAmount nPremineAmount{0};
+     int nPremineHeight{0};
+     std::vector<unsigned char> vPremineScript; // raw scriptPubKey bytes
     /**
      * Minimum blocks including miner confirmation of the total of 2016 blocks in a retargeting period,
      * (nPowTargetTimespan / nPowTargetSpacing) which is also used for BIP9 deployments.
@@ -128,7 +134,7 @@ struct Params {
     uint256 defaultAssumeValid;
 
     /**
-     * If true, witness commitments contain a payload equal to a BitcoinII Script solution
+     * If true, witness commitments contain a payload equal to a Trumpsperm Script solution
      * to the signet challenge. See BIP325.
      */
     bool signet_blocks{false};

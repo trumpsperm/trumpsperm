@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,7 +22,7 @@
 
 typedef uint256 ChainCode;
 
-/** A hasher class for BitcoinII's 256-bit hash (double SHA-256). */
+/** A hasher class for Trumpsperm's 256-bit hash (double SHA-256). */
 class CHash256 {
 private:
     CSHA256 sha;
@@ -46,7 +47,7 @@ public:
     }
 };
 
-/** A hasher class for BitcoinII's 160-bit hash (SHA-256 + RIPEMD-160). */
+/** A hasher class for Trumpsperm's 160-bit hash (SHA-256 + RIPEMD-160). */
 class CHash160 {
 private:
     CSHA256 sha;

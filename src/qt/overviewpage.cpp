@@ -1,13 +1,14 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/overviewpage.h>
 #include <qt/forms/ui_overviewpage.h>
 
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermunits.h>
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
@@ -95,7 +96,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
-        QString amountText = BitcoinIIUnits::formatWithUnit(unit, amount, true, BitcoinIIUnits::SeparatorStyle::ALWAYS);
+        QString amountText = TrumpspermUnits::formatWithUnit(unit, amount, true, TrumpspermUnits::SeparatorStyle::ALWAYS);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -126,7 +127,7 @@ public:
         return {DECORATION_SIZE + 8 + minimum_text_width, DECORATION_SIZE};
     }
 
-    BitcoinIIUnit unit{BitcoinIIUnit::BC2};
+    TrumpspermUnit unit{TrumpspermUnit::TPS};
 
 Q_SIGNALS:
     //! An intermediate signal for emitting from the `paint() const` member function.
@@ -196,28 +197,28 @@ OverviewPage::~OverviewPage()
 
 void OverviewPage::setBalance(const interfaces::WalletBalances& balances)
 {
-    BitcoinIIUnit unit = walletModel->getOptionsModel()->getDisplayUnit();
+    TrumpspermUnit unit = walletModel->getOptionsModel()->getDisplayUnit();
     if (walletModel->wallet().isLegacy()) {
         if (walletModel->wallet().privateKeysDisabled()) {
-            ui->labelBalance->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelUnconfirmed->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.unconfirmed_watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelImmature->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.immature_watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelTotal->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelBalance->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelUnconfirmed->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.unconfirmed_watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelImmature->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.immature_watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelTotal->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
         } else {
-            ui->labelBalance->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelUnconfirmed->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.unconfirmed_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelImmature->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.immature_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelTotal->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelWatchAvailable->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelWatchPending->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.unconfirmed_watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelWatchImmature->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.immature_watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-            ui->labelWatchTotal->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelBalance->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelUnconfirmed->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.unconfirmed_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelImmature->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.immature_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelTotal->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchAvailable->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchPending->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.unconfirmed_watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchImmature->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.immature_watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+            ui->labelWatchTotal->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.watch_only_balance + balances.unconfirmed_watch_only_balance + balances.immature_watch_only_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
         }
     } else {
-        ui->labelBalance->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-        ui->labelUnconfirmed->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.unconfirmed_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-        ui->labelImmature->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.immature_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
-        ui->labelTotal->setText(BitcoinIIUnits::formatWithPrivacy(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, BitcoinIIUnits::SeparatorStyle::ALWAYS, m_privacy));
+        ui->labelBalance->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+        ui->labelUnconfirmed->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.unconfirmed_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+        ui->labelImmature->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.immature_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
+        ui->labelTotal->setText(TrumpspermUnits::formatWithPrivacy(unit, balances.balance + balances.unconfirmed_balance + balances.immature_balance, TrumpspermUnits::SeparatorStyle::ALWAYS, m_privacy));
     }
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users
@@ -290,7 +291,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         });
     }
 
-    // update the display unit, to not use the default ("BC2")
+    // update the display unit, to not use the default ("TPS")
     updateDisplayUnit();
 }
 

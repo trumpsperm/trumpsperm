@@ -5,7 +5,7 @@
 See the Bitcoin Core website for versions of Bitcoin Core that are currently supported with
 security updates: https://bitcoincore.org/en/lifecycle/#schedule
 
-As BitcoinII Core will closely follow Bitcoin Core's upgrade paths, the official Bitcoin Core
+As Trumpsperm Core will closely follow Bitcoin Core's upgrade paths, the official Bitcoin Core
 webiste is the foremost authority in relation to version lifecyles. 
 
 ## Reporting a Vulnerability

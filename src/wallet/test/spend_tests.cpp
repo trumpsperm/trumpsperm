@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -67,18 +68,18 @@ BOOST_FIXTURE_TEST_CASE(wallet_duplicated_preset_inputs_test, TestChain100Setup)
 {
     // Verify that the wallet's Coin Selection process does not include pre-selected inputs twice in a transaction.
 
-    // Add 4 spendable UTXO, 50 BC2 each, to the wallet (total balance 200 BC2)
+    // Add 4 spendable UTXO, 50 TPS each, to the wallet (total balance 200 TPS)
     for (int i = 0; i < 4; i++) CreateAndProcessBlock({}, GetScriptForRawPubKey(coinbaseKey.GetPubKey()));
     auto wallet = CreateSyncedWallet(*m_node.chain, WITH_LOCK(Assert(m_node.chainman)->GetMutex(), return m_node.chainman->ActiveChain()), coinbaseKey);
 
     LOCK(wallet->cs_wallet);
     auto available_coins = AvailableCoins(*wallet);
     std::vector<COutput> coins = available_coins.All();
-    // Preselect the first 3 UTXO (150 BC2 total)
+    // Preselect the first 3 UTXO (150 TPS total)
     std::set<COutPoint> preset_inputs = {coins[0].outpoint, coins[1].outpoint, coins[2].outpoint};
 
     // Try to create a tx that spends more than what preset inputs + wallet selected inputs are covering for.
-    // The wallet can cover up to 200 BC2, and the tx target is 299 BC2.
+    // The wallet can cover up to 200 TPS, and the tx target is 299 TPS.
     std::vector<CRecipient> recipients{{*Assert(wallet->GetNewDestination(OutputType::BECH32, "dummy")),
                                            /*nAmount=*/299 * COIN, /*fSubtractFeeFromAmount=*/true}};
     CCoinControl coin_control;
@@ -87,16 +88,16 @@ BOOST_FIXTURE_TEST_CASE(wallet_duplicated_preset_inputs_test, TestChain100Setup)
         coin_control.Select(outpoint);
     }
 
-    // Attempt to send 299 BC2 from a wallet that only has 200 BC2. The wallet should exclude
+    // Attempt to send 299 TPS from a wallet that only has 200 TPS. The wallet should exclude
     // the preset inputs from the pool of available coins, realize that there is not enough
-    // money to fund the 299 BC2 payment, and fail with "Insufficient funds".
+    // money to fund the 299 TPS payment, and fail with "Insufficient funds".
     //
-    // Even with SFFO, the wallet can only afford to send 200 BC2.
+    // Even with SFFO, the wallet can only afford to send 200 TPS.
     // If the wallet does not properly exclude preset inputs from the pool of available coins
     // prior to coin selection, it may create a transaction that does not fund the full payment
     // amount or, through SFFO, incorrectly reduce the recipient's amount by the difference
-    // between the original target and the wrongly counted inputs (in this case 99 BC2)
-    // so that the recipient's amount is no longer equal to the user's selected target of 299 BC2.
+    // between the original target and the wrongly counted inputs (in this case 99 TPS)
+    // so that the recipient's amount is no longer equal to the user's selected target of 299 TPS.
 
     // First case, use 'subtract_fee_from_outputs=true'
     BOOST_CHECK(!CreateTransaction(*wallet, recipients, /*change_pos=*/std::nullopt, coin_control));

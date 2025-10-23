@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -48,7 +49,7 @@ enum class SigningResult {
 };
 
 /** Verify a signed message.
- * @param[in] address Signer's bitcoinII address, it must refer to a public key.
+ * @param[in] address Signer's trumpsperm address, it must refer to a public key.
  * @param[in] signature The signature in base64 format.
  * @param[in] message The message that was signed.
  * @return result code */

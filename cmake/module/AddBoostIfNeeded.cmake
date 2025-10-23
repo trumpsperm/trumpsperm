@@ -1,6 +1,6 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@ function(add_boost_if_needed)
         Boost. Therefore, a proper check will be appropriate here.
 
   Implementation notes:
-  Although only Boost headers are used to build BitcoinII Core,
+  Although only Boost headers are used to build Trumpsperm Core,
   we still leverage a standard CMake's approach to handle
   dependencies, i.e., the Boost::headers "library".
   A command target_link_libraries(target PRIVATE Boost::headers)
@@ -73,7 +73,7 @@ function(add_boost_if_needed)
     include(CheckIncludeFileCXX)
     check_include_file_cxx(boost/test/included/unit_test.hpp HAVE_BOOST_INCLUDED_UNIT_TEST_H)
     if(NOT HAVE_BOOST_INCLUDED_UNIT_TEST_H)
-      message(FATAL_ERROR "Building test_bitcoinII executable requested but boost/test/included/unit_test.hpp header not available.")
+      message(FATAL_ERROR "Building test_trumpsperm executable requested but boost/test/included/unit_test.hpp header not available.")
     endif()
   endif()
 

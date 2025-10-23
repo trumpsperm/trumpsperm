@@ -4,27 +4,27 @@ Test Shell for Interactive Environments
 This document describes how to use the `TestShell` submodule in the functional
 test suite.
 
-The `TestShell` submodule extends the `BitcoinIITestFramework` functionality to
+The `TestShell` submodule extends the `TrumpspermTestFramework` functionality to
 external interactive environments for prototyping and educational purposes. Just
-like `BitcoinIITestFramework`, the `TestShell` allows the user to:
+like `TrumpspermTestFramework`, the `TestShell` allows the user to:
 
-* Manage regtest bitcoinIId subprocesses.
-* Access RPC interfaces of the underlying bitcoinIId instances.
+* Manage regtest trumpspermd subprocesses.
+* Access RPC interfaces of the underlying trumpspermd instances.
 * Log events to the functional test logging utility.
 
 The `TestShell` can be useful in interactive environments where it is necessary
-to extend the object lifetime of the underlying `BitcoinIITestFramework` between
+to extend the object lifetime of the underlying `TrumpspermTestFramework` between
 user inputs. Such environments include the Python3 command line interpreter or
 [Jupyter](https://jupyter.org/) notebooks running a Python3 kernel.
 
 ## 1. Requirements
 
 * Python3
-* `bitcoinIId` built in the same repository as the `TestShell`.
+* `trumpspermd` built in the same repository as the `TestShell`.
 
-## 2. Importing `TestShell` from the BitcoinII Core repository
+## 2. Importing `TestShell` from the Trumpsperm Core repository
 
-We can import the `TestShell` by adding the path of the configured BitcoinII Core
+We can import the `TestShell` by adding the path of the configured Trumpsperm Core
 `test_framework` module to the beginning of the PATH variable, and then
 importing the `TestShell` class from the `test_shell` sub-package. Since
 the build system creates a copy of the `test_framework` module into a new `build/`
@@ -33,17 +33,17 @@ must be used.
 
 ```
 >>> import sys
->>> sys.path.insert(0, "/path/to/bitcoinII/build/test/functional")
+>>> sys.path.insert(0, "/path/to/trumpsperm/build/test/functional")
 >>> from test_framework.test_shell import TestShell
 ```
 
-The following `TestShell` methods manage the lifetime of the underlying bitcoinIId
+The following `TestShell` methods manage the lifetime of the underlying trumpspermd
 processes and logging utilities.
 
 * `TestShell().setup()`
 * `TestShell().shutdown()`
 
-The `TestShell` inherits all `BitcoinIITestFramework` members and methods, such
+The `TestShell` inherits all `TrumpspermTestFramework` members and methods, such
 as:
 * `TestShell().nodes[index].rpc_method()`
 * `TestShell().log.info("Custom log message")`
@@ -55,16 +55,16 @@ The following sections demonstrate how to initialize, run, and shut down a
 
 ```
 >>> test = TestShell().setup(num_nodes=2, setup_clean_chain=True)
-20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Initializing test directory /path/to/bitcoinII_func_test_XXXXXXX
+20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Initializing test directory /path/to/trumpsperm_func_test_XXXXXXX
 ```
 The `TestShell` forwards all functional test parameters of the parent
-`BitcoinIITestFramework` object. The full set of argument keywords which can be
+`TrumpspermTestFramework` object. The full set of argument keywords which can be
 used to initialize the `TestShell` can be found in [section
 #6](#custom-testshell-parameters) of this document.
 
 **Note: Running multiple instances of `TestShell` is not allowed.** Running a
 single process also ensures that logging remains consolidated in the same
-temporary folder. If you need more bitcoinIId nodes than set by default (1),
+temporary folder. If you need more trumpspermd nodes than set by default (1),
 simply increase the `num_nodes` parameter during setup.
 
 ```
@@ -74,12 +74,12 @@ TestShell is already running!
 
 ## 4. Interacting with the `TestShell`
 
-Unlike the `BitcoinIITestFramework` class, the `TestShell` keeps the underlying
-BitcoinIId subprocesses (nodes) and logging utilities running until the user
+Unlike the `TrumpspermTestFramework` class, the `TestShell` keeps the underlying
+Trumpspermd subprocesses (nodes) and logging utilities running until the user
 explicitly shuts down the `TestShell` object.
 
-During the time between the `setup` and `shutdown` calls, all `bitcoinIId` node
-processes and `BitcoinIITestFramework` convenience methods can be accessed
+During the time between the `setup` and `shutdown` calls, all `trumpspermd` node
+processes and `TrumpspermTestFramework` convenience methods can be accessed
 interactively.
 
 **Example: Mining a regtest chain**
@@ -131,18 +131,18 @@ test-framework**. Modules such as
 [key.py](/test/functional/test_framework/key.py),
 [script.py](/test/functional/test_framework/script.py) and
 [messages.py](/test/functional/test_framework/messages.py) are particularly
-useful in constructing objects which can be passed to the bitcoinIId nodes managed
+useful in constructing objects which can be passed to the trumpspermd nodes managed
 by a running `TestShell` object.
 
 ## 5. Shutting the `TestShell` down
 
-Shutting down the `TestShell` will safely tear down all running bitcoinIId
+Shutting down the `TestShell` will safely tear down all running trumpspermd
 instances and remove all temporary data and logging directories.
 
 ```
 >>> test.shutdown()
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Stopping nodes
-20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Cleaning up /path/to/bitcoinII_func_test_XXXXXXX on exit
+20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Cleaning up /path/to/trumpsperm_func_test_XXXXXXX on exit
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Tests successful
 ```
 To prevent the logs from being removed after a shutdown, simply set the
@@ -151,20 +151,20 @@ To prevent the logs from being removed after a shutdown, simply set the
 >>> test.options.nocleanup = True
 >>> test.shutdown()
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Stopping nodes
-20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Not cleaning up dir /path/to/bitcoinII_func_test_XXXXXXX on exit
+20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Not cleaning up dir /path/to/trumpsperm_func_test_XXXXXXX on exit
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Tests successful
 ```
 
-The following utility consolidates logs from the bitcoinIId nodes and the
-underlying `BitcoinIITestFramework`:
+The following utility consolidates logs from the trumpspermd nodes and the
+underlying `TrumpspermTestFramework`:
 
-* `/path/to/bitcoinII/build/test/functional/combine_logs.py
-  '/path/to/bitcoinII_func_test_XXXXXXX'`
+* `/path/to/trumpsperm/build/test/functional/combine_logs.py
+  '/path/to/trumpsperm_func_test_XXXXXXX'`
 
 ## 6. Custom `TestShell` parameters
 
 The `TestShell` object initializes with the default settings inherited from the
-`BitcoinIITestFramework` class. The user can override these in
+`TrumpspermTestFramework` class. The user can override these in
 `TestShell().setup(key=value)`.
 
 **Note:** `TestShell().reset()` will reset test parameters to default values and
@@ -172,20 +172,20 @@ can be called after the TestShell is shut down.
 
 | Test parameter key | Default Value | Description |
 |---|---|---|
-| `bind_to_localhost_only` | `True` | Binds bitcoinIId P2P services to `127.0.0.1` if set to `True`.|
-| `cachedir` | `"/path/to/bitcoinII/build/test/cache"` | Sets the bitcoinIId datadir directory. |
-| `chain`  | `"regtest"` | Sets the chain-type for the underlying test bitcoinIId processes. |
-| `configfile` | `"/path/to/bitcoinII/build/test/config.ini"` | Sets the location of the test framework config file. |
-| `coveragedir` | `None` | Records bitcoinIId RPC test coverage into this directory if set. |
+| `bind_to_localhost_only` | `True` | Binds trumpspermd P2P services to `127.0.0.1` if set to `True`.|
+| `cachedir` | `"/path/to/trumpsperm/build/test/cache"` | Sets the trumpspermd datadir directory. |
+| `chain`  | `"regtest"` | Sets the chain-type for the underlying test trumpspermd processes. |
+| `configfile` | `"/path/to/trumpsperm/build/test/config.ini"` | Sets the location of the test framework config file. |
+| `coveragedir` | `None` | Records trumpspermd RPC test coverage into this directory if set. |
 | `loglevel` | `INFO` | Logs events at this level and higher. Can be set to `DEBUG`, `INFO`, `WARNING`, `ERROR` or `CRITICAL`. |
 | `nocleanup` | `False` | Cleans up temporary test directory if set to `True` during `shutdown`. |
-| `noshutdown` | `False` | Does not stop bitcoinIId instances after `shutdown` if set to `True`. |
-| `num_nodes` | `1` | Sets the number of initialized bitcoinIId processes. |
+| `noshutdown` | `False` | Does not stop trumpspermd instances after `shutdown` if set to `True`. |
+| `num_nodes` | `1` | Sets the number of initialized trumpspermd processes. |
 | `perf` | False | Profiles running nodes with `perf` for the duration of the test if set to `True`. |
-| `rpc_timeout` | `60` | Sets the RPC server timeout for the underlying bitcoinIId processes. |
+| `rpc_timeout` | `60` | Sets the RPC server timeout for the underlying trumpspermd processes. |
 | `setup_clean_chain` | `False` | A 200-block-long chain is initialized from cache by default. Instead, `setup_clean_chain` initializes an empty blockchain if set to `True`. |
 | `randomseed` | Random Integer | `TestShell().options.randomseed` is a member of `TestShell` which can be accessed during a test to seed a random generator. User can override default with a constant value for reproducible test runs. |
-| `supports_cli` | `False` | Whether the bitcoinII-cli utility is compiled and available for the test. |
+| `supports_cli` | `False` | Whether the trumpsperm-cli utility is compiled and available for the test. |
 | `tmpdir` | `"/var/folders/.../"` | Sets directory for test logs. Will be deleted upon a successful test run unless `nocleanup` is set to `True` |
 | `trace_rpc` | `False` | Logs all RPC calls if set to `True`. |
-| `usecli` | `False` | Uses the bitcoinII-cli interface for all bitcoinIId commands instead of directly calling the RPC server. Requires `supports_cli`. |
+| `usecli` | `False` | Uses the trumpsperm-cli interface for all trumpspermd commands instead of directly calling the RPC server. Requires `supports_cli`. |

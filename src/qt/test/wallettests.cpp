@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,8 +12,8 @@
 #include <interfaces/chain.h>
 #include <interfaces/node.h>
 #include <key_io.h>
-#include <qt/bitcoinIIamountfield.h>
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermamountfield.h>
+#include <qt/trumpspermunits.h>
 #include <qt/clientmodel.h>
 #include <qt/optionsmodel.h>
 #include <qt/overviewpage.h>
@@ -83,7 +84,7 @@ uint256 SendCoins(CWallet& wallet, SendCoinsDialog& sendCoinsDialog, const CTxDe
     QVBoxLayout* entries = sendCoinsDialog.findChild<QVBoxLayout*>("entries");
     SendCoinsEntry* entry = qobject_cast<SendCoinsEntry*>(entries->itemAt(0)->widget());
     entry->findChild<QValidatedLineEdit*>("payTo")->setText(QString::fromStdString(EncodeDestination(address)));
-    entry->findChild<BitcoinIIAmountField*>("payAmount")->setValue(amount);
+    entry->findChild<TrumpspermAmountField*>("payAmount")->setValue(amount);
     sendCoinsDialog.findChild<QFrame*>("frameFee")
         ->findChild<QFrame*>("frameFeeSelection")
         ->findChild<QCheckBox*>("optInRBF")
@@ -140,8 +141,8 @@ void BumpFee(TransactionView& view, const uint256& txid, bool expectDisabled, st
 
 void CompareBalance(WalletModel& walletModel, CAmount expected_balance, QLabel* balance_label_to_check)
 {
-    BitcoinIIUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
-    QString balanceComparison = BitcoinIIUnits::formatWithUnit(unit, expected_balance, false, BitcoinIIUnits::SeparatorStyle::ALWAYS);
+    TrumpspermUnit unit = walletModel.getOptionsModel()->getDisplayUnit();
+    QString balanceComparison = TrumpspermUnits::formatWithUnit(unit, expected_balance, false, TrumpspermUnits::SeparatorStyle::ALWAYS);
     QCOMPARE(balance_label_to_check->text().trimmed(), balanceComparison);
 }
 
@@ -270,9 +271,9 @@ public:
 //
 // This also requires overriding the default minimal Qt platform:
 //
-//     QT_QPA_PLATFORM=xcb     build/bin/test_bitcoinII-qt  # Linux
-//     QT_QPA_PLATFORM=windows build/bin/test_bitcoinII-qt  # Windows
-//     QT_QPA_PLATFORM=cocoa   build/bin/test_bitcoinII-qt  # macOS
+//     QT_QPA_PLATFORM=xcb     build/bin/test_trumpsperm-qt  # Linux
+//     QT_QPA_PLATFORM=windows build/bin/test_trumpsperm-qt  # Windows
+//     QT_QPA_PLATFORM=cocoa   build/bin/test_trumpsperm-qt  # macOS
 void TestGUI(interfaces::Node& node, const std::shared_ptr<CWallet>& wallet)
 {
     // Create widgets for sending coins and listing transactions.
@@ -324,7 +325,7 @@ void TestGUI(interfaces::Node& node, const std::shared_ptr<CWallet>& wallet)
     labelInput->setText("TEST_LABEL_1");
 
     // Amount input
-    BitcoinIIAmountField* amountInput = receiveCoinsDialog.findChild<BitcoinIIAmountField*>("reqAmount");
+    TrumpspermAmountField* amountInput = receiveCoinsDialog.findChild<TrumpspermAmountField*>("reqAmount");
     amountInput->setValue(1);
 
     // Message input
@@ -340,7 +341,7 @@ void TestGUI(interfaces::Node& node, const std::shared_ptr<CWallet>& wallet)
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("payment_header")->text(), QString("Payment information"));
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("uri_tag")->text(), QString("URI:"));
             QString uri = receiveRequestDialog->QObject::findChild<QLabel*>("uri_content")->text();
-            QCOMPARE(uri.count("bitcoinII:"), 2);
+            QCOMPARE(uri.count("trumpsperm:"), 2);
             QCOMPARE(receiveRequestDialog->QObject::findChild<QLabel*>("address_tag")->text(), QString("Address:"));
             QVERIFY(address.isEmpty());
             address = receiveRequestDialog->QObject::findChild<QLabel*>("address_content")->text();
@@ -478,7 +479,7 @@ void WalletTests::walletTests()
         // and fails to handle returned nulls
         // (https://bugreports.qt.io/browse/QTBUG-49686).
         qWarning() << "Skipping WalletTests on mac build with 'minimal' platform set due to Qt bugs. To run AppTests, invoke "
-                      "with 'QT_QPA_PLATFORM=cocoa test_bitcoinII-qt' on mac, or else use a linux or windows build.";
+                      "with 'QT_QPA_PLATFORM=cocoa test_trumpsperm-qt' on mac, or else use a linux or windows build.";
         return;
     }
 #endif

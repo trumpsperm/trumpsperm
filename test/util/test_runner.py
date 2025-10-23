@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # Copyright 2014 BitPay Inc.
-# Copyright 2016-2017 The BitcoinII Core developers
+# Copyright 2016-2017 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test framework for bitcoinII utils.
+"""Test framework for trumpsperm utils.
 
 Runs automatically during `ctest --test-dir build/`.
 
@@ -39,7 +39,7 @@ def main():
     # Add the format/level to the logger
     logging.basicConfig(format=formatter, level=level)
 
-    bctester(os.path.join(env_conf["SRCDIR"], "test", "util", "data"), "bitcoinII-util-test.json", env_conf)
+    bctester(os.path.join(env_conf["SRCDIR"], "test", "util", "data"), "trumpsperm-util-test.json", env_conf)
 
 def bctester(testDir, input_basename, buildenv):
     """ Loads and parses the input file, runs all tests and reports results"""
@@ -74,9 +74,9 @@ def bctest(testDir, testObj, buildenv):
     """
     # Get the exec names and arguments
     execprog = os.path.join(buildenv["BUILDDIR"], "bin", testObj["exec"] + buildenv["EXEEXT"])
-    if testObj["exec"] == "./bitcoinII-util":
+    if testObj["exec"] == "./trumpsperm-util":
         execprog = os.getenv("BITCOINIIUTIL", default=execprog)
-    elif testObj["exec"] == "./bitcoinII-tx":
+    elif testObj["exec"] == "./trumpsperm-tx":
         execprog = os.getenv("BITCOINIITX", default=execprog)
 
     execargs = testObj['args']
@@ -157,7 +157,7 @@ def bctest(testDir, testObj, buildenv):
         want_error = testObj["error_txt"]
         # Compare error text
         # TODO: ideally, we'd compare the strings exactly and also assert
-        # That stderr is empty if no errors are expected. However, bitcoinII-tx
+        # That stderr is empty if no errors are expected. However, trumpsperm-tx
         # emits DISPLAY errors when running as a windows application on
         # linux through wine. Just assert that the expected error text appears
         # somewhere in stderr.

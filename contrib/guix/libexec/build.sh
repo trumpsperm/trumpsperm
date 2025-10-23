@@ -244,7 +244,7 @@ mkdir -p "$DISTSRC"
           -DWITH_CCACHE=OFF \
           ${CONFIGFLAGS}
 
-    # Build BitcoinII Core
+    # Build Trumpsperm Core
     cmake --build build -j "$JOBS" ${V:+--verbose}
 
     # Perform basic security checks on a series of executables.
@@ -258,16 +258,16 @@ mkdir -p "$DISTSRC"
     case "$HOST" in
         *mingw*)
             cmake --build build -j "$JOBS" -t deploy ${V:+--verbose}
-            mv build/bitcoinII-win64-setup.exe "${OUTDIR}/${DISTNAME}-win64-setup-unsigned.exe"
+            mv build/trumpsperm-win64-setup.exe "${OUTDIR}/${DISTNAME}-win64-setup-unsigned.exe"
             ;;
     esac
 
-    # Setup the directory where our BitcoinII Core build for HOST will be
+    # Setup the directory where our Trumpsperm Core build for HOST will be
     # installed. This directory will also later serve as the input for our
     # binary tarballs.
     INSTALLPATH="${PWD}/installed/${DISTNAME}"
     mkdir -p "${INSTALLPATH}"
-    # Install built BitcoinII Core to $INSTALLPATH
+    # Install built Trumpsperm Core to $INSTALLPATH
     case "$HOST" in
         *darwin*)
             # This workaround can be dropped for CMake >= 3.27.
@@ -303,9 +303,9 @@ mkdir -p "$DISTSRC"
                 ;;
         esac
 
-        # copy over the example bitcoinII.conf file. if contrib/devtools/gen-bitcoinII-conf.sh
+        # copy over the example trumpsperm.conf file. if contrib/devtools/gen-trumpsperm-conf.sh
         # has not been run before buildling, this file will be a stub
-        cp "${DISTSRC}/share/examples/bitcoinII.conf" "${DISTNAME}/"
+        cp "${DISTSRC}/share/examples/trumpsperm.conf" "${DISTNAME}/"
 
         cp -r "${DISTSRC}/share/rpcauth" "${DISTNAME}/share/"
 
@@ -368,7 +368,7 @@ mkdir -p "$DISTSRC"
             ;;
         *darwin*)
             cmake --build build --target deploy ${V:+--verbose}
-            mv build/dist/BitcoinII-Core.zip "${OUTDIR}/${DISTNAME}-${HOST}-unsigned.zip"
+            mv build/dist/Trumpsperm-Core.zip "${OUTDIR}/${DISTNAME}-${HOST}-unsigned.zip"
             mkdir -p "unsigned-app-${HOST}"
             cp  --target-directory="unsigned-app-${HOST}" \
                 contrib/macdeploy/detached-sig-create.sh

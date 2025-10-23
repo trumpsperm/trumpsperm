@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -37,7 +38,7 @@
 #include <utility>
 #include <variant>
 
-const char * const BITCOINII_CONF_FILENAME = "bitcoinII.conf";
+const char * const BITCOINII_CONF_FILENAME = "trumpsperm.conf";
 const char * const BITCOINII_SETTINGS_FILENAME = "settings.json";
 
 ArgsManager gArgs;
@@ -193,7 +194,7 @@ bool ArgsManager::ParseParameters(int argc, const char* const argv[], std::strin
         if (key.substr(0, 5) == "-psn_") continue;
 #endif
 
-        if (key == "-") break; //bitcoinII-tx using stdin
+        if (key == "-") break; //trumpsperm-tx using stdin
         std::optional<std::string> val;
         size_t is_index = key.find('=');
         if (is_index != std::string::npos) {
@@ -724,18 +725,18 @@ bool HasTestOption(const ArgsManager& args, const std::string& test_option)
 fs::path GetDefaultDataDir()
 {
     // Windows:
-    //   old: C:\Users\Username\AppData\Roaming\BitcoinII
-    //   new: C:\Users\Username\AppData\Local\BitcoinII
-    // macOS: ~/Library/Application Support/BitcoinII
-    // Unix-like: ~/.bitcoinII
+    //   old: C:\Users\Username\AppData\Roaming\Trumpsperm
+    //   new: C:\Users\Username\AppData\Local\Trumpsperm
+    // macOS: ~/Library/Application Support/Trumpsperm
+    // Unix-like: ~/.trumpsperm
 #ifdef WIN32
     // Windows
     // Check for existence of datadir in old location and keep it there
-    fs::path legacy_path = GetSpecialFolderPath(CSIDL_APPDATA) / "BitcoinII";
+    fs::path legacy_path = GetSpecialFolderPath(CSIDL_APPDATA) / "Trumpsperm";
     if (fs::exists(legacy_path)) return legacy_path;
 
     // Otherwise, fresh installs can start in the new, "proper" location
-    return GetSpecialFolderPath(CSIDL_LOCAL_APPDATA) / "BitcoinII";
+    return GetSpecialFolderPath(CSIDL_LOCAL_APPDATA) / "Trumpsperm";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -745,10 +746,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef __APPLE__
     // macOS
-    return pathRet / "Library/Application Support/BitcoinII";
+    return pathRet / "Library/Application Support/Trumpsperm";
 #else
     // Unix-like
-    return pathRet / ".bitcoinII";
+    return pathRet / ".trumpsperm";
 #endif
 #endif
 }

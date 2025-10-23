@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,10 +21,10 @@
 #define NUM_MULTIPLES_CENT 10000
 
 // amounts 1 .. 10000
-#define NUM_MULTIPLES_1BC2 10000
+#define NUM_MULTIPLES_1TPS 10000
 
 // amounts 50 .. 21000000
-#define NUM_MULTIPLES_50BC2 420000
+#define NUM_MULTIPLES_50TPS 420000
 
 BOOST_FIXTURE_TEST_SUITE(compress_tests, BasicTestingSetup)
 
@@ -55,10 +56,10 @@ BOOST_AUTO_TEST_CASE(compress_amounts)
     for (uint64_t i = 1; i <= NUM_MULTIPLES_CENT; i++)
         BOOST_CHECK(TestEncode(i * CENT));
 
-    for (uint64_t i = 1; i <= NUM_MULTIPLES_1BC2; i++)
+    for (uint64_t i = 1; i <= NUM_MULTIPLES_1TPS; i++)
         BOOST_CHECK(TestEncode(i * COIN));
 
-    for (uint64_t i = 1; i <= NUM_MULTIPLES_50BC2; i++)
+    for (uint64_t i = 1; i <= NUM_MULTIPLES_50TPS; i++)
         BOOST_CHECK(TestEncode(i * 50 * COIN));
 
     for (uint64_t i = 0; i < 100000; i++)

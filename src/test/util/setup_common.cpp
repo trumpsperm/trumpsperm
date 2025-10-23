@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -74,7 +75,7 @@ using node::VerifyLoadedChainstate;
 
 const TranslateFn G_TRANSLATION_FUN{nullptr};
 
-constexpr inline auto TEST_DIR_PATH_ELEMENT{"test_common bitcoinII"}; // Includes a space to catch possible path escape issues.
+constexpr inline auto TEST_DIR_PATH_ELEMENT{"test_common trumpsperm"}; // Includes a space to catch possible path escape issues.
 /** Random context to get unique temp data dirs. Separate from m_rng, which can be seeded from a const env var */
 static FastRandomContext g_rng_temp_path;
 static const bool g_rng_temp_path_init{[] {

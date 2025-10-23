@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <bitcoinII-build-config.h> // IWYU pragma: keep
+#include <trumpsperm-build-config.h> // IWYU pragma: keep
 
 #include <chain.h>
 #include <clientversion.h>
@@ -115,7 +116,7 @@ CAmount AmountFromValue(const UniValue& value, int decimals)
 CFeeRate ParseFeeRate(const UniValue& json)
 {
     CAmount val{AmountFromValue(json)};
-    if (val >= COIN) throw JSONRPCError(RPC_INVALID_PARAMETER, "Fee rates larger than or equal to 1BC2/kvB are not accepted");
+    if (val >= COIN) throw JSONRPCError(RPC_INVALID_PARAMETER, "Fee rates larger than or equal to 1TPS/kvB are not accepted");
     return CFeeRate{val};
 }
 
@@ -187,12 +188,12 @@ std::string ShellQuoteIfNeeded(const std::string& s)
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
-    return "> bitcoinII-cli " + methodname + " " + args + "\n";
+    return "> trumpsperm-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleCliNamed(const std::string& methodname, const RPCArgList& args)
 {
-    std::string result = "> bitcoinII-cli -named " + methodname;
+    std::string result = "> trumpsperm-cli -named " + methodname;
     for (const auto& argpair: args) {
         const auto& value = argpair.second.isStr()
                 ? argpair.second.get_str()
@@ -1418,7 +1419,7 @@ std::vector<RPCResult> ScriptPubKeyDoc() {
              {RPCResult::Type::STR, "asm", "Disassembly of the output script"},
              {RPCResult::Type::STR, "desc", "Inferred descriptor for the output"},
              {RPCResult::Type::STR_HEX, "hex", "The raw output script bytes, hex-encoded"},
-             {RPCResult::Type::STR, "address", /*optional=*/true, "The BitcoinII address (only if a well-defined address exists)"},
+             {RPCResult::Type::STR, "address", /*optional=*/true, "The Trumpsperm address (only if a well-defined address exists)"},
              {RPCResult::Type::STR, "type", "The type (one of: " + GetAllOutputTypes() + ")"},
          };
 }

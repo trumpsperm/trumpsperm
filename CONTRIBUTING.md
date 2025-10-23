@@ -1,4 +1,4 @@
-Contributing to BitcoinII Core
+Contributing to Trumpsperm Core
 ============================
 
 While we appreciate everyone who might want to contribute, we ask that you

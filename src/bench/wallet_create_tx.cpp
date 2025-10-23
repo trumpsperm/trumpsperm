@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -138,7 +139,7 @@ static void WalletCreateTx(benchmark::Bench& bench, const OutputType output_type
 
     CAmount target = 0;
     if (preset_inputs) {
-        // Select inputs, each has 49 BC2
+        // Select inputs, each has 49 TPS
         wallet::CoinFilterParams filter_coins;
         filter_coins.max_count = preset_inputs->num_of_internal_inputs;
         const auto& res = WITH_LOCK(wallet.cs_wallet,

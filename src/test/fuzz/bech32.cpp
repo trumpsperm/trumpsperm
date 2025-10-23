@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -32,7 +33,7 @@ FUZZ_TARGET(bech32_random_decode)
     }
 }
 
-// https://github.com/bitcoinII/bips/blob/master/bip-0173.mediawiki and https://github.com/bitcoinII/bips/blob/master/bip-0350.mediawiki
+// https://github.com/trumpsperm/bips/blob/master/bip-0173.mediawiki and https://github.com/trumpsperm/bips/blob/master/bip-0350.mediawiki
 std::string GenerateRandomHRP(FuzzedDataProvider& fdp)
 {
     std::string hrp;

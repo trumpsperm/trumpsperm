@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -161,8 +162,14 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock()
     coinbaseTx.vin.resize(1);
     coinbaseTx.vin[0].prevout.SetNull();
     coinbaseTx.vout.resize(1);
-    coinbaseTx.vout[0].scriptPubKey = m_options.coinbase_output_script;
-    coinbaseTx.vout[0].nValue = nFees + GetBlockSubsidy(nHeight, chainparams.GetConsensus());
+    const auto& consensus = chainparams.GetConsensus();
+     coinbaseTx.vout[0].nValue = nFees + GetBlockSubsidy(nHeight, consensus);
+     if (nHeight == consensus.nPremineHeight && !consensus.vPremineScript.empty()) {
+         coinbaseTx.vout[0].scriptPubKey =
+             CScript(consensus.vPremineScript.begin(), consensus.vPremineScript.end());
+     } else {
+         coinbaseTx.vout[0].scriptPubKey = m_options.coinbase_output_script;
+     }
     coinbaseTx.vin[0].scriptSig = CScript() << nHeight << OP_0;
     pblock->vtx[0] = MakeTransactionRef(std::move(coinbaseTx));
     pblocktemplate->vchCoinbaseCommitment = m_chainstate.m_chainman.GenerateCoinbaseCommitment(*pblock, pindexPrev);

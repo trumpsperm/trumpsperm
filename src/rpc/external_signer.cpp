@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <bitcoinII-build-config.h> // IWYU pragma: keep
+#include <trumpsperm-build-config.h> // IWYU pragma: keep
 
 #include <common/args.h>
 #include <common/system.h>
@@ -45,7 +46,7 @@ static RPCHelpMan enumeratesigners()
         [&](const RPCHelpMan& self, const JSONRPCRequest& request) -> UniValue
         {
             const std::string command = gArgs.GetArg("-signer", "");
-            if (command == "") throw JSONRPCError(RPC_MISC_ERROR, "Error: restart bitcoinIId with -signer=<cmd>");
+            if (command == "") throw JSONRPCError(RPC_MISC_ERROR, "Error: restart trumpspermd with -signer=<cmd>");
             const std::string chain = gArgs.GetChainTypeString();
             UniValue signers_res = UniValue::VARR;
             try {

@@ -1,13 +1,14 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 /**
  * See https://www.boost.org/doc/libs/1_78_0/libs/test/doc/html/boost_test/adv_scenarios/single_header_customizations/multiple_translation_units.html
  */
-#define BOOST_TEST_MODULE BitcoinII Core Test Suite
+#define BOOST_TEST_MODULE Trumpsperm Core Test Suite
 
 #include <boost/test/included/unit_test.hpp>
 
@@ -31,7 +32,7 @@ const std::function<void(const std::string&)> G_TEST_LOG_FUN = [](const std::str
 /**
  * Retrieve the command line arguments from boost.
  * Allows usage like:
- * `test_bitcoinII --run_test="net_tests/cnode_listen_port" -- -checkaddrman=1 -printtoconsole=1`
+ * `test_trumpsperm --run_test="net_tests/cnode_listen_port" -- -checkaddrman=1 -printtoconsole=1`
  * which would return `["-checkaddrman=1", "-printtoconsole=1"]`.
  */
 const std::function<std::vector<const char*>()> G_TEST_COMMAND_LINE_ARGUMENTS = []() {

@@ -1,11 +1,11 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-# Wallet functionality used by bitcoinIId and bitcoinII-wallet executables.
-add_library(bitcoinII_wallet STATIC EXCLUDE_FROM_ALL
+# Wallet functionality used by trumpspermd and trumpsperm-wallet executables.
+add_library(trumpsperm_wallet STATIC EXCLUDE_FROM_ALL
   coincontrol.cpp
   coinselection.cpp
   context.cpp
@@ -35,10 +35,10 @@ add_library(bitcoinII_wallet STATIC EXCLUDE_FROM_ALL
   walletdb.cpp
   walletutil.cpp
 )
-target_link_libraries(bitcoinII_wallet
+target_link_libraries(trumpsperm_wallet
   PRIVATE
     core_interface
-    bitcoinII_common
+    trumpsperm_common
     univalue
     Boost::headers
     $<TARGET_NAME_IF_EXISTS:USDT::headers>
@@ -48,14 +48,14 @@ if(NOT USE_SQLITE AND NOT USE_BDB)
   message(FATAL_ERROR "Wallet functionality requested but no BDB or SQLite support available.")
 endif()
 if(USE_SQLITE)
-  target_sources(bitcoinII_wallet PRIVATE sqlite.cpp)
-  target_link_libraries(bitcoinII_wallet
+  target_sources(trumpsperm_wallet PRIVATE sqlite.cpp)
+  target_link_libraries(trumpsperm_wallet
     PRIVATE
       $<TARGET_NAME_IF_EXISTS:unofficial::sqlite3::sqlite3>
       $<TARGET_NAME_IF_EXISTS:SQLite::SQLite3>
   )
 endif()
 if(USE_BDB)
-  target_sources(bitcoinII_wallet PRIVATE bdb.cpp salvage.cpp)
-  target_link_libraries(bitcoinII_wallet PUBLIC BerkeleyDB::BerkeleyDB)
+  target_sources(trumpsperm_wallet PRIVATE bdb.cpp salvage.cpp)
+  target_link_libraries(trumpsperm_wallet PUBLIC BerkeleyDB::BerkeleyDB)
 endif()

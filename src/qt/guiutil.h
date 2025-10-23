@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -54,7 +55,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the BitcoinII Qt UI.
+/** Utility functions used by the Trumpsperm Qt UI.
  */
 namespace GUIUtil
 {
@@ -79,10 +80,10 @@ namespace GUIUtil
      */
     void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut);
 
-    // Parse "bitcoinII:" URI into recipient object, return true on successful parsing
-    bool parseBitcoinIIURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseBitcoinIIURI(QString uri, SendCoinsRecipient *out);
-    QString formatBitcoinIIURI(const SendCoinsRecipient &info);
+    // Parse "trumpsperm:" URI into recipient object, return true on successful parsing
+    bool parseTrumpspermURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseTrumpspermURI(QString uri, SendCoinsRecipient *out);
+    QString formatTrumpspermURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(interfaces::Node& node, const QString& address, const CAmount& amount);
@@ -180,7 +181,7 @@ namespace GUIUtil
     void openDebugLogfile();
 
     // Open the config file
-    bool openBitcoinIIConf();
+    bool openTrumpspermConf();
 
     /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.

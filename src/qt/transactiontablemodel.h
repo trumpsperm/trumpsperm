@@ -1,13 +1,14 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifndef BITCOINII_QT_TRANSACTIONTABLEMODEL_H
 #define BITCOINII_QT_TRANSACTIONTABLEMODEL_H
 
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermunits.h>
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -103,7 +104,7 @@ private:
     QString formatTxDate(const TransactionRecord *wtx) const;
     QString formatTxType(const TransactionRecord *wtx) const;
     QString formatTxToAddress(const TransactionRecord *wtx, bool tooltip) const;
-    QString formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed=true, BitcoinIIUnits::SeparatorStyle separators=BitcoinIIUnits::SeparatorStyle::STANDARD) const;
+    QString formatTxAmount(const TransactionRecord *wtx, bool showUnconfirmed=true, TrumpspermUnits::SeparatorStyle separators=TrumpspermUnits::SeparatorStyle::STANDARD) const;
     QString formatTooltip(const TransactionRecord *rec) const;
     QVariant txStatusDecoration(const TransactionRecord *wtx) const;
     QVariant txWatchonlyDecoration(const TransactionRecord *wtx) const;

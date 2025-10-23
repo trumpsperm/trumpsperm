@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +9,7 @@
 #define BITCOINII_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
-// bitcoinII: URIs
+// trumpsperm: URIs
 //
 // This is somewhat tricky, because we have to deal with
 // the situation where the user clicks on a link during

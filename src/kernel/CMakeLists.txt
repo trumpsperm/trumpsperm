@@ -1,17 +1,17 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 include(GNUInstallDirs)
 
-# TODO: libbitcoinIIkernel is a work in progress consensus engine
+# TODO: libtrumpspermkernel is a work in progress consensus engine
 #       library, as more and more modules are decoupled from the
 #       consensus engine, this list will shrink to only those
 #       which are absolutely necessary.
-add_library(bitcoinIIkernel
-  bitcoinIIkernel.cpp
+add_library(trumpspermkernel
+  trumpspermkernel.cpp
   chain.cpp
   checks.cpp
   chainparams.cpp
@@ -82,11 +82,11 @@ add_library(bitcoinIIkernel
   ../validationinterface.cpp
   ../versionbits.cpp
 )
-target_link_libraries(bitcoinIIkernel
+target_link_libraries(trumpspermkernel
   PRIVATE
     core_interface
-    bitcoinII_clientversion
-    bitcoinII_crypto
+    trumpsperm_clientversion
+    trumpsperm_crypto
     leveldb
     secp256k1
     $<TARGET_NAME_IF_EXISTS:USDT::headers>
@@ -94,29 +94,29 @@ target_link_libraries(bitcoinIIkernel
     Boost::headers
 )
 
-# libbitcoinIIkernel requires default symbol visibility, explicitly
+# libtrumpspermkernel requires default symbol visibility, explicitly
 # specify that here so that things still work even when user
 # configures with -DREDUCE_EXPORTS=ON
 #
 # Note this is a quick hack that will be removed as we
 # incrementally define what to export from the library.
-set_target_properties(bitcoinIIkernel PROPERTIES
+set_target_properties(trumpspermkernel PROPERTIES
   CXX_VISIBILITY_PRESET default
 )
 
-# Add a convenience libbitcoinIIkernel target as a synonym for bitcoinIIkernel.
-add_custom_target(libbitcoinIIkernel)
-add_dependencies(libbitcoinIIkernel bitcoinIIkernel)
+# Add a convenience libtrumpspermkernel target as a synonym for trumpspermkernel.
+add_custom_target(libtrumpspermkernel)
+add_dependencies(libtrumpspermkernel trumpspermkernel)
 
 # When building the static library, install all static libraries the
-# bitcoinIIkernel depends on.
+# trumpspermkernel depends on.
 if(NOT BUILD_SHARED_LIBS)
   # Recursively get all the static libraries a target depends on and put them in libs_out
   function(get_target_static_link_libs target libs_out)
     get_target_property(linked_libraries ${target} LINK_LIBRARIES)
     foreach(dep ${linked_libraries})
       if(TARGET ${dep})
-        add_dependencies(libbitcoinIIkernel ${dep})
+        add_dependencies(libtrumpspermkernel ${dep})
         get_target_property(dep_type ${dep} TYPE)
         if(dep_type STREQUAL "STATIC_LIBRARY")
           list(APPEND ${libs_out} ${dep})
@@ -128,25 +128,25 @@ if(NOT BUILD_SHARED_LIBS)
   endfunction()
 
   set(all_kernel_static_link_libs "")
-  get_target_static_link_libs(bitcoinIIkernel all_kernel_static_link_libs)
+  get_target_static_link_libs(trumpspermkernel all_kernel_static_link_libs)
 
-  install(TARGETS ${all_kernel_static_link_libs} ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT libbitcoinIIkernel)
+  install(TARGETS ${all_kernel_static_link_libs} ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT libtrumpspermkernel)
   list(TRANSFORM all_kernel_static_link_libs PREPEND "-l")
   # LIBS_PRIVATE is substituted in the pkg-config file.
   list(JOIN all_kernel_static_link_libs " " LIBS_PRIVATE)
 endif()
 
-configure_file(${PROJECT_SOURCE_DIR}/libbitcoinIIkernel.pc.in ${PROJECT_BINARY_DIR}/libbitcoinIIkernel.pc @ONLY)
-install(FILES ${PROJECT_BINARY_DIR}/libbitcoinIIkernel.pc DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig" COMPONENT libbitcoinIIkernel)
+configure_file(${PROJECT_SOURCE_DIR}/libtrumpspermkernel.pc.in ${PROJECT_BINARY_DIR}/libtrumpspermkernel.pc @ONLY)
+install(FILES ${PROJECT_BINARY_DIR}/libtrumpspermkernel.pc DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig" COMPONENT libtrumpspermkernel)
 
-install(TARGETS bitcoinIIkernel
+install(TARGETS trumpspermkernel
   RUNTIME
     DESTINATION ${CMAKE_INSTALL_BINDIR}
-    COMPONENT libbitcoinIIkernel
+    COMPONENT libtrumpspermkernel
   LIBRARY
     DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    COMPONENT libbitcoinIIkernel
+    COMPONENT libtrumpspermkernel
   ARCHIVE
     DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    COMPONENT libbitcoinIIkernel
+    COMPONENT libtrumpspermkernel
 )

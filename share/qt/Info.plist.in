@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>bitcoinII.icns</string>
+  <string>trumpsperm.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -34,16 +34,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>BitcoinII-Qt</string>
+  <string>Trumpsperm-Qt</string>
 
   <key>CFBundleName</key>
-  <string>BitcoinII-Qt</string>
+  <string>Trumpsperm-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.bitcoinIIfoundation.BitcoinII-Qt</string>
+  <string>org.trumpspermfoundation.Trumpsperm-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -51,10 +51,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.bitcoinII.BitcoinIIPayment</string>
+      <string>org.trumpsperm.TrumpspermPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>bitcoinII</string>
+        <string>trumpsperm</string>
       </array>
     </dict>
   </array>

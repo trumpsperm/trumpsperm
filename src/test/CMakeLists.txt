@@ -1,12 +1,12 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 # Do not use generator expressions in test sources because the
 # SOURCES property is processed to gather test suite macros.
-add_executable(test_bitcoinII
+add_executable(test_trumpsperm
   main.cpp
   addrman_tests.cpp
   allocator_tests.cpp
@@ -127,7 +127,7 @@ add_executable(test_bitcoinII
 )
 
 include(TargetDataSources)
-target_json_data_sources(test_bitcoinII
+target_json_data_sources(test_trumpsperm
   data/base58_encode_decode.json
   data/bip341_wallet_vectors.json
   data/blockfilters.json
@@ -138,16 +138,16 @@ target_json_data_sources(test_bitcoinII
   data/tx_invalid.json
   data/tx_valid.json
 )
-target_raw_data_sources(test_bitcoinII NAMESPACE test::data
+target_raw_data_sources(test_trumpsperm NAMESPACE test::data
   data/asmap.raw
 )
 
-target_link_libraries(test_bitcoinII
+target_link_libraries(test_trumpsperm
   core_interface
   test_util
-  bitcoinII_cli
-  bitcoinII_node
-  bitcoinII_consensus
+  trumpsperm_cli
+  trumpsperm_node
+  trumpsperm_consensus
   minisketch
   secp256k1
   Boost::headers
@@ -159,17 +159,17 @@ if(ENABLE_WALLET)
 endif()
 
 if(WITH_MULTIPROCESS)
-  target_link_libraries(bitcoinII_ipc_test
+  target_link_libraries(trumpsperm_ipc_test
     PRIVATE
       core_interface
       univalue
   )
 
-  target_sources(test_bitcoinII
+  target_sources(test_trumpsperm
     PRIVATE
       ipc_tests.cpp
   )
-  target_link_libraries(test_bitcoinII bitcoinII_ipc_test bitcoinII_ipc)
+  target_link_libraries(test_trumpsperm trumpsperm_ipc_test trumpsperm_ipc)
 endif()
 
 function(add_boost_test source_file)
@@ -188,7 +188,7 @@ function(add_boost_test source_file)
   )
   if(test_suite_name)
     add_test(NAME ${test_suite_name}
-      COMMAND test_bitcoinII --run_test=${test_suite_name} --catch_system_error=no --log_level=test_suite -- DEBUG_LOG_OUT
+      COMMAND test_trumpsperm --run_test=${test_suite_name} --catch_system_error=no --log_level=test_suite -- DEBUG_LOG_OUT
     )
     set_property(TEST ${test_suite_name} PROPERTY
       SKIP_REGULAR_EXPRESSION "no test cases matching filter"
@@ -197,8 +197,8 @@ function(add_boost_test source_file)
 endfunction()
 
 function(add_all_test_targets)
-  get_target_property(test_source_dir test_bitcoinII SOURCE_DIR)
-  get_target_property(test_sources test_bitcoinII SOURCES)
+  get_target_property(test_source_dir test_trumpsperm SOURCE_DIR)
+  get_target_property(test_sources test_trumpsperm SOURCES)
   foreach(test_source ${test_sources})
     cmake_path(IS_RELATIVE test_source result)
     if(result)
@@ -210,4 +210,4 @@ endfunction()
 
 add_all_test_targets()
 
-install_binary_component(test_bitcoinII)
+install_binary_component(test_trumpsperm)

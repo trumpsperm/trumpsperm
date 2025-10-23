@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -458,7 +459,7 @@ RPCHelpMan listtransactions()
                         {RPCResult::Type::OBJ, "", "", Cat(Cat<std::vector<RPCResult>>(
                         {
                             {RPCResult::Type::BOOL, "involvesWatchonly", /*optional=*/true, "Only returns true if imported addresses were involved in transaction."},
-                            {RPCResult::Type::STR, "address",  /*optional=*/true, "The bitcoinII address of the transaction (not returned if the output does not have an address, e.g. OP_RETURN null data)."},
+                            {RPCResult::Type::STR, "address",  /*optional=*/true, "The trumpsperm address of the transaction (not returned if the output does not have an address, e.g. OP_RETURN null data)."},
                             {RPCResult::Type::STR, "category", "The transaction category.\n"
                                 "\"send\"                  Transactions sent.\n"
                                 "\"receive\"               Non-coinbase transactions received.\n"
@@ -572,7 +573,7 @@ RPCHelpMan listsinceblock()
                             {RPCResult::Type::OBJ, "", "", Cat(Cat<std::vector<RPCResult>>(
                             {
                                 {RPCResult::Type::BOOL, "involvesWatchonly", /*optional=*/true, "Only returns true if imported addresses were involved in transaction."},
-                                {RPCResult::Type::STR, "address",  /*optional=*/true, "The bitcoinII address of the transaction (not returned if the output does not have an address, e.g. OP_RETURN null data)."},
+                                {RPCResult::Type::STR, "address",  /*optional=*/true, "The trumpsperm address of the transaction (not returned if the output does not have an address, e.g. OP_RETURN null data)."},
                                 {RPCResult::Type::STR, "category", "The transaction category.\n"
                                     "\"send\"                  Transactions sent.\n"
                                     "\"receive\"               Non-coinbase transactions received.\n"
@@ -719,7 +720,7 @@ RPCHelpMan gettransaction()
                             {RPCResult::Type::OBJ, "", "",
                             {
                                 {RPCResult::Type::BOOL, "involvesWatchonly", /*optional=*/true, "Only returns true if imported addresses were involved in transaction."},
-                                {RPCResult::Type::STR, "address", /*optional=*/true, "The bitcoinII address involved in the transaction."},
+                                {RPCResult::Type::STR, "address", /*optional=*/true, "The trumpsperm address involved in the transaction."},
                                 {RPCResult::Type::STR, "category", "The transaction category.\n"
                                     "\"send\"                  Transactions sent.\n"
                                     "\"receive\"               Non-coinbase transactions received.\n"

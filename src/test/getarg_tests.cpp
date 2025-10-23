@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -30,7 +31,7 @@ void ResetArgs(ArgsManager& local_args, const std::string& strArg)
     }
 
     // Insert dummy executable name:
-    vecArg.insert(vecArg.begin(), "testbitcoinII");
+    vecArg.insert(vecArg.begin(), "testtrumpsperm");
 
     // Convert to char*:
     std::vector<const char*> vecChar;
@@ -314,60 +315,60 @@ BOOST_AUTO_TEST_CASE(patharg)
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), win_root_path);
 #endif
 
-    const fs::path absolute_path{"/home/user/.bitcoinII"};
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinII");
+    const fs::path absolute_path{"/home/user/.trumpsperm"};
+    ResetArgs(local_args, "-dir=/home/user/.trumpsperm");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/root/../home/user/.bitcoinII");
+    ResetArgs(local_args, "-dir=/root/../home/user/.trumpsperm");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/./user/.bitcoinII");
+    ResetArgs(local_args, "-dir=/home/./user/.trumpsperm");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinII/");
+    ResetArgs(local_args, "-dir=/home/user/.trumpsperm/");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinII//");
+    ResetArgs(local_args, "-dir=/home/user/.trumpsperm//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinII/.");
+    ResetArgs(local_args, "-dir=/home/user/.trumpsperm/.");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinII/./");
+    ResetArgs(local_args, "-dir=/home/user/.trumpsperm/./");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    ResetArgs(local_args, "-dir=/home/user/.bitcoinII/.//");
+    ResetArgs(local_args, "-dir=/home/user/.trumpsperm/.//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), absolute_path);
 
-    const fs::path relative_path{"user/.bitcoinII"};
-    ResetArgs(local_args, "-dir=user/.bitcoinII");
+    const fs::path relative_path{"user/.trumpsperm"};
+    ResetArgs(local_args, "-dir=user/.trumpsperm");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=somewhere/../user/.bitcoinII");
+    ResetArgs(local_args, "-dir=somewhere/../user/.trumpsperm");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/./.bitcoinII");
+    ResetArgs(local_args, "-dir=user/./.trumpsperm");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinII/");
+    ResetArgs(local_args, "-dir=user/.trumpsperm/");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinII//");
+    ResetArgs(local_args, "-dir=user/.trumpsperm//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinII/.");
+    ResetArgs(local_args, "-dir=user/.trumpsperm/.");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinII/./");
+    ResetArgs(local_args, "-dir=user/.trumpsperm/./");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
-    ResetArgs(local_args, "-dir=user/.bitcoinII/.//");
+    ResetArgs(local_args, "-dir=user/.trumpsperm/.//");
     BOOST_CHECK_EQUAL(local_args.GetPathArg("-dir"), relative_path);
 
     // Check negated and default argument handling. Specifying an empty argument
     // is the same as not specifying the argument. This is convenient for
     // scripting so later command line arguments can override earlier command
-    // line arguments or bitcoinII.conf values. Currently the -dir= case cannot be
+    // line arguments or trumpsperm.conf values. Currently the -dir= case cannot be
     // distinguished from -dir case with no assignment, but #16545 would add the
     // ability to distinguish these in the future (and treat the no-assign case
     // like an imperative command or an error).

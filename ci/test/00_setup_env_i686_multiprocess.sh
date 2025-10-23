@@ -20,4 +20,4 @@ export BITCOINII_CONFIG="\
  -DCMAKE_CXX_COMPILER='clang++;-m32' \
  -DAPPEND_CPPFLAGS='-DBOOST_MULTI_INDEX_ENABLE_SAFE_MODE' \
 "
-export BITCOINIID=bitcoinII-node  # Used in functional tests
+export BITCOINIID=trumpsperm-node  # Used in functional tests

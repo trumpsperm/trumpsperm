@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -446,7 +447,7 @@ BOOST_AUTO_TEST_CASE(cnetaddr_unserialize_v2)
     // Valid IPv6, contains embedded "internal".
     s << "02"                                    // network type (IPv6)
          "10"                                    // address length
-         "fd6b88c08724ca978112ca1bbdcafac2"_hex; // address: 0xfd + sha256("bitcoinII")[0:5] +
+         "fd6b88c08724ca978112ca1bbdcafac2"_hex; // address: 0xfd + sha256("trumpsperm")[0:5] +
                                                  // sha256(name)[0:10]
     s >> ser_params(addr);
     BOOST_CHECK(addr.IsInternal());

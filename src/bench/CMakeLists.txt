@@ -1,11 +1,11 @@
 # Copyright (c) 2009-2025 Satoshi Nakamoto
 # Copyright (c) 2009-2025 The Bitcoin Core developers
-# Copyright (c) 2024-2025 The BitcoinII Core developers
+# Copyright (c) 2024-2025 The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-add_executable(bench_bitcoinII
-  bench_bitcoinII.cpp
+add_executable(bench_trumpsperm
+  bench_trumpsperm.cpp
   bench.cpp
   nanobench.cpp
 # Benchmarks:
@@ -55,19 +55,19 @@ add_executable(bench_bitcoinII
 )
 
 include(TargetDataSources)
-target_raw_data_sources(bench_bitcoinII NAMESPACE benchmark::data
+target_raw_data_sources(bench_trumpsperm NAMESPACE benchmark::data
   data/block413567.raw
 )
 
-target_link_libraries(bench_bitcoinII
+target_link_libraries(bench_trumpsperm
   core_interface
   test_util
-  bitcoinII_node
+  trumpsperm_node
   Boost::headers
 )
 
 if(ENABLE_WALLET)
-  target_sources(bench_bitcoinII
+  target_sources(bench_trumpsperm
     PRIVATE
       coin_selection.cpp
       wallet_balance.cpp
@@ -77,11 +77,11 @@ if(ENABLE_WALLET)
       wallet_ismine.cpp
       wallet_migration.cpp
   )
-  target_link_libraries(bench_bitcoinII bitcoinII_wallet)
+  target_link_libraries(bench_trumpsperm trumpsperm_wallet)
 endif()
 
 add_test(NAME bench_sanity_check_high_priority
-  COMMAND bench_bitcoinII -sanity-check -priority-level=high
+  COMMAND bench_trumpsperm -sanity-check -priority-level=high
 )
 
-install_binary_component(bench_bitcoinII)
+install_binary_component(bench_trumpsperm)

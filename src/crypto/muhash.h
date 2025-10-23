@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2021 The BitcoinII Core developers
+// Copyright (c) 2017-2021 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -94,7 +94,7 @@ public:
  * is intended to represent a set of elements.
  *
  * See also https://cseweb.ucsd.edu/~mihir/papers/inchash.pdf and
- * https://lists.linuxfoundation.org/pipermail/bitcoinII-dev/2017-May/014337.html.
+ * https://lists.linuxfoundation.org/pipermail/trumpsperm-dev/2017-May/014337.html.
  */
 class MuHash3072
 {

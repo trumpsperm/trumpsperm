@@ -1,12 +1,13 @@
 // Copyright (c) 2009-2025 Satoshi Nakamoto
 // Copyright (c) 2009-2025 The Bitcoin Core developers
 // Copyright (c) 2024-2025 The BitcoinII Core developers
+// Copyright (c) 2025 The Trumpsperm Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <qt/recentrequeststablemodel.h>
 
-#include <qt/bitcoinIIunits.h>
+#include <qt/trumpspermunits.h>
 #include <qt/guiutil.h>
 #include <qt/optionsmodel.h>
 #include <qt/walletmodel.h>
@@ -90,9 +91,9 @@ QVariant RecentRequestsTableModel::data(const QModelIndex &index, int role) cons
             if (rec->recipient.amount == 0 && role == Qt::DisplayRole)
                 return tr("(no amount requested)");
             else if (role == Qt::EditRole)
-                return BitcoinIIUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount, false, BitcoinIIUnits::SeparatorStyle::NEVER);
+                return TrumpspermUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount, false, TrumpspermUnits::SeparatorStyle::NEVER);
             else
-                return BitcoinIIUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount);
+                return TrumpspermUnits::format(walletModel->getOptionsModel()->getDisplayUnit(), rec->recipient.amount);
         }
     }
     else if (role == Qt::TextAlignmentRole)
@@ -133,7 +134,7 @@ QString RecentRequestsTableModel::getAmountTitle()
     if (!walletModel->getOptionsModel()) return {};
     return tr("Requested") +
            QLatin1String(" (") +
-           BitcoinIIUnits::shortName(this->walletModel->getOptionsModel()->getDisplayUnit()) +
+           TrumpspermUnits::shortName(this->walletModel->getOptionsModel()->getDisplayUnit()) +
            QLatin1Char(')');
 }
 

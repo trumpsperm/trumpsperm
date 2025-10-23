@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-# Copyright (c) 2023-present The BitcoinII Core developers
+# Copyright (c) 2023-present The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 import threading
-from test_framework.test_framework import BitcoinIITestFramework
+from test_framework.test_framework import TrumpspermTestFramework
 from random import randbytes
 
 
-class NetDeadlockTest(BitcoinIITestFramework):
+class NetDeadlockTest(TrumpspermTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

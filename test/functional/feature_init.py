@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2021-present The BitcoinII Core developers
+# Copyright (c) 2021-present The Trumpsperm Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Tests related to node initialization."""
@@ -10,7 +10,7 @@ import shutil
 import signal
 import subprocess
 
-from test_framework.test_framework import BitcoinIITestFramework
+from test_framework.test_framework import TrumpspermTestFramework
 from test_framework.test_node import (
     BITCOINII_PID_FILENAME_DEFAULT,
     ErrorMatch,
@@ -18,7 +18,7 @@ from test_framework.test_node import (
 from test_framework.util import assert_equal
 
 
-class InitTest(BitcoinIITestFramework):
+class InitTest(TrumpspermTestFramework):
     """
     Ensure that initialization can be interrupted at a number of points and not impair
     subsequent starts.
@@ -43,7 +43,7 @@ class InitTest(BitcoinIITestFramework):
             if platform.system() == 'Windows':
                 # Don't call Python's terminate() since it calls
                 # TerminateProcess(), which unlike SIGTERM doesn't allow
-                # bitcoinIId to perform any shutdown logic.
+                # trumpspermd to perform any shutdown logic.
                 os.kill(node.process.pid, signal.CTRL_BREAK_EVENT)
             else:
                 node.process.terminate()
@@ -157,7 +157,7 @@ class InitTest(BitcoinIITestFramework):
             shutil.move(node.chain_path / "chainstate_bak", node.chain_path / "chainstate")
 
     def init_pid_test(self):
-        BITCOINII_PID_FILENAME_CUSTOM = "my_fancy_bitcoinII_pid_file.foobar"
+        BITCOINII_PID_FILENAME_CUSTOM = "my_fancy_trumpsperm_pid_file.foobar"
 
         self.log.info("Test specifying custom pid file via -pid command line option")
         custom_pidfile_relative = BITCOINII_PID_FILENAME_CUSTOM
