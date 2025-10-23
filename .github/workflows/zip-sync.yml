@@ -50,9 +50,10 @@ jobs:
       - name: Copy new contents
         shell: bash
         run: |
-          set -euo pipefail
-          [ -d unpack ]
-          rsync -a --delete unpack/ .
+          set -xeuo pipefail
+          test -d unpack || { echo "unpack missing"; exit 1; }
+          test -n "$(ls -A unpack)" || { echo "unpack is empty"; exit 1; }
+          rsync -av --delete --exclude '.git' --exclude '.github' unpack/ .
 
       - name: Commit & push
         shell: bash
