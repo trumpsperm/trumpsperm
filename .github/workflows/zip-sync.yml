@@ -14,24 +14,23 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Download & unpack ZIP (strict)
+        shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ZIP_URL: ${{ github.event.inputs.url }}
         run: |
-          set -euo pipefail
+          set -xeuo pipefail
+          if [ -z "${ZIP_URL:-}" ]; then echo "ZIP_URL is empty"; exit 1; fi
           if ! command -v unzip >/dev/null 2>&1; then
             sudo apt-get update -y >/dev/null
             sudo apt-get install -y unzip >/dev/null
           fi
-          HTTP_CODE=$(curl -sSL -w '%{http_code}' -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/octet-stream" -o sync.zip "$ZIP_URL")
-          if [ "$HTTP_CODE" != "200" ]; then
-            echo "Download failed: HTTP $HTTP_CODE"
-            exit 1
-          fi
-          if ! unzip -tq sync.zip >/dev/null 2>&1; then
-            head -c 300 sync.zip || true
-            exit 1
-          fi
+          HTTP_CODE=$(curl -sSL -w '%{http_code}' \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/octet-stream" \
+            -o sync.zip "$ZIP_URL")
+          if [ "$HTTP_CODE" != "200" ]; then echo "Download failed: HTTP $HTTP_CODE"; exit 1; fi
+          unzip -tq sync.zip >/dev/null 2>&1 || { head -c 300 sync.zip || true; exit 1; }
           rm -rf unpack
           mkdir -p unpack
           unzip -q -o sync.zip -d unpack
@@ -39,10 +38,7 @@ jobs:
           if [ -d unpack/* ] && [ "$(ls -1 unpack | wc -l)" = "1" ]; then
             mv unpack/* unpack_root && rm -rf unpack && mv unpack_root unpack
           fi
-          if [ ! -d unpack ] || [ -z "$(ls -A unpack)" ]; then
-            echo "Nothing unpacked (unpack/ is empty or missing)"
-            exit 1
-          fi
+          [ -d unpack ] && [ -n "$(ls -A unpack)" ]
 
       - name: Clean working tree
         shell: bash
@@ -52,12 +48,14 @@ jobs:
           rm -rf !(.git|.github)
 
       - name: Copy new contents
+        shell: bash
         run: |
           set -euo pipefail
           [ -d unpack ]
           rsync -a --delete unpack/ .
 
       - name: Commit & push
+        shell: bash
         run: |
           set -euo pipefail
           git config user.name "zip-sync[bot]"
